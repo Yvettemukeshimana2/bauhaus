@@ -7,6 +7,7 @@
  import im5 from "../assets/images/3U8A1253.jpg";
  import testmony from "../assets/images/testimony1.jpg";
  import testmony1 from "../assets/images/testmony2.jpg";
+ import { Link } from "react-router-dom";
 
  interface Testimonial {
    id: number;
@@ -67,12 +68,11 @@
              <p className="text-3xl font-bold text-yellow-500 mb-10">
                Muhe Hospitality Services
              </p>
-             <a
-               href="/contactus"
+             <Link to="/contactus"
                className="btn animate-bounce px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full transition duration-300"
              >
                LET'S CONNECT
-             </a>
+             </Link>
            </div>
          </section>
        </div>
