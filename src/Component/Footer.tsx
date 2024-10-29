@@ -127,7 +127,7 @@
                 ))}
               </div>
                <Link to="/venue">
-              <button className=" md:block hidden justify-end ml-9 mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100 w-full px-4 py-2">
+              <button className=" md:block hidden justify-end ml-9 mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
                 Work With Us
               </button>
             </Link>
