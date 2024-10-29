@@ -12,7 +12,7 @@
       { href: "/aboutus1", label: "About", category: "Useful Links" },
       { href: "/contactus", label: "Contact", category: "Useful Links" },
       {
-        href: "/venue",
+        href: "/material",
         label: "Event Cattering",
         category: "Services",
       },
