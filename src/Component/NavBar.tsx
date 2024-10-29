@@ -117,7 +117,7 @@
                      }`}
                    />
                    {isServicesOpen && (
-                     <div className="absolute left-0 mb-32 w-40 bg-white bg-opacity-20 border rounded shadow-lg z-50">
+                     <div className="absolute left-0 mb-32 w-40 borde-2 border-yellow-500 bg-yellow-400  border rounded shadow-lg z-50">
                        <Link
                          to="/venue"
                          className="block px-4 py-2 hover:bg-gray-200"
