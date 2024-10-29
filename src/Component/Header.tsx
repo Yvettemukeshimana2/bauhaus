@@ -7,7 +7,7 @@ const Header = () => {
         celebration.
       </h1>
       <a  href="/aboutus1">
-      <button className="ml-3 text-green-300 hover:text-green-900 font-semibold">
+      <button className="ml-3 text-yellow-500 hover:text-yellow-600 font-semibold">
         Learn More
       </button>
       </a>
