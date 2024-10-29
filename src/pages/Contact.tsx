@@ -20,7 +20,7 @@
 
    const onSubmit = (data: FormInputs) => {
      console.log(data);
-     reset(); // Reset form after successful submission
+     reset();  
    };
 
    return (
@@ -66,16 +66,11 @@
            Contact Us
          </motion.button>
        </header>
-       {/* Hero Section */}
-
        <div className="max-w-7xl mx-auto p-10 grid md:grid-cols-2 gap-8 ">
-         {/* Contact Information */}
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
            <h2 className="text-2xl font-bold mb-6 text-center ">
              Our Location
            </h2>
-
-           {/* Google Map Embed */}
            <motion.div
              initial={{ y: 100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
@@ -133,8 +128,6 @@
              </div>
            </div>
          </div>
-
-         {/* Contact Form */}
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
            <h2 className="text-2xl font-bold mb-6 text-center">Get in Touch</h2>
            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

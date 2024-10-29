@@ -126,8 +126,7 @@
    ]);
 
    useEffect(() => {
-     // Fetch materials from backend in a real-world application
-     // setMaterials(data from backend);
+     //  
    }, []);
 
    return (
@@ -206,5 +205,4 @@
      </div>
    );
  };
-
  export default HospitalityMaterials;

@@ -263,7 +263,7 @@
        },
      ],
    },
-   // Add more services as needed
+   
  ];
 
  interface ServiceDetailProps {
@@ -285,7 +285,7 @@
 
    return (
      <div className="mt-24 h-full">
-       {/* Animated Title Section */}
+    
        <header className="relative bg-black">
          <img
            src={img1}
@@ -297,13 +297,13 @@
          </h1>
        </header>
 
-       {/* Header */}
+     
        <header className="mb-8 p-10 text-center">
          <h1 className="text-4xl font-bold text-yellow-500">{service.title}</h1>
          <p className="mt-4 text-lg text-gray-600">{service.description}</p>
        </header>
 
-       {/* Image Gallery */}
+ 
        <div className="flex gap-4 mb-12 pl-20 pr-20 h-72">
          {service.images.slice(0, 3).map((image, index) => (
            <div key={index} className="flex-1 overflow-hidden rounded-lg">
@@ -316,7 +316,7 @@
          ))}
        </div>
 
-       {/* Full Description */}
+  
        <section className="mb-12 bg-yellow-500 opacity-70 rounded-lg p-8 text-center">
          <h2 className="text-3xl font-bold mb-4 text-yellow-200">About This Service</h2>
          <p className="text-black mb-8 font-normal">{service.fullDescription}</p>
@@ -331,8 +331,6 @@
            ))}
          </ul>
        </section>
-
-       {/* Testimonials */}
        <section className="mb-12 text-center">
          <h2 className="text-2xl font-bold mb-6 text-yellow-500">Client Testimonials</h2>
          <div className="grid gap-6 md:grid-cols-2 p-10">
@@ -362,8 +360,6 @@
            ))}
          </div>
        </section>
-
-       {/* Actions */}
        <footer className="flex items-center justify-center mb-10 space-x-4">
          <button
            onClick={onBackClick}
@@ -379,8 +375,6 @@
            Book This Service
          </button>
        </footer>
-
-       {/* Inline CSS */}
        <style>{`
         .animate-marquee {
           animation: marquee 10s linear infinite;

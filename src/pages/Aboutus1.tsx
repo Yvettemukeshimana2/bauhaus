@@ -37,7 +37,6 @@ import { Link } from "react-router-dom";
 
    return (
      <div className="min-h-screen   bg-white">
-       {/* Hero Section */}
        <div className=" h-[80vh] overflow-hidden bg-black">
          <img
            src={bg}
@@ -60,10 +59,7 @@ import { Link } from "react-router-dom";
            </div>
          </div>
        </div>
-
-       {/* Main Content */}
        <div className="container mx-auto px-6 py-16">
-         {/* Vision Statement */}
          <div className="text-center mb-20">
            <h2 className="text-3xl font-bold mb-6">
              Crafting Memorable Experiences
@@ -74,8 +70,6 @@ import { Link } from "react-router-dom";
              creative design, and flawless execution.
            </p>
          </div>
-
-         {/* Info Sections */}
          <div className="grid md:grid-cols-2 gap-12 mb-20">
            {sections.map((section,) => (
              <div
@@ -100,8 +94,6 @@ import { Link } from "react-router-dom";
              </div>
            ))}
          </div>
-
-         {/* Achievements Section */}
          <div className="bg-yellow-50 rounded-lg p-8 mb-20">
            <div className="flex items-center mb-8">
              <Award className="w-8 h-8 text-yellow-600" />
@@ -119,9 +111,6 @@ import { Link } from "react-router-dom";
              ))}
            </div>
          </div>
-
-         {/* Call to Action */}
-
          <OurTeam />
          <Link to="/contactus">
          <div className="text-center">

@@ -7,39 +7,27 @@ import Ourteam from "../pages/Ourteam";
 import Whoweare from "../pages/Whoweare";
 import AboutUs1 from "../pages/Aboutus1";
 import VenuePage from "../pages/Venue";
-import ServicesPage from "../pages/Venue"; // Correct path for ServicesPage component
+import ServicesPage from "../pages/Venue"; 
 import ServiceDetail from "../pages/ServiceDetail";
 import Publication from "../pages/Publication";
 import ContactPage from "../pages/Contact";
 import InspirationPage from "../pages/Inspiration";
 import HospitalityMaterials from "../pages/Material";
-
-// Error Component
 export const Error404 = () => <div>Page not found</div>;
 
-// Service Detail Wrapper Component to handle navigation
 const ServiceDetailWrapper = () => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-
-  const onBookService = () => {
-    alert("Booking initiated!");
-  };
-
-  const onBackClick = () => {
-    navigate("/services");
-  };
-
+  const onBookService = () => { alert("Booking initiated!"); };
+  const onBackClick = () => {   navigate("/services"); };
   return (
     <ServiceDetail
-      serviceId={parseInt(id || "0", 10)} // Pass serviceId as a number
+      serviceId={parseInt(id || "0", 10)}
       onBookService={onBookService}
       onBackClick={onBackClick}
     />
   );
 };
-
-// Route Configuration
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -51,11 +39,8 @@ const routes = createBrowserRouter([
       { path: "whoweare", element: <Whoweare /> },
       { path: "aboutus1", element: <AboutUs1 /> },
       { path: "venue", element: <VenuePage /> },
-      { path: "services", element: <ServicesPage /> }, // List of all services
-      {
-        path: "services/:id",
-        element: <ServiceDetailWrapper />, // Route for each service detail
-      },
+      { path: "services", element: <ServicesPage /> },  
+      { path: "services/:id", element: <ServiceDetailWrapper />,  },
       { path: "publication", element: <Publication /> },
       { path: "contactus", element: <ContactPage /> },
       { path: "insipiration", element: <InspirationPage /> },
@@ -63,5 +48,4 @@ const routes = createBrowserRouter([
     ],
   },
 ]);
-
 export default routes;

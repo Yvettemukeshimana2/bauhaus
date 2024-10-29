@@ -8,9 +8,7 @@ import ach2 from "../assets/images/testmony2.jpg"
  const AboutUs = () => {
    return (
      <div className="p-2 space-y-6">
-       {/* Top row with Mission, Culture, and Vision */}
        <div className="grid grid-cols-1 md:grid-cols-3 bg-yellow-500 gap-6 -mt-7">
-         {/* Our Mission Section */}
          <div className="relative">
            <img
              src={img2}
@@ -29,8 +27,6 @@ import ach2 from "../assets/images/testmony2.jpg"
              </p>
            </div>
          </div>
-
-         {/* Our Culture Section */}
          <div className="relative">
            <img
              src={img1}
@@ -49,8 +45,6 @@ import ach2 from "../assets/images/testmony2.jpg"
              </p>
            </div>
          </div>
-
-         {/* Our Vision Section */}
          <div className="relative">
            <img
              src={img3}
@@ -69,8 +63,6 @@ import ach2 from "../assets/images/testmony2.jpg"
            </div>
          </div>
        </div>
-
-       {/* History Section with Text and Images Side by Side */}
        <div className="flex flex-col md:flex-row gap-6 items-center">
          <div className="md:w-1/2 p-6 bg-gray-50 rounded-lg shadow-lg">
            <h3 className="text-3xl font-bold mb-4 text-yellow-700 text-center">
@@ -95,8 +87,6 @@ import ach2 from "../assets/images/testmony2.jpg"
            />
          </div>
        </div>
-
-       {/* Achievements Section with Text and Images Side by Side */}
        <div className="flex flex-col md:flex-row gap-6 items-center">
          <div className="md:w-1/2 grid grid-cols-2 gap-4 order-2 md:order-1">
            <img

@@ -132,8 +132,6 @@
            ))}
          </div>
        </section>
-
-       {/* Third Section - Instagram Feed */}
        <section className="section3_content container-fluid p-10 ml-20 mr-20 mb-5 bg-yellow-600">
          <div id="instafeed-container" className="flex justify-center">
            <p>
@@ -146,16 +144,12 @@
            </p>
          </div>
        </section>
-
-       {/* Fourth Section */}
        <section
          className="bg-cover bg-center h-96 py-20"
          style={{
            backgroundImage: "url('src/assets/images/service_background.jpg')",
          }}
        ></section>
-
-       {/* Fifth Section - Testimonials */}
        <section className="mb-12 text-center">
          <h2 className="text-2xl font-bold mb-6 text-yellow-500">
            Client Testimonials

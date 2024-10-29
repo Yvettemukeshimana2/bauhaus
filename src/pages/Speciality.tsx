@@ -1,10 +1,6 @@
 import React from "react";
-
- 
 import weddingImage from "../assets/images/planning-picture.jpg";
 import partyImage from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0699.jpg";
-
-// Data array with image paths
 const specialtiesData = [
   {
     title: "WEDDINGS",
@@ -19,23 +15,18 @@ const specialtiesData = [
     image: partyImage,
   },
 ];
-
 const Specialties: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto  ">
       <h2 className="text-4xl font-bold text-center mt-10">Our Specialties</h2>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {specialtiesData.map((specialty, index) => (
           <div key={index} className="  p-6 rounded-lg ">
-            {/* Image Section */}
             <img
               src={specialty.image}
               alt={specialty.title}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-
-            {/* Text Section */}
             <h3 className="text-2xl font-semibold mb-4 text-yellow-600">
               {specialty.title}
             </h3>
@@ -46,5 +37,4 @@ const Specialties: React.FC = () => {
     </div>
   );
 };
-
 export default Specialties;

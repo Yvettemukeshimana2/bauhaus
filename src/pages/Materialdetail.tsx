@@ -3,7 +3,7 @@ import React from "react";
 interface Material {
   type: string;
   price: number;
-  image: string; // URL of the image
+  image: string;  
 }
 
 interface SelectedMaterialDetailProps {

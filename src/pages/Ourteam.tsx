@@ -188,7 +188,6 @@ const teamMembers: TeamMember[] = [
     bio: "Alain leads our marketing initiatives with innovative strategies. His understanding of market trends and customer needs drives our business growth."
   }
 ];
-
 const OurTeam: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">

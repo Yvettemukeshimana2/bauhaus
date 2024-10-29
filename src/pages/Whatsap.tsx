@@ -3,9 +3,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import icon1 from "../assets/images/Muhe-Logo-Black.png";
 import Avatar from "../assets/images/Muhe-Logo-Black.png";
 import { motion } from "framer-motion";
-
-// Mock data for FAQs and related questions
-// Mock data for FAQs and related questions in the specified industries
  const relatedQuestions: Record<string, string[]> = {
    "What types of rooms do you offer?": [
      "Do you have suite rooms available?",
@@ -74,8 +71,6 @@ import { motion } from "framer-motion";
    "Do you offer room service?":
      "Yes, we offer 24/7 room service with a variety of dining options.",
  };
-
-
 const WhatsAppChatButton: React.FC = () => {
   const [chatActive, setChatActive] = useState(false);
   const [conversation, setConversation] = useState<
@@ -84,24 +79,19 @@ const WhatsAppChatButton: React.FC = () => {
   const [remainingQuestions, setRemainingQuestions] = useState(
     Object.keys(faq).slice(0, 5)
   );
-
   const chatContentRef = useRef<HTMLDivElement>(null);
-
   const handleSelectQuestion = (question: string) => {
     const answer = faq[question];
     setConversation((prevConversation) => [
       ...prevConversation,
       { question, answer },
     ]);
-
     const updatedRemainingQuestions = remainingQuestions.filter(
       (q) => q !== question && !relatedQuestions[question]?.includes(q)
     );
     setRemainingQuestions(updatedRemainingQuestions);
   };
-
   const handleSelectAnotherQuestion = () => {
-    // Reset the conversation state
     setConversation([]);
     setRemainingQuestions(Object.keys(faq).slice(0, 5));
   };
@@ -144,8 +134,6 @@ const WhatsAppChatButton: React.FC = () => {
           <FaWhatsapp className="sm:w-6 sm:h-6  w-24 h-24" />
         </button>
       </div>
-
-      {/* Chat Window */}
       {chatActive && (
         <div
           className="fixed bottom-2 right-4 sm:w-96 p-4 bg-white bg-opacity-95 border border-gray-300 rounded-lg max-h-[70vh] overflow-y-96 shadow-md z-50"
@@ -158,7 +146,6 @@ const WhatsAppChatButton: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col"
           >
-            {/* Chat Header */}
             <div className="flex items-center justify-between mb-4 bg-gray-100 p-2 rounded-lg">
               <div className="flex items-center space-x-2">
                 <img
@@ -178,11 +165,8 @@ const WhatsAppChatButton: React.FC = () => {
                 &#x2715;
               </button>
             </div>
-
-            {/* Chat Messages */}
             <div className="text-sm text-gray-700 mb-4">
               <div className="flex flex-col space-y-2">
-                {/* Assistant Initial Messages */}
                 <div className="self-start text-lg text-black rounded-lg">
                   <div className="not-italic text-sm pt-6 pb-2">
                     <motion.div
@@ -193,7 +177,7 @@ const WhatsAppChatButton: React.FC = () => {
                     >
                       <div className="flex items-start space-x-2">
                         <img
-                          src={icon1} // Replace with actual image
+                          src={icon1}  
                           alt="Profile"
                           className="w-8 h-8 rounded-full"
                         />
@@ -214,11 +198,8 @@ const WhatsAppChatButton: React.FC = () => {
                     </motion.div>
                   </div>
                 </div>
-
-                {/* Conversation Flow */}
                 {conversation.map((entry, index) => (
                   <div key={index}>
-                    {/* User Question */}
                     <div className="flex justify-end space-x-2">
                       <motion.div
                         initial={{ opacity: 0, y: 50 }}
@@ -234,8 +215,6 @@ const WhatsAppChatButton: React.FC = () => {
                         </p>
                       </motion.div>
                     </div>
-
-                    {/* Assistant Answer */}
                     <div className="flex space-x-2">
                       <img
                         src={Avatar}
@@ -254,8 +233,6 @@ const WhatsAppChatButton: React.FC = () => {
                         <p className="text-xs text-gray-400 mt-1">11:27 PM</p>
                       </motion.div>
                     </div>
-
-                    {/* Related Sub-Questions */}
                     {relatedQuestions[entry.question]?.length > 0 && (
                       <div className="flex flex-col mt-2 space-y-1">
                         <p className="text-sm font-semibold">
@@ -274,8 +251,6 @@ const WhatsAppChatButton: React.FC = () => {
                     )}
                   </div>
                 ))}
-
-                {/* Ask Another Question Button */}
                 {conversation.length > 0 &&
                   !relatedQuestions[
                     conversation[conversation.length - 1].question
@@ -287,8 +262,6 @@ const WhatsAppChatButton: React.FC = () => {
                       Ask another question
                     </button>
                   )}
-
-                {/* Initial Questions */}
                 {!conversation.length && remainingQuestions.length > 0 && (
                   <ul className="list-none space-y-2 text-black">
                     {remainingQuestions.map((q, index) => (
@@ -305,8 +278,6 @@ const WhatsAppChatButton: React.FC = () => {
                 )}
               </div>
             </div>
-
-            {/* Input Section */}
             <div className="self-start text-black rounded-full mt-4">
               <p className="mt-4 text-gray-600 text-sm">
                 Alternatively, send us a message directly on WhatsApp.
@@ -331,5 +302,4 @@ const WhatsAppChatButton: React.FC = () => {
     </div>
   );
 };
-
 export default WhatsAppChatButton;

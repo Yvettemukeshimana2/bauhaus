@@ -30,14 +30,13 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change every 3 seconds
+    }, 6000);  
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);  
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
-      {/* Image Slider Section */}
+    <div className="flex flex-col items-center"> 
       <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -45,11 +44,10 @@ const Home: React.FC = () => {
             alt="Slide"
             className="object-cover w-full h-full duration-500 ease-in-out"
           />
-
           <div
             className="absolute inset-0 bg-black"
             style={{
-              opacity: 0.4, // Adjust opacity as needed
+              opacity: 0.4, 
             }}
           ></div>
         </div>
@@ -63,13 +61,10 @@ const Home: React.FC = () => {
         </div>
       </div>
       <AboutUs />
-
       <OurServices />
-
       <Specialties />
       <OurProcess />
     </div>
   );
 };
-
 export default Home;

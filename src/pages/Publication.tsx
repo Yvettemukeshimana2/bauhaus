@@ -1,6 +1,6 @@
  import React from "react";
  import { ChevronRight } from "lucide-react";
- import { motion } from "framer-motion"; // Note: You'll need to install framer-motion
+ import { motion } from "framer-motion";  
  import bg from "../assets/images/3U8A0855.jpg";
  import c1 from "../assets/images/image1.avif";
  import c2 from "../assets/images/DSC_3894.jpg";
@@ -159,8 +159,6 @@
            let's Talk
          </motion.button>
        </header>
-
-       {/* What's New Section */}
        <section className="py-16">
          <motion.h2
            initial={{ opacity: 0 }}
@@ -203,8 +201,6 @@
            </div>
          </div>
        </section>
-
-       {/* Tenders Section */}
        <motion.section
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}
@@ -231,8 +227,6 @@
            </div>
          </div>
        </motion.section>
-
-       {/* Careers Section */}
        <motion.section
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}
@@ -296,5 +290,4 @@
      </div>
    );
  };
-
  export default Publication;

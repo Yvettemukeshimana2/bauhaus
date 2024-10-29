@@ -46,7 +46,6 @@ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-
      description: "Delicious and custom menus tailored for every event...",
      image: "https://www.partyhelp4u.com/wp-content/uploads/2024/07/DALL%C2%B7E-2024-07-29-14.06.09-A-featured-image-representing-professional-food-servers-for-hire-showing-a-team-of-well-dressed-servers-at-an-elegant-event-setup.-The-servers-are-we-768x768.webp",
    },
-   // Add other services here
  ];
 
  const ServicesPage: React.FC = () => {
@@ -111,5 +110,4 @@ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-
      </div>
    );
  };
-
  export default ServicesPage;

@@ -31,7 +31,7 @@
            </p>
          </div>
 
-         {/* Step 3: We Manage */}
+      
          <div className="bg-gradient-to-r from-purple-400 to-pink-200 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-700 ease-in-out">
            <h3 className="text-2xl font-semibold mb-4 text-gray-800">
              We Manage
@@ -42,7 +42,7 @@
            </p>
          </div>
 
-         {/* Step 4: We Coordinate */}
+ 
          <div className="bg-gradient-to-r from-blue-400 to-indigo-200 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-700 ease-in-out">
            <h3 className="text-2xl font-semibold mb-4 text-gray-800">
              We Coordinate
