@@ -8,6 +8,8 @@
  import testmony from "../assets/images/testimony1.jpg";
  import testmony1 from "../assets/images/testmony2.jpg";
  import { Link } from "react-router-dom";
+   import { motion } from "framer-motion";
+   import bg from "../assets/images/ourTeam.jpg"
 
  interface Testimonial {
    id: number;
@@ -54,27 +56,49 @@
 
    return (
      <div className="text-white min-h-screen">
-       <div className="bg-black">
-         <section
-           className="banniere animation-section opacity-70 mt-24 min-h-screen flex items-center justify-center py-20 bg-cover bg-center"
-           id="banniere"
-           style={{
-             backgroundImage: "url('src/assets/images/ourTeam.jpg')",
-           }}
-         >
-           <div className="contenu text-center p-10 rounded-md">
-             <h2 className="text-4xl font-bold mb-2">GET INSPIRED</h2>
-             <label className="text-2xl text-yellow-500 font-bold">By</label>
-             <p className="text-3xl font-bold text-yellow-500 mb-10">
-               Muhe Hospitality Services
-             </p>
-             <Link to="/contactus"
-               className="btn animate-bounce px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full transition duration-300"
+       <div className="bg-black relative ">
+         <header className="relative h-96">
+           <motion.img
+             initial={{ scale: 1.2 }}
+             animate={{ scale: 1 }}
+             transition={{ duration: 1.5 }}
+             src={bg}
+             alt="Our Services"
+             className="w-full h-96 object-cover mt-10 opacity-40"
+           />
+           <div className="absolute inset-0 flex flex-col items-center mt-10 justify-center">
+             <motion.div
+               initial={{ y: -100, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 1, delay: 0.5 }}
+               className="text-center space-y-4"
              >
-               LET'S CONNECT
-             </Link>
+               <h2 className="text-6xl font-bold tracking-wider">
+                 GET INSPIRED
+               </h2>
+               <div className="flex items-center justify-center gap-3">
+                 <span className="text-3xl text-yellow-500 font-bold">By</span>
+                 <h3 className="text-4xl font-bold text-yellow-500">
+                   Muhe Hospitality Services
+                 </h3>
+               </div>
+             </motion.div>
+
+             <motion.div
+               initial={{ y: 100, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 1, delay: 0.8 }}
+               className="mt-12"
+             >
+               <Link
+                 to="/contactus"
+                 className="btn px-8 py-4 border-2 border-yellow-500 animate-spin   hover:bg-yellow-600 text-white text-xl font-semibold rounded-full transition duration-300"
+               >
+                 LET'S CONNECT
+               </Link>
+             </motion.div>
            </div>
-         </section>
+         </header>
        </div>
 
        {/* Second Section */}
