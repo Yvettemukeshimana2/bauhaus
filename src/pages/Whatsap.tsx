@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import icon1 from "../assets/images/Muhe-Logo-Black.png";
+import icon1 from "../assets/Muhe-Logo-white.png";
 import Avatar from "../assets/images/Muhe-Logo-Black.png";
 import { motion } from "framer-motion";
  const relatedQuestions: Record<string, string[]> = {
@@ -128,7 +128,7 @@ const WhatsAppChatButton: React.FC = () => {
         </style>
         <button
           onClick={() => setChatActive(!chatActive)}
-          className="fixed bounce bottom-16 right-4 bg-customGreen-700 text-white p-4 rounded-full z-50 shadow-lg hover:bg-customTeal-950 transition-colors duration-300"
+          className="fixed  bottom-16 right-4 bg-customGreen-700 animate-bounce text-white p-4 rounded-full z-50 shadow-lg hover:bg-customTeal-950 transition-colors duration-300"
           style={{ zIndex: 9999 }}
         >
           <FaWhatsapp className="sm:w-6 sm:h-6  w-24 h-24" />
@@ -136,7 +136,7 @@ const WhatsAppChatButton: React.FC = () => {
       </div>
       {chatActive && (
         <div
-          className="fixed bottom-2 right-4 sm:w-96 p-4 bg-white bg-opacity-95 border border-gray-300 rounded-lg max-h-[70vh] overflow-y-96 shadow-md z-50"
+          className="fixed bottom-2 right-4 sm:w-96 p-4 bg-black   border-yellow-500 border-2 rounded-lg max-h-[70vh] overflow-y-96 shadow-md z-50"
           ref={chatContentRef}
           style={{ zIndex: 9999 }}
         >
@@ -146,7 +146,7 @@ const WhatsAppChatButton: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col"
           >
-            <div className="flex items-center justify-between mb-4 bg-gray-100 p-2 rounded-lg">
+            <div className="flex items-center justify-between mb-4 bg-gradient-to-t from-yellow-500 to-yellow-700 p-2 rounded-lg">
               <div className="flex items-center space-x-2">
                 <img
                   src={icon1}
@@ -160,7 +160,7 @@ const WhatsAppChatButton: React.FC = () => {
               </div>
               <button
                 onClick={handleCloseChat}
-                className="text-yellow-700 font-bold hover:text-yellow-800 transition-colors duration-300"
+                className="text-black font-bold hover:text-yellow-800 transition-colors duration-300"
               >
                 &#x2715;
               </button>
@@ -177,11 +177,11 @@ const WhatsAppChatButton: React.FC = () => {
                     >
                       <div className="flex items-start space-x-2">
                         <img
-                          src={icon1}  
+                          src={icon1}
                           alt="Profile"
                           className="w-8 h-8 rounded-full"
                         />
-                        <div className="bg-gray-100 p-2 rounded-lg">
+                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-2 rounded-lg">
                           <p>Need any help? Click here!</p>
                         </div>
                       </div>
@@ -191,7 +191,7 @@ const WhatsAppChatButton: React.FC = () => {
                           alt="Profile"
                           className="w-8 h-8 rounded-full"
                         />
-                        <div className="bg-gray-100 p-2 rounded-lg">
+                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-2 rounded-lg">
                           <p>How can I help you?</p>
                         </div>
                       </div>
@@ -282,9 +282,9 @@ const WhatsAppChatButton: React.FC = () => {
               <p className="mt-4 text-gray-600 text-sm">
                 Alternatively, send us a message directly on WhatsApp.
               </p>
-              <div className="flex gap-5 ">
+              <div className="flex gap-5 animate-pulse ">
                 <p className="mt-5 text-yellow-500">contact us on WhatsApp</p>
-                <button className="mt-2  flex items-center animate-spin bg-green-700 text-white p-4 rounded-full shadow-md hover:bg-green-600 transition-colors duration-300">
+                <button className="mt-2  flex items-center  bg-green-700 text-white p-4 rounded-full shadow-md hover:bg-green-600 transition-colors duration-300">
                   <a
                     href="https://wa.me/+250788501009"
                     target="_blank"

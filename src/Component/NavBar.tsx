@@ -47,10 +47,10 @@
    return (
      <>
        {isMenuOpen && (
-         <div className="inset-0 bg-black bg-opacity-50 z-40"></div>
+         <div className="inset-0 bg-black bg-opacity-50 z-0"></div>
        )}
        <header
-         className={`fixed top-0 left-0 z-50 bg-black w-full h-24 flex justify-center items-center transition-all duration-300 ${
+         className={`fixed top-0 left-0 z-10 bg-black w-full h-24 flex justify-center items-center transition-all duration-300 ${
            isScrolled
              ? "bg-black sm:bg-opacity-75 sm:backdrop-blur-2xl"
              : "bg-transparent"
