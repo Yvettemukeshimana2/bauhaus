@@ -46,8 +46,8 @@
           <div className="grid grid-cols-4 sm:grid-cols-5  mb-6">
             {/* Company Info */}
             <div>
-              <h2 className="text-3xl text-yellow-500 font-bold">{companyName}</h2>
-              <p className="text-yellow-200 text-xl">
+              <h2 className="text-xl text-yellow-500 font-bold">{companyName}</h2>
+              <p className="text-yellow-200 text-lg">
                 Providing quality services since {year}
               </p>
             </div>
@@ -58,7 +58,7 @@
                 key={category}
                 className="flex font-normal ml-8 flex-col mb-6"
               >
-                <span className="text-yellow-500  font-bold text-2xl mb-3">
+                <span className="text-yellow-500  font-bold text-xl mb-3">
                   {category}
                 </span>
                 <div className="  flex flex-col">
@@ -68,7 +68,7 @@
                       <a
                         key={link.label}
                         href={link.href}
-                        className="hover:text-yellow-400 text-yellow-200 text-xl"
+                        className="hover:text-yellow-400 text-yellow-200 text-lg"
                       >
                         {link.label}
                       </a>
@@ -79,10 +79,10 @@
 
             {/* Location Info */}
             <div className="flex font-normal flex-col mb-6 ">
-              <span className="text-yellow-500 font-bold ml-8 mb-3 text-2xl">
+              <span className="text-yellow-500 font-bold ml-8 mb-3 text-xl">
                 Contact Us
               </span>
-              <div className=" text-yellow-200 ml-8 text-xl">
+              <div className=" text-yellow-200 ml-8 text-lg">
                 <p>Phone: +250788501009</p>
                 <p>
                   Email:{" "}

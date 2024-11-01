@@ -1,6 +1,8 @@
- import React from "react";
+ import React, { useState } from "react";
  import { useNavigate } from "react-router-dom";
-import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-Harold-Washington-Library_0636.jpg"
+ import Modal from "../pages/Venuemodal"; // Add this import
+ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-Harold-Washington-Library_0636.jpg";
+
  interface Service {
    id: number;
    title: string;
@@ -47,17 +49,178 @@ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-
      image: "https://www.partyhelp4u.com/wp-content/uploads/2024/07/DALL%C2%B7E-2024-07-29-14.06.09-A-featured-image-representing-professional-food-servers-for-hire-showing-a-team-of-well-dressed-servers-at-an-elegant-event-setup.-The-servers-are-we-768x768.webp",
    },
  ];
+   // ... your existing services array stays exactly the same ...
+  
+
+ // BookingForm component to be used inside the modal
+ const BookingForm: React.FC<{
+   selectedService?: Service;
+   onClose: () => void;
+ }> = ({ selectedService, onClose }) => {
+   const [formData, setFormData] = useState({
+     contactName: "",
+     email: "",
+     startDate: "",
+     startTime: "",
+     endDate: "",
+     endTime: "",
+     eventType: selectedService?.title || "",
+   });
+
+   const handleSubmit = (e: React.FormEvent) => {
+     e.preventDefault();
+     console.log("Form submitted:", formData);
+     onClose();
+   };
+
+   const handleChange = (
+     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+   ) => {
+     const { name, value } = e.target;
+     setFormData((prev) => ({
+       ...prev,
+       [name]: value,
+     }));
+   };
+
+   return (
+     <form onSubmit={handleSubmit} className="space-y-4">
+       <div>
+         <label className="block text-sm font-medium text-gray-700 mb-1">
+           Contact Name
+         </label>
+         <input
+           type="text"
+           name="contactName"
+           value={formData.contactName}
+           onChange={handleChange}
+           required
+           className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           placeholder="Your name"
+         />
+       </div>
+
+       <div>
+         <label className="block text-sm font-medium text-gray-700 mb-1">
+           Email
+         </label>
+         <input
+           type="email"
+           name="email"
+           value={formData.email}
+           onChange={handleChange}
+           required
+           className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           placeholder="your.email@example.com"
+         />
+       </div>
+
+       <div>
+         <label className="block text-sm font-medium text-gray-700 mb-1">
+           Event Type
+         </label>
+         <select
+           name="eventType"
+           value={formData.eventType}
+           onChange={handleChange}
+           required
+           className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+         >
+           <option value="">Select Event Type</option>
+           {services.map((service) => (
+             <option key={service.id} value={service.title}>
+               {service.title}
+             </option>
+           ))}
+         </select>
+       </div>
+
+       <div className="grid grid-cols-2 gap-4">
+         <div>
+           <label className="block text-sm font-medium text-gray-700 mb-1">
+             Start Date
+           </label>
+           <input
+             type="date"
+             name="startDate"
+             value={formData.startDate}
+             onChange={handleChange}
+             required
+             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           />
+         </div>
+         <div>
+           <label className="block text-sm font-medium text-gray-700 mb-1">
+             Start Time
+           </label>
+           <input
+             type="time"
+             name="startTime"
+             value={formData.startTime}
+             onChange={handleChange}
+             required
+             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           />
+         </div>
+       </div>
+
+       <div className="grid grid-cols-2 gap-4">
+         <div>
+           <label className="block text-sm font-medium text-gray-700 mb-1">
+             End Date
+           </label>
+           <input
+             type="date"
+             name="endDate"
+             value={formData.endDate}
+             onChange={handleChange}
+             required
+             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           />
+         </div>
+         <div>
+           <label className="block text-sm font-medium text-gray-700 mb-1">
+             End Time
+           </label>
+           <input
+             type="time"
+             name="endTime"
+             value={formData.endTime}
+             onChange={handleChange}
+             required
+             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+           />
+         </div>
+       </div>
+
+       <button
+         type="submit"
+         className="w-full bg-yellow-600 text-white py-2 px-4 rounded hover:bg-yellow-700 transition-colors duration-200"
+       >
+         Book Now
+       </button>
+     </form>
+   );
+ };
 
  const ServicesPage: React.FC = () => {
    const navigate = useNavigate();
+   // Add these state variables
+   const [isModalOpen, setIsModalOpen] = useState(false);
+   const [selectedService, setSelectedService] = useState<
+     Service | undefined
+   >();
 
    const handleReadMore = (id: number) => {
      navigate(`/services/${id}`);
    };
 
+   // Update this function
    const handleBookService = (service: Service) => {
-       console.log("Booking service:", service);
+     setSelectedService(service);
+     setIsModalOpen(true);
    };
+
    return (
      <div className="bg-gray-100 min-h-screen">
        <header className="relative bg-black">
@@ -73,7 +236,9 @@ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-
            BATO <span className="text-yellow-500 ">BATARI GITO</span>
          </h1>
        </header>
-       <div className=" font-bold text-3xl flex justify-center items-center p-2 text-yellow-600">WE PLANN YOUR EVENT</div>
+       <div className="font-bold text-3xl flex justify-center items-center p-2 text-yellow-600">
+         WE PLANN YOUR EVENT
+       </div>
        <section className="p-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
          {services.map((service) => (
            <div
@@ -106,8 +271,21 @@ import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-
            </div>
          ))}
        </section>
-        
+
+       {/* Add the Modal component here, right before the closing div */}
+       <Modal
+         isOpen={isModalOpen}
+         onClose={() => setIsModalOpen(false)}
+         title={`Book ${selectedService?.title || "Service"}`}
+         maxWidth="max-w-lg"
+       >
+         <BookingForm
+           selectedService={selectedService}
+           onClose={() => setIsModalOpen(false)}
+         />
+       </Modal>
      </div>
    );
  };
+
  export default ServicesPage;

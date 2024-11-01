@@ -47,10 +47,10 @@
    return (
      <>
        {isMenuOpen && (
-         <div className="inset-0 bg-black bg-opacity-50 z-0"></div>
+         <div className="inset-0 bg-black bg-opacity-50 z-50"></div>
        )}
        <header
-         className={`fixed top-0 left-0 z-10 bg-black w-full h-24 flex justify-center items-center transition-all duration-300 ${
+         className={`fixed top-0 left-0 z-50 bg-black w-full h-24 flex justify-center items-center transition-all duration-300 ${
            isScrolled
              ? "bg-black sm:bg-opacity-75 sm:backdrop-blur-2xl"
              : "bg-transparent"
@@ -112,7 +112,7 @@
                      onClick={handleMenuItemClick}
                    />
                    <FiChevronDown
-                     className={`absolute right-0 left-11 w-8 h-8 text-white top-1/2 transform -translate-y-1/2 ml-5 transition-transform ${
+                     className={`absolute right-0 left-11 w-6 h-6 text-white top-1/2 transform -translate-y-1/2 ml-5 transition-transform ${
                        isServicesOpen ? "rotate-180" : ""
                      }`}
                    />

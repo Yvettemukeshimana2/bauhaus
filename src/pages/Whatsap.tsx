@@ -282,7 +282,7 @@ const WhatsAppChatButton: React.FC = () => {
               <p className="mt-4 text-gray-600 text-sm">
                 Alternatively, send us a message directly on WhatsApp.
               </p>
-              <div className="flex gap-5 animate-pulse ">
+              <div className="flex gap-5 animate-pulse                   ">
                 <p className="mt-5 text-yellow-500">contact us on WhatsApp</p>
                 <button className="mt-2  flex items-center  bg-green-700 text-white p-4 rounded-full shadow-md hover:bg-green-600 transition-colors duration-300">
                   <a

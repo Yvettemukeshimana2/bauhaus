@@ -1,6 +1,7 @@
- import React, { useState, useEffect } from "react";
-  import { motion } from "framer-motion";
-  import bg from "../assets/images/DSC_3894.jpg"
+ import React, { useState } from "react";
+ import { motion } from "framer-motion";
+ import bg from "../assets/images/DSC_3894.jpg";
+ import BookingModal, { BookingFormData } from "./Materialmodel";
 
  interface Material {
    id: string;
@@ -18,7 +19,16 @@
  }
 
  const HospitalityMaterials: React.FC = () => {
+   const [selectedMaterial, setSelectedMaterial] = useState<Material | null>(
+     null
+   );
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
    const [materials] = useState<Material[]>([
+    
+    
+    
+      
      {
        id: "1",
        name: "Premium Tent",
@@ -124,13 +134,37 @@
        },
      },
    ]);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //    ... your existing materials array ...
+   
 
-   useEffect(() => {
-     //  
-   }, []);
+   const handleBookNow = (material: Material) => {
+     setSelectedMaterial(material);
+     setIsModalOpen(true);
+   };
+
+   const handleCloseModal = () => {
+     setIsModalOpen(false);
+     setSelectedMaterial(null);
+   };
+
+   const handleBookingSubmit = (data: BookingFormData) => {
+     // Handle the booking submission here
+     console.log("Booking submitted:", data);
+     // You can add API calls or other logic here
+   };
 
    return (
-     <div className="container min-h-full max-w-screen-2xl ">
+     <div className="container min-h-full max-w-screen-2xl">
        <header className="relative  bg-black overflow-hidden">
          <motion.img
            initial={{ scale: 1.2 }}
@@ -144,7 +178,7 @@
            initial={{ y: -100, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
            transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/2 left-1/2 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
+           className="text-5xl absolute top-1/2 left-96 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
          >
            BATO <span className="text-yellow-500  ">BATARI GITO</span>
          </motion.h1>
@@ -195,14 +229,27 @@
                <p className="text-gray-300 font-bold mb-4">
                  ${material.price} per {material.priceUnit}
                </p>
-               <button className="text-yellow-500 border-2 border-yellow-500 hover:text-yellow-700 font-bold py-2 px-4 rounded">
+               <button
+                 onClick={() => handleBookNow(material)}
+                 className="text-yellow-500 border-2 border-yellow-500 hover:text-yellow-700 font-bold py-2 px-4 rounded"
+               >
                  Book Now
                </button>
              </div>
            </div>
          ))}
        </div>
+
+       {selectedMaterial && (
+         <BookingModal
+           isOpen={isModalOpen}
+           onClose={handleCloseModal}
+           material={selectedMaterial}
+           onSubmit={handleBookingSubmit}
+         />
+       )}
      </div>
    );
  };
+
  export default HospitalityMaterials;

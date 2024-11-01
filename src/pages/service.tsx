@@ -2,7 +2,7 @@ import React from "react";
 import im1 from "../assets/images/mettings.jpg";
 import im2 from "../assets/images/LOLA-Event-Productions-Wedding-Planning-Tent-RichHarvestFarm-034.jpg";
 import im3 from "../assets/images/image1.avif";
-
+import { Link } from "react-router-dom";
 const services = [
   {
     img: im1,
@@ -23,7 +23,6 @@ const services = [
     link: "/services/event-coordination",
   },
 ];
-
 const OurServices: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-10 z-20">
@@ -41,11 +40,11 @@ const OurServices: React.FC = () => {
             />
             <h2 className="font-semibold text-xl mb-2">{service.title}</h2>
             <p className="text-center mb-3">{service.description}</p>
-            <a href={service.link}>
+            < Link to="/venue">
               <button className="mt-2 bg-white text-black border-2 border-yellow-700 hover:text-white hover:bg-yellow-700 py-2 px-4 rounded">
                 See More
               </button>
-            </a>
+             </Link>
           </div>
         ))}
       </div>
@@ -57,5 +56,4 @@ const OurServices: React.FC = () => {
     </div>
   );
 };
-
 export default OurServices;

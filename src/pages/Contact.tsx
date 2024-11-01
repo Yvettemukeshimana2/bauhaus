@@ -43,7 +43,7 @@
            initial={{ y: -100, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
            transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/2 left-1/2 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
+           className="text-5xl absolute top-1/2 left-96 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
          >
            BATO <span className="text-yellow-500  ">BATARI GITO</span>
          </motion.h1>
