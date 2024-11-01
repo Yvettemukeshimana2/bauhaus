@@ -201,7 +201,7 @@
            let's Talk
          </motion.button>
        </header>
-       <h1 className="text-3xl font-bold mb-8 text-center text-yellow-500">
+       <h1 className="text-4xl font-bold mb  mt-5 text-center text-yellow-500">
          Rental Materials
        </h1>
        <div className="grid grid-cols-1 p-10 md:grid-cols-4 w-full gap-8">
