@@ -43,18 +43,18 @@ import { Link } from "react-router-dom";
            alt="Event Space"
            className="w-full bg-black h-96 object-cover opacity-40"
          />
-         <div className="absolute inset-0 bg-gradient-to-r  mb-16 from-black/70 to-black/50 flex justify-center items-center">
-           <div className="container mx-auto px-6 ml-56  ">
-             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+         <div className="absolute inset-0 bg-gradient-to-r  mb-16    flex justify-center items-center">
+           <div className="container mx-auto px-6 ml-56  top-36  absolute  ">
+             <h1 className="text-5xl md:text-4xl text-center font-bold text-white mb-4">
                Welcome to <span className="text-yellow-500">MHC</span>
              </h1>
-             <h1 className="text-5xl md:text-5xl font-bold text-center
+             <h1 className="text-5xl md:text-4xl  font-bold text-center
               text-white mb-4">
                BATO  <span className="text-yellow-500">BATARI GITO</span>
              </h1>
              <p className="text-2xl pb-5 text-gray-200 font-semibold ">
                Creating extraordinary events that leave lasting impressions.
-               Your vision, our expertise, perfect execution.
+               Your vision, <br/>our expertise, perfect execution.
              </p>
            </div>
          </div>
