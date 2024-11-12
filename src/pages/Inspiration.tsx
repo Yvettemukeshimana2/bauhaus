@@ -144,12 +144,12 @@
            </p>
          </div>
        </section>
-       <section
+       {/* <section
          className="bg-cover bg-center h-96 py-20"
          style={{
            backgroundImage: "url('src/assets/images/service_background.jpg')",
          }}
-       ></section>
+       ></section> */}
        <section className="mb-12 text-center">
          <h2 className="text-2xl font-bold mb-6 text-yellow-500">
            Client Testimonials
