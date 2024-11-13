@@ -226,6 +226,7 @@
        <header className="relative bg-black">
          <img
            src={img1}
+           loading="lazy"
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />
@@ -248,6 +249,7 @@
              <img
                src={service.image}
                alt={service.title}
+               loading="lazy"
                className="w-full h-40 object-cover"
              />
              <div className="p-6">

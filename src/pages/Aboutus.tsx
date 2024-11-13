@@ -13,6 +13,7 @@ import ach2 from "../assets/images/testmony2.jpg"
            <img
              src={img2}
              alt="Our Mission"
+             loading="lazy"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
@@ -31,6 +32,7 @@ import ach2 from "../assets/images/testmony2.jpg"
            <img
              src={img1}
              alt="Our Culture"
+             loading="lazy"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
@@ -49,6 +51,7 @@ import ach2 from "../assets/images/testmony2.jpg"
            <img
              src={img3}
              alt="Our Vision"
+             loading="lazy"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
@@ -78,11 +81,13 @@ import ach2 from "../assets/images/testmony2.jpg"
            <img
              src={h1}
              alt="History Image 1"
+             loading="lazy"
              className="w-full h-48 object-cover rounded-lg shadow-md"
            />
            <img
              src={h2}
              alt="History Image 2"
+             loading="lazy"
              className="w-full h-48 object-cover rounded-lg shadow-md"
            />
          </div>
@@ -92,11 +97,13 @@ import ach2 from "../assets/images/testmony2.jpg"
            <img
              src={ach2}
              alt="Achievements Image 1"
+             loading="lazy"
              className="w-full h-48 object-cover rounded-lg shadow-md"
            />
            <img
-             src= {ach1}
+             src={ach1}
              alt="Achievements Image 2"
+             loading="lazy"
              className="w-full h-48 object-cover rounded-lg shadow-md"
            />
          </div>

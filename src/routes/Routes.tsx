@@ -4,7 +4,6 @@ import { createBrowserRouter, useParams, useNavigate } from "react-router-dom";
 import AppLayout from "../layout.tsx/Applayout";
 import Home from "../pages/Home";
 import Ourteam from "../pages/Ourteam";
-import Whoweare from "../pages/Whoweare";
 import AboutUs1 from "../pages/Aboutus1";
 import VenuePage from "../pages/Venue";
 import ServicesPage from "../pages/Venue"; 
@@ -36,7 +35,6 @@ const routes = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       { path: "ourteam", element: <Ourteam /> },
-      { path: "whoweare", element: <Whoweare /> },
       { path: "aboutus1", element: <AboutUs1 /> },
       { path: "venue", element: <VenuePage /> },
       { path: "services", element: <ServicesPage /> },  

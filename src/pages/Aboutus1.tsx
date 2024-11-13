@@ -41,6 +41,7 @@ import { Link } from "react-router-dom";
          <img
            src={bg}
            alt="Event Space"
+           loading="lazy"
            className="w-full bg-black h-96 object-cover opacity-40"
          />
          <div className="absolute inset-0 bg-gradient-to-r  mb-16    flex justify-center items-center">
@@ -48,13 +49,16 @@ import { Link } from "react-router-dom";
              <h1 className="text-5xl md:text-4xl text-center font-bold text-white mb-4">
                Welcome to <span className="text-yellow-500">MHC</span>
              </h1>
-             <h1 className="text-5xl md:text-4xl  font-bold text-center
-              text-white mb-4">
-               BATO  <span className="text-yellow-500">BATARI GITO</span>
+             <h1
+               className="text-5xl md:text-4xl  font-bold text-center
+              text-white mb-4"
+             >
+               BATO <span className="text-yellow-500">BATARI GITO</span>
              </h1>
              <p className="text-2xl pb-5 text-gray-200 font-semibold ">
                Creating extraordinary events that leave lasting impressions.
-               Your vision, <br/>our expertise, perfect execution.
+               Your vision, <br />
+               our expertise, perfect execution.
              </p>
            </div>
          </div>
@@ -71,7 +75,7 @@ import { Link } from "react-router-dom";
            </p>
          </div>
          <div className="grid md:grid-cols-2 gap-12 mb-20">
-           {sections.map((section,) => (
+           {sections.map((section) => (
              <div
                key={section.title}
                className="bg-gray-50 rounded-lg p-8 shadow-lg"
@@ -113,11 +117,11 @@ import { Link } from "react-router-dom";
          </div>
          <OurTeam />
          <Link to="/contactus">
-         <div className="text-center">
-           <button className="bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-colors">
-             Contact Us Today
-           </button>
-         </div>
+           <div className="text-center">
+             <button className="bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-colors">
+               Contact Us Today
+             </button>
+           </div>
          </Link>
        </div>
      </div>

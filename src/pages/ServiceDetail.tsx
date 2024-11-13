@@ -285,10 +285,10 @@
 
    return (
      <div className="mt-24 h-full">
-    
        <header className="relative bg-black">
          <img
            src={img1}
+           loading="lazy"
            alt="Our Services"
            className="w-full h-48 object-cover opacity-40 bg-black"
          />
@@ -297,18 +297,17 @@
          </h1>
        </header>
 
-     
        <header className="mb-8 p-10 text-center">
          <h1 className="text-4xl font-bold text-yellow-500">{service.title}</h1>
          <p className="mt-4 text-lg text-gray-600">{service.description}</p>
        </header>
 
- 
        <div className="flex gap-4 mb-12 pl-20 pr-20 h-72">
          {service.images.slice(0, 3).map((image, index) => (
            <div key={index} className="flex-1 overflow-hidden rounded-lg">
              <img
                src={image}
+               loading="lazy"
                alt={`${service.title} image ${index + 1}`}
                className="w-full h-full object-cover"
              />
@@ -316,10 +315,13 @@
          ))}
        </div>
 
-  
        <section className="mb-12 bg-yellow-500 opacity-70 rounded-lg p-8 text-center">
-         <h2 className="text-3xl font-bold mb-4 text-yellow-200">About This Service</h2>
-         <p className="text-black mb-8 font-normal">{service.fullDescription}</p>
+         <h2 className="text-3xl font-bold mb-4 text-yellow-200">
+           About This Service
+         </h2>
+         <p className="text-black mb-8 font-normal">
+           {service.fullDescription}
+         </p>
 
          <h3 className="text-xl font-semibold mb-4 text-white">Features</h3>
          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 pl-44">
@@ -332,7 +334,9 @@
          </ul>
        </section>
        <section className="mb-12 text-center">
-         <h2 className="text-2xl font-bold mb-6 text-yellow-500">Client Testimonials</h2>
+         <h2 className="text-2xl font-bold mb-6 text-yellow-500">
+           Client Testimonials
+         </h2>
          <div className="grid gap-6 md:grid-cols-2 p-10">
            {service.testimonials.map((testimonial) => (
              <article
@@ -342,6 +346,7 @@
                <div className="flex items-center mb-4">
                  <img
                    src={testimonial.avatar}
+                   loading="lazy"
                    alt={`${testimonial.name}'s avatar`}
                    className="w-20 h-20 rounded-full mr-4"
                  />

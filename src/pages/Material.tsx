@@ -214,6 +214,7 @@
            >
              <img
                src={material.imageUrl}
+               loading="lazy"
                alt={material.name}
                className="w-full h-96 object-cover"
              />

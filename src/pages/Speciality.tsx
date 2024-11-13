@@ -24,6 +24,7 @@ const Specialties: React.FC = () => {
           <div key={index} className="  p-6 rounded-lg ">
             <img
               src={specialty.image}
+              loading="lazy"
               alt={specialty.title}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />

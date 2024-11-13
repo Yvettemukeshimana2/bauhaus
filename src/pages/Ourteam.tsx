@@ -92,13 +92,16 @@ const CEOSection: React.FC = () => {
         <div className="lg:w-1/3">
           <img
             src={salto}
+            loading="lazy"
             alt="Salton MUHETO"
             className="rounded-lg  w-full object-cover"
           />
         </div>
         <div className="lg:w-2/3 space-y-4">
           <h2 className="text-3xl font-bold text-gray-800">Salton MUHETO</h2>
-          <h3 className="text-xl font-semibold text-yellow-700">CEO & Founder</h3>
+          <h3 className="text-xl font-semibold text-yellow-700">
+            CEO & Founder
+          </h3>
           <ExpandableText text={ceoContent} maxLength={500} />
         </div>
       </CardContent>
@@ -112,6 +115,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
       <div className="mb-6">
         <img
           src={member.image}
+          loading="lazy"
           alt={member.name}
           className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg"
         />
@@ -123,7 +127,11 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
       </div>
       <div className="flex justify-center space-x-6 mt-6">
         <SocialLink href={member.email} icon={<Mail />} label="Email" />
-        <SocialLink href={member.linkedin} icon={<Linkedin />} label="LinkedIn" />
+        <SocialLink
+          href={member.linkedin}
+          icon={<Linkedin />}
+          label="LinkedIn"
+        />
         <SocialLink href={member.phone} icon={<Phone />} label="Phone" />
       </div>
     </CardContent>

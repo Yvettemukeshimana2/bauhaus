@@ -35,16 +35,17 @@ const OurServices: React.FC = () => {
           >
             <img
               src={service.img}
+              loading="lazy"
               alt={service.title}
               className="rounded mb-3 w-full h-32 object-cover"
             />
             <h2 className="font-semibold text-xl mb-2">{service.title}</h2>
             <p className="text-center mb-3">{service.description}</p>
-            < Link to="/venue">
+            <Link to="/venue">
               <button className="mt-2 bg-white text-black border-2 border-yellow-700 hover:text-white hover:bg-yellow-700 py-2 px-4 rounded">
                 See More
               </button>
-             </Link>
+            </Link>
           </div>
         ))}
       </div>

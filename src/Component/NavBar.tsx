@@ -74,6 +74,7 @@
              <img
                src={Logo}
                alt="Logo"
+               loading="lazy"
                width="150px"
                className="flex justify-start mr-80"
              />

@@ -64,6 +64,7 @@
        <div className="h-48 overflow-hidden">
          <img
            src={imageUrl}
+           loading="lazy"
            alt={title}
            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
          />
@@ -129,6 +130,7 @@
            animate={{ scale: 1 }}
            transition={{ duration: 1.5 }}
            src={bg}
+           loading="lazy"
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />

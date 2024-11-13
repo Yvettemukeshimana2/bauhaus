@@ -63,6 +63,7 @@
              animate={{ scale: 1 }}
              transition={{ duration: 1.5 }}
              src={bg}
+             loading="lazy"
              alt="Our Services"
              className="w-full h-96 object-cover mt-10 opacity-40"
            />
@@ -163,6 +164,7 @@
                <div className="flex items-center mb-4">
                  <img
                    src={testimonial.avatar}
+                   loading="lazy"
                    alt={`${testimonial.name}'s avatar`}
                    className="w-20 h-20 rounded-full mr-4"
                  />

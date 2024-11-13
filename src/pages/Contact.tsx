@@ -27,7 +27,7 @@
      <motion.div
        initial={{ scale: 1.2 }}
        animate={{ scale: 1 }}
-       transition={{ duration: 0}}
+       transition={{ duration: 0 }}
        className="min-h-screen bg-gray-50 "
      >
        <header className="relative item-center bg-black overflow-hidden">
@@ -36,6 +36,7 @@
            animate={{ scale: 1 }}
            transition={{ duration: 1.5 }}
            src={bg}
+           loading="lazy"
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />

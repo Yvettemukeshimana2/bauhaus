@@ -20,6 +20,7 @@ const SelectedMaterialDetail: React.FC<SelectedMaterialDetailProps> = ({
       <h2 className="text-xl font-bold">Selected Material</h2>
       <img
         src={material.image}
+        loading="lazy"
         alt={material.type}
         className="h-64 w-full object-cover rounded"
       />

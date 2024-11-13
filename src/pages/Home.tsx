@@ -36,18 +36,19 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center"> 
+    <div className="flex flex-col items-center">
       <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={images[currentIndex].src}
+            loading="lazy"
             alt="Slide"
             className="object-cover w-full h-full duration-500 ease-in-out"
           />
           <div
             className="absolute inset-0 bg-black"
             style={{
-              opacity: 0.4, 
+              opacity: 0.4,
             }}
           ></div>
         </div>
