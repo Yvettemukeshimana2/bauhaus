@@ -41,6 +41,8 @@ const Home: React.FC = () => {
         <div className="absolute inset-0">
           <img
             src={images[currentIndex].src}
+            srcSet={`${images[currentIndex].src}?w=500 500w, ${images[currentIndex].src}?w=1000 1000w`}
+            sizes="(max-width: 768px) 500px, 1000px"
             loading="lazy"
             alt="Slide"
             className="object-cover w-full h-full duration-500 ease-in-out"
