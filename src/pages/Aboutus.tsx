@@ -8,7 +8,7 @@ import ach2 from "../assets/images/testmony2.jpg"
  const AboutUs = () => {
    return (
      <div className="p-2 space-y-6">
-       <div className="grid grid-cols-1 md:grid-cols-3 bg-yellow-500 gap-6 -mt-7">
+       <div className="grid grid-cols-2 md:grid-cols-3  md:bg-yellow-500 gap-6 -mt-7">
          <div className="relative">
            <img
              src={img2}

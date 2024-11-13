@@ -27,7 +27,7 @@ const OurServices: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-10 z-20">
       <h1 className="text-3xl font-bold mb-6">Our Services</h1>
-      <div className="flex flex-wrap gap-10 mb-5 justify-center">
+      <div className="grid grid-cols-3  gap-10 mb-5 justify-center">
         {services.map((service, index) => (
           <div
             key={index}
