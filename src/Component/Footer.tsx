@@ -41,13 +41,15 @@
     const categories = ["Useful Links", "Services"];
 
     return (
-      <footer className="bg-yellow-700  text-white py-8">
+      <footer className="bg-gradient-to-b from-yellow-800 to-yellow-500  text-white py-8">
         <div className="container mx-auto px-4 ">
           <div className="grid grid-cols-4 sm:grid-cols-5  mb-6">
             {/* Company Info */}
             <div>
-              <h2 className="text-xl text-yellow-500 font-bold">{companyName}</h2>
-              <p className="text-yellow-200 text-lg">
+              <h2 className="text-xl text-yellow-500 font-bold">
+                {companyName}
+              </h2>
+              <p className="text-white text-lg">
                 Providing quality services since {year}
               </p>
             </div>
@@ -68,7 +70,7 @@
                       <a
                         key={link.label}
                         href={link.href}
-                        className="hover:text-yellow-400 text-yellow-200 text-lg"
+                        className="hover:text-white text-white text-lg"
                       >
                         {link.label}
                       </a>
@@ -82,7 +84,7 @@
               <span className="text-yellow-500 font-bold ml-8 mb-3 text-xl">
                 Contact Us
               </span>
-              <div className=" text-yellow-200 ml-8 text-lg">
+              <div className=" text-white ml-8 text-lg">
                 <p>Phone: +250788501009</p>
                 <p>
                   Email:{" "}
@@ -99,14 +101,14 @@
 
             {/* Social Media Links */}
             <div className="flex flex-col  ">
-              <div className="flex space-x-6 mt-6 md:mt-0 ml-32">
+              <div className="flex space-x-6 mt-6 md:mt-0 ml-10">
                 {["twitter", "facebook", "instagram"].map((platform) => (
                   <a
                     key={platform}
                     href={`https://${platform}.com`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=" text-yellow-500  w-16 h-16 hover:text-yellow-400"
+                    className=" text-white  w-16 h-16 "
                   >
                     <svg
                       fill="currentColor"
@@ -126,15 +128,15 @@
                   </a>
                 ))}
               </div>
-               <Link to="/venue">
-              <button className=" md:block hidden justify-end ml-9 mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
-                Work With Us
-              </button>
-            </Link>
+              <Link to="/venue">
+                <button className=" md:block hidden justify-end ml-9 mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
+                  Work With Us
+                </button>
+              </Link>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-6 pt-6 text-center">
-            <p className="text-yellow-500 text-lg font-semibold">
+            <p className="text-white text-lg font-semibold">
               © {year} {companyName}. All rights reserved.
             </p>
           </div>

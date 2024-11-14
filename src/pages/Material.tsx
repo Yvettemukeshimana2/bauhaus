@@ -174,32 +174,34 @@
            alt="Our Services"
            className="w-full h-96 mt-20 object-cover opacity-40 bg-black"
          />
-         <motion.h1
-           initial={{ y: -100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/2 left-96 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
-         >
-           BATO <span className="text-yellow-500  ">BATARI GITO</span>
-         </motion.h1>
-         <motion.h1
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.8 }}
-           className="absolute bottom-24 left-80 animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold"
-         >
-           MHS(Muhe Hospitality Service)
-         </motion.h1>
-         <motion.button
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 1.1 }}
-           whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.95 }}
-           className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md left-96 ml-32 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
-         >
-           let's Talk
-         </motion.button>
+         <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
+           <motion.h1
+             initial={{ y: -100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 0.5 }}
+             className="text-5xl absolute top-1/2 l transform animate-bounce   md:text-5xl font-bold text-white text-center"
+           >
+             BATO <span className="text-yellow-500  ">BATARI GITO</span>
+           </motion.h1>
+           <motion.h1
+             initial={{ y: 100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 0.8 }}
+             className="absolute bottom-24  animate-pulse  text-white text-4xl font-bold"
+           >
+             MHS(Muhe Hospitality Service)
+           </motion.h1>
+           <motion.button
+             initial={{ y: 100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 1.1 }}
+             whileHover={{ scale: 1.1 }}
+             whileTap={{ scale: 0.95 }}
+             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md  transform   text-white text-4xl font-bold hover:bg-yellow-500  duration-300"
+           >
+             let's Talk
+           </motion.button>
+         </div>
        </header>
        <h1 className="text-4xl font-bold mb  mt-5 text-center text-yellow-500">
          Rental Materials

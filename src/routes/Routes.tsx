@@ -41,7 +41,7 @@ const routes = createBrowserRouter([
       { path: "services/:id", element: <ServiceDetailWrapper />,  },
       { path: "publication", element: <Publication /> },
       { path: "contactus", element: <ContactPage /> },
-      { path: "insipiration", element: <InspirationPage /> },
+      { path: "insipirations", element: <InspirationPage /> },
       { path: "material", element: <HospitalityMaterials /> },
     ],
   },

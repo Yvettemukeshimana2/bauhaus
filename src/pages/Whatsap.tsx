@@ -136,7 +136,7 @@ const WhatsAppChatButton: React.FC = () => {
       </div>
       {chatActive && (
         <div
-          className="fixed bottom-2 right-4 sm:w-96 p-4 bg-black   border-yellow-500 border-2 rounded-lg max-h-[70vh] overflow-y-96 shadow-md z-50"
+          className="fixed bottom-2 right-4  sm:w-96 p-4 bg-white   border-yellow-500 border-2 rounded-lg max-h-[70vh] overflow-y-96 shadow-md z-50"
           ref={chatContentRef}
           style={{ zIndex: 9999 }}
         >
@@ -149,7 +149,7 @@ const WhatsAppChatButton: React.FC = () => {
             <div className="flex items-center justify-between mb-4 bg-gradient-to-t from-yellow-500 to-yellow-700 p-2 rounded-lg">
               <div className="flex items-center space-x-2">
                 <img
-                  src={icon1}
+                  src={Avatar}
                   alt="Profile"
                   className="w-10 h-10 rounded-full"
                 />

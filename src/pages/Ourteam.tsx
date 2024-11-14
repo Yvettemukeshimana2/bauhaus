@@ -45,7 +45,7 @@ const BannerSection: React.FC = () => (
   <section className="relative bg-gradient-to-r from-yellow-50 to-yellow-100 py-10">
     <div className="absolute inset-0 bg-opacity-50"></div>
     <div className=" container mx-auto text-center">
-      <h1 className="text-4xl font-bold text-yellow-700 mb-4">
+      <h1 className="text-4xl font-bold text-yellow-500 mb-4">
         <h3 className="text-2xl font-bold mb-4">
           Ready to Create Something Amazing?
         </h3>
@@ -72,8 +72,8 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({ text, maxLength = 250 }
       {shouldTruncate && (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="px-6 py-2 border-2 border-yellow-700 text-yellow-700 
-                     hover:bg-yellow-700 hover:text-white rounded-md 
+          className="px-6 py-2 border-2 border-yellow-500 text-yellow-500 
+                     hover:bg-yellow-600 hover:text-white rounded-md 
                      transition-all duration-300 font-semibold"
         >
           {isExpanded ? "Show Less" : "Read More"}
@@ -99,7 +99,7 @@ const CEOSection: React.FC = () => {
         </div>
         <div className="lg:w-2/3 space-y-4">
           <h2 className="text-3xl font-bold text-gray-800">Salton MUHETO</h2>
-          <h3 className="text-xl font-semibold text-yellow-700">
+          <h3 className="text-xl font-semibold text-yellow-500">
             CEO & Founder
           </h3>
           <ExpandableText text={ceoContent} maxLength={500} />
@@ -122,7 +122,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
       </div>
       <div className="space-y-2">
         <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
-        <p className="text-yellow-700 font-medium">{member.title}</p>
+        <p className="text-yellow-500 font-medium">{member.title}</p>
         {member.bio && <ExpandableText text={member.bio} maxLength={150} />}
       </div>
       <div className="flex justify-center space-x-6 mt-6">
@@ -154,7 +154,7 @@ const TeamSection: React.FC = () => (
   <section className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-yellow-700">MHS TEAM</h2>
+        <h2 className="text-3xl font-bold text-yellow-500">MHS TEAM</h2>
         <p className="text-xl text-gray-600 mt-2">Meet Our Exceptional Team</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  mx-auto">

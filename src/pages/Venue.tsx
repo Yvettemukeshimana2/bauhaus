@@ -2,7 +2,7 @@
  import { useNavigate } from "react-router-dom";
  import Modal from "../pages/Venuemodal"; // Add this import
  import img1 from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-Harold-Washington-Library_0636.jpg";
-
+import { FaArrowRightLong } from "react-icons/fa6";
  interface Service {
    id: number;
    title: string;
@@ -230,21 +230,23 @@
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />
-         <h1 className="absolute animate-pulse top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-           Our Services
-         </h1>
-         <h1 className="text-5xl animate-bounce absolute top-1/2 left-1/2 md:text-5xl font-bold mt-10 text-white text-center">
-           BATO <span className="text-yellow-500 ">BATARI GITO</span>
-         </h1>
+         <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
+           <h1 className="text-5xl animate-bounce absolute bottom-1/2   md:text-5xl font-bold  text-white text-center">
+             BATO <span className="text-yellow-500 ">BATARI GITO</span>
+           </h1>
+           <h1 className="absolute  top-1/2   transform     text-white text-5xl font-bold">
+             Our Services
+           </h1>
+         </div>
        </header>
-       <div className="font-bold text-3xl flex justify-center items-center p-2 text-yellow-600">
+       <div className="font-bold text-3xl flex justify-center items-center p-2 text-yellow-500">
          WE PLANN YOUR EVENT
        </div>
-       <section className="p-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+       <section className="p-8 grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4">
          {services.map((service) => (
            <div
              key={service.id}
-             className="bg-white rounded-lg border-2 border-yellow-600 shadow-lg overflow-hidden"
+             className="bg-white rounded-lg border-2 border-yellow-500 shadow-lg overflow-hidden"
            >
              <img
                src={service.image}
@@ -252,19 +254,19 @@
                loading="lazy"
                className="w-full h-40 object-cover"
              />
-             <div className="p-6">
-               <h2 className="text-xl font-bold mb-2">{service.title}</h2>
-               <p className="text-gray-700">{service.description}</p>
-               <div className="mt-4 flex space-x-4">
+             <div className="p-">
+               <h2 className="text-xl font-bold mb-2 p-6">{service.title}</h2>
+               <p className="text-gray-700 p-6">{service.description}</p>
+               <div className="mt-4 flex space-x-4 p-3 justify-between">
                  <button
                    onClick={() => handleReadMore(service.id)}
-                   className="text-black p-1 rounded-md hover:text-yellow-700 border-2 border-yellow-500"
+                   className="flex  hover:text-yellow-500  text-yellow-500 text-sm  "
                  >
-                   Read More
+                   Read More<FaArrowRightLong className="mx-1 mt-1"/>
                  </button>
                  <button
                    onClick={() => handleBookService(service)}
-                   className="text-yellow-500 font-bold hover:text-yellow-700"
+                   className="text-black border-yellow-500 text-sm border-2 p-1 hover:text-yellow-700"
                  >
                    Book Service
                  </button>

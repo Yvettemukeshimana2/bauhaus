@@ -30,7 +30,7 @@
        transition={{ duration: 0 }}
        className="min-h-screen bg-gray-50 "
      >
-       <header className="relative item-center bg-black overflow-hidden">
+       <header className="relative item-center flex justify-center bg-black overflow-hidden">
          <motion.img
            initial={{ scale: 1.2 }}
            animate={{ scale: 1 }}
@@ -40,11 +40,12 @@
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />
+          <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
          <motion.h1
            initial={{ y: -100, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
            transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/2 left-96 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
+           className="text-5xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white "
          >
            BATO <span className="text-yellow-500  ">BATARI GITO</span>
          </motion.h1>
@@ -52,7 +53,7 @@
            initial={{ y: 100, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
            transition={{ duration: 1, delay: 0.8 }}
-           className="absolute bottom-24 left-80 animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold"
+           className="absolute bottom-28  animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold"
          >
            MHS(Muhe Hospitality Service)
          </motion.h1>
@@ -62,10 +63,11 @@
            transition={{ duration: 1, delay: 1.1 }}
            whileHover={{ scale: 1.1 }}
            whileTap={{ scale: 0.95 }}
-           className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md left-96 ml-32 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
+           className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-4 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
          >
            Contact Us
          </motion.button>
+         </div>
        </header>
        <div className="max-w-7xl mx-auto p-10 grid md:grid-cols-2 gap-8 ">
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">

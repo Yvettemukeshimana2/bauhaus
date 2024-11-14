@@ -134,32 +134,34 @@
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />
-         <motion.h1
-           initial={{ y: -100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/2 left-96 transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white text-center"
-         >
-           BATO <span className="text-yellow-500  ">BATARI GITO</span>
-         </motion.h1>
-         <motion.h1
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.8 }}
-           className="absolute bottom-24 left-80 animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold"
-         >
-           MHS(Muhe Hospitality Service)
-         </motion.h1>
-         <motion.button
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 1.1 }}
-           whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.95 }}
-           className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md left-96 ml-32 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
-         >
-           let's Talk
-         </motion.button>
+         <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
+           <motion.h1
+             initial={{ y: -100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 0.5 }}
+             className="text-5xl absolute top-1/2  transform animate-bounce   md:text-5xl font-bold text-white text-center"
+           >
+             BATO <span className="text-yellow-500  ">BATARI GITO</span>
+           </motion.h1>
+           <motion.h1
+             initial={{ y: 100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 0.8 }}
+             className="absolute bottom-24  animate-pulse transform   text-white text-4xl font-bold"
+           >
+             MHS(Muhe Hospitality Service)
+           </motion.h1>
+           <motion.button
+             initial={{ y: 100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 1.1 }}
+             whileHover={{ scale: 1.1 }}
+             whileTap={{ scale: 0.95 }}
+             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md  text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
+           >
+             let's Talk
+           </motion.button>
+         </div>
        </header>
        <section className="py-16">
          <motion.h2
@@ -170,8 +172,9 @@
          >
            What's New!
          </motion.h2>
+
          <div className="container  mx-auto px-4">
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
              {[
                {
                  title: "Crafting Memorable MHS Events",
@@ -270,7 +273,7 @@
                  <h5 className="text-2xl font-semibold text-center mb-8">
                    Available Job Positions
                  </h5>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
                    <JobCard
                      title="Event Staffing Officer"
                      buttonText="Apply Here"

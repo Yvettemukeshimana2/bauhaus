@@ -26,7 +26,7 @@ const services = [
 const OurServices: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-10 z-20">
-      <h1 className="text-3xl font-bold mb-6">Our Services</h1>
+      <h1 className="text-3xl font-bold mb-6 text-yellow-500">Our Services</h1>
       <div className="grid grid-cols-3  gap-10 mb-5 justify-center">
         {services.map((service, index) => (
           <div
@@ -42,7 +42,7 @@ const OurServices: React.FC = () => {
             <h2 className="font-semibold text-xl mb-2">{service.title}</h2>
             <p className="text-center mb-3">{service.description}</p>
             <Link to="/venue">
-              <button className="mt-2 bg-white text-black border-2 border-yellow-700 hover:text-white hover:bg-yellow-700 py-2 px-4 rounded">
+              <button className="mt-2 bg-white text-black border-2 border-yellow-500 hover:text-white hover:bg-yellow-700 py-2 px-4 rounded">
                 See More
               </button>
             </Link>
@@ -50,7 +50,7 @@ const OurServices: React.FC = () => {
         ))}
       </div>
       <a href="/services" className="mt-5">
-        <button className=" text-white border-2 bg-yellow-600 py-2 px-4 rounded">
+        <button className=" text-white border-2 bg-yellow-500 py-2 px-4 rounded">
           View All Services
         </button>
       </a>

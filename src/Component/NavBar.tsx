@@ -3,62 +3,43 @@
  import { Link } from "react-router-dom";
  import {
    FiHome,
-   FiMenu,
-   FiX,
    FiPhone,
    FiActivity,
    FiPackage,
    FiRadio,
    FiBookmark,
    FiChevronDown,
+   FiMenu,
+   FiX,
  } from "react-icons/fi";
- import Button from "../reusable/Button.tsx";
  import Logo from "../assets/Muhe-Logo-white.png";
  import Header from "./Header.tsx";
 
  const NavBar = () => {
    const [isScrolled, setIsScrolled] = useState(false);
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
    const [isServicesOpen, setIsServicesOpen] = useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
    useEffect(() => {
      const handleScroll = () => {
        setIsScrolled(window.scrollY > 0);
      };
-     const handleResize = () => {
-       if (window.innerWidth > 640 && isMenuOpen) {
-         setIsMenuOpen(false);
-       }
-     };
 
      window.addEventListener("scroll", handleScroll);
-     window.addEventListener("resize", handleResize);
      return () => {
        window.removeEventListener("scroll", handleScroll);
-       window.removeEventListener("resize", handleResize);
      };
-   }, [isMenuOpen]);
-
-   const toggleMenu = () => {
-     setIsMenuOpen(!isMenuOpen);
-   };
+   }, []);
 
    const handleMenuItemClick = () => {
-     if (isMobile()) {
-       toggleMenu();
+     if (window.innerWidth <= 640) {
+       setIsMenuOpen(false);
+       setIsServicesOpen(false);
      }
-      if (window.innerWidth <= 640) {
-        setIsMenuOpen(false);
-      }
    };
-
-   const isMobile = () => window.innerWidth <= 640;
 
    return (
      <>
-       {isMenuOpen && (
-         <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-       )}
        <header
          className={`fixed top-0 left-0 z-50 bg-black w-full h-24 flex justify-center items-center transition-all duration-300 ${
            isScrolled
@@ -66,33 +47,35 @@
              : "bg-transparent"
          }`}
        >
-         <div className="flex flex-col">
-           <div className="">
-             <Header />
-           </div>
-           <div className="flex justify-between items-center mb-8 bg-gradient-to-b from-yellow-800 to-yellow-500 rounded-t-sm w-full max-w-7xl px-4 lg:px-8">
-             <img
+         <div className="flex flex-col w-full max-w-7xl">
+           <Header />
+
+           <div className="flex justify-between items-center mb-8 bg-gradient-to-b from-yellow-800 to-yellow-500 rounded-t-sm w-full px-4">
+             <Link to="/"><img
                src={Logo}
                alt="Logo"
                loading="lazy"
                width="150px"
                className="flex justify-start mr-80"
              />
-             <button className="md:hidden text-white z-50" onClick={toggleMenu}>
-               {!isMenuOpen ? <FiMenu size={54} /> : <FiX size={24} />}
-             </button>
-             <nav
-               className={`fixed md:static flex flex-col md:flex-row items-center bg-black md:bg-transparent transition-transform transform ${
-                 isMenuOpen ? "translate-x-0" : "translate-x-full"
-               } md:translate-x-0 w-4/5 md:w-auto h-full md:h-auto top-0 right-0 z-50 p-5 md:p-0`}
-             >
+</Link>
+             {/* Hamburger menu for small and medium screens */}
+             <div className="flex lg:hidden">
                <button
-                 className="md:hidden text-white absolute top-4 right-4 z-50"
-                 onClick={toggleMenu}
+                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                 className="text-white text-3xl"
                >
-                 <FiX size={24} />
+                 {isMenuOpen ? <FiX /> : <FiMenu />}
                </button>
-               <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto mt-8 md:mt-0">
+             </div>
+
+             {/* Navigation Menu */}
+             <nav
+               className={`${
+                 isMenuOpen ? "flex" : "hidden"
+               } lg:flex flex-col lg:flex-row items-center lg:bg-transparent w-full lg:w-auto h-full lg:h-auto top-0 right-0 z-50 p-5 lg:p-0`}
+             >
+               <div className="flex flex-col lg:flex-row gap-6 w-full lg:w-auto mt-8 lg:mt-0">
                  <MenuItem
                    title="Home"
                    address="/"
@@ -111,6 +94,7 @@
                    Icon={FiPhone}
                    onClick={handleMenuItemClick}
                  />
+
                  <div
                    className="relative"
                    onMouseEnter={() => setIsServicesOpen(true)}
@@ -123,32 +107,34 @@
                      onClick={handleMenuItemClick}
                    />
                    <FiChevronDown
-                     className={`absolute -right-4 text-white top-1/2 w-6 h-6 transform -translate-y-1/2 transition-transform ${
+                     className={`absolute -right-4 text-white top-1/2 w-5 h-5 transform -translate-y-1/2 transition-transform ${
                        isServicesOpen ? "rotate-180" : ""
                      }`}
                    />
+                   {/* Dropdown items */}
                    {isServicesOpen && (
-                     <div className="absolute left-0 w-40 bg-white bg-opacity-90 border rounded shadow-lg z-50">
+                     <div className="absolute top-full left-0 bg-white dark:bg-dark-secondary text-center flex flex-col space-y-4 py-4">
                        <Link
                          to="/venue"
                          className="block px-4 py-2 hover:bg-gray-200"
-                         onClick={() => setIsServicesOpen(false)}
+                         onClick={handleMenuItemClick}
                        >
                          Event
                        </Link>
                        <Link
                          to="/material"
                          className="block px-4 py-2 hover:bg-gray-200"
-                         onClick={() => setIsServicesOpen(false)}
+                         onClick={handleMenuItemClick}
                        >
                          Material
                        </Link>
                      </div>
                    )}
                  </div>
+
                  <MenuItem
                    title="Inspirations"
-                   address="/insipiration"
+                   address="/insipirations"
                    Icon={FiActivity}
                    onClick={handleMenuItemClick}
                  />
@@ -158,9 +144,6 @@
                    Icon={FiPackage}
                    onClick={handleMenuItemClick}
                  />
-               </div>
-               <div className="md:hidden mt-4 w-full">
-                 <Button label="Contact Us" onClick={toggleMenu} />
                </div>
              </nav>
            </div>

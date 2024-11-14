@@ -18,7 +18,7 @@ const specialtiesData = [
 const Specialties: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto  ">
-      <h2 className="text-4xl font-bold text-center mt-10">Our Specialties</h2>
+      <h2 className="text-4xl font-bold text-center text-yellow-500 mt-10">Our Specialties</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {specialtiesData.map((specialty, index) => (
           <div key={index} className="  p-6 rounded-lg ">
@@ -28,7 +28,7 @@ const Specialties: React.FC = () => {
               alt={specialty.title}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-semibold mb-4 text-yellow-600">
+            <h3 className="text-2xl font-semibold mb-4 text-yellow-500">
               {specialty.title}
             </h3>
             <p className="text-md text-gray-700">{specialty.description}</p>

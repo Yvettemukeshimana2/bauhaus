@@ -104,7 +104,7 @@
 
        {/* Second Section */}
        <section className="py-10">
-         <h1 className="page_title text-center text-4xl font-bold text-gray-200 mb-10">
+         <h1 className="page_title text-center text-4xl font-bold text-gray-400 mb-10">
            GRAB SOME INSPIRATION
          </h1>
 

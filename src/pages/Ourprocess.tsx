@@ -3,9 +3,9 @@
  const OurProcess: React.FC = () => {
    return (
      <div className="max-w-6xl mx-auto p-8">
-       <h2 className="text-4xl font-bold text-center mb-10">Our Process</h2>
+       <h2 className="text-4xl font-bold text-center text-yellow-500 mb-10">Our Process</h2>
 
-       <div className="grid grid-cols-2 md:grid-cols-2 gap-12">
+       <div className="grid grid-cols-2 md:grid-cols-2 gap-12 -z-50">
        
          <div className="bg-gradient-to-r from-yellow-400 to-yellow-200 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-700 ease-in-out">
            <h3 className="text-2xl font-semibold mb-4 text-gray-800">
