@@ -51,14 +51,15 @@
            <Header />
 
            <div className="flex justify-between items-center mb-8 bg-gradient-to-b from-yellow-800 to-yellow-500 rounded-t-sm w-full px-4">
-             <Link to="/"><img
-               src={Logo}
-               alt="Logo"
-               loading="lazy"
-               width="150px"
-               className="flex justify-start mr-80"
-             />
-</Link>
+             <Link to="/">
+               <img
+                 src={Logo}
+                 alt="Logo"
+                 loading="lazy"
+                 width="150px"
+                 className="flex justify-start mr-80"
+               />
+             </Link>
              {/* Hamburger menu for small and medium screens */}
              <div className="flex lg:hidden">
                <button
@@ -100,31 +101,39 @@
                    onMouseEnter={() => setIsServicesOpen(true)}
                    onMouseLeave={() => setIsServicesOpen(false)}
                  >
-                   <MenuItem
-                     title="Services"
-                     address=""
-                     Icon={FiRadio}
-                     onClick={handleMenuItemClick}
-                   />
-                   <FiChevronDown
-                     className={`absolute -right-4 text-white top-1/2 w-5 h-5 transform -translate-y-1/2 transition-transform ${
-                       isServicesOpen ? "rotate-180" : ""
-                     }`}
-                   />
+                  {/* Services Button */}
+                   <div
+                     className="flex items-center cursor-pointer"
+                     onClick={(e) => {
+                       e.preventDefault(); 
+                       setIsServicesOpen((prev) => !prev);  
+                     }}
+                   >
+                      
+                     <div className="flex items-center space-x-2 mt-2 text-white">
+                       <FiRadio className="text-white lg:hidden" />
+                       <span>Services</span>
+                     </div>
+                     <FiChevronDown
+                       className={`absolute -right-5 text-white top-1/2 w-5 h-5 transform -translate-y-1/2 transition-transform ${
+                         isServicesOpen ? "rotate-180" : ""
+                       }`}
+                     />
+                   </div>
                    {/* Dropdown items */}
                    {isServicesOpen && (
-                     <div className="absolute top-full left-0 bg-white dark:bg-dark-secondary text-center flex flex-col space-y-4 py-4">
+                     <div className="absolute top-full left-0 bg-white dark:bg-dark-secondary text-center flex flex-col space-y-2 py-3">
                        <Link
                          to="/venue"
-                         className="block px-4 py-2 hover:bg-gray-200"
-                         onClick={handleMenuItemClick}
+                         className="block px-4 py-2 hover:bg-yellow-500"
+                         onClick={() => setIsServicesOpen(false)}  
                        >
                          Event
                        </Link>
                        <Link
                          to="/material"
-                         className="block px-4 py-2 hover:bg-gray-200"
-                         onClick={handleMenuItemClick}
+                         className="block px-4 py-2 hover:bg-yellow-500"
+                         onClick={() => setIsServicesOpen(false)}  
                        >
                          Material
                        </Link>
@@ -152,5 +161,4 @@
      </>
    );
  };
-
  export default NavBar;
