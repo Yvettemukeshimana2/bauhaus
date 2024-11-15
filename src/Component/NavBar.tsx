@@ -63,7 +63,7 @@
              <div className="flex lg:hidden">
                <button
                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                 className="text-white text-3xl"
+                 className="text-white text-3xl "
                >
                  {isMenuOpen ? <FiX /> : <FiMenu />}
                </button>
@@ -73,9 +73,9 @@
              <nav
                className={`${
                  isMenuOpen ? "flex" : "hidden"
-               } lg:flex flex-col lg:flex-row items-center lg:bg-transparent w-full lg:w-auto h-full lg:h-auto top-0 right-0 z-50 p-5 lg:p-0`}
+               } lg:flex flex-row lg:flex-row items-center lg:bg-transparent w-full lg:w-auto h-full lg:h-auto top-0 right-0 z-50 sm:p-5 lg:p-0`}
              >
-               <div className="flex flex-col lg:flex-row gap-6 w-full lg:w-auto mt-8 lg:mt-0">
+               <div className="flex flex-row lg:flex-row gap-3 lg:gap-6 w-full lg:w-auto mt-8 lg:mt-0">
                  <MenuItem
                    title="Home"
                    address="/"

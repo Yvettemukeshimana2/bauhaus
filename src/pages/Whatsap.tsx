@@ -146,7 +146,7 @@ const WhatsAppChatButton: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col"
           >
-            <div className="flex items-center justify-between mb-4 bg-gradient-to-t from-yellow-500 to-yellow-700 p-2 rounded-lg">
+            <div className="flex items-center justify-between  bg-gradient-to-t from-yellow-500 to-yellow-700 p-1 rounded-lg">
               <div className="flex items-center space-x-2">
                 <img
                   src={Avatar}
@@ -154,7 +154,7 @@ const WhatsAppChatButton: React.FC = () => {
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="font-semibold">Jayne N.</p>
+                  <p className="font-semibold">Salto M.</p>
                   <p className="text-xs text-customTeal-950">Online</p>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const WhatsAppChatButton: React.FC = () => {
                 &#x2715;
               </button>
             </div>
-            <div className="text-sm text-gray-700 mb-4">
+            <div className="text-sm text-gray-700">
               <div className="flex flex-col space-y-2">
                 <div className="self-start text-lg text-black rounded-lg">
                   <div className="not-italic text-sm pt-6 pb-2">
@@ -177,21 +177,21 @@ const WhatsAppChatButton: React.FC = () => {
                     >
                       <div className="flex items-start space-x-2">
                         <img
-                          src={icon1}
+                          src={Avatar}
                           alt="Profile"
                           className="w-8 h-8 rounded-full"
                         />
-                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-2 rounded-lg">
+                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-1 rounded-lg">
                           <p>Need any help? Click here!</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-2 mt-2">
                         <img
-                          src={icon1} // Replace with actual image
+                          src={Avatar} // Replace with actual image
                           alt="Profile"
                           className="w-8 h-8 rounded-full"
                         />
-                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-2 rounded-lg">
+                        <div className=" bg-gradient-to-t from-yellow-500 to-yellow-700 font-bold text-white p-1 rounded-lg">
                           <p>How can I help you?</p>
                         </div>
                       </div>
@@ -207,7 +207,7 @@ const WhatsAppChatButton: React.FC = () => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col"
                       >
-                        <p className="bg-white text-yellow-500 text-sm p-2 rounded-md">
+                        <p className="bg-white text-yellow-500 text-xs rounded-md">
                           {entry.question}
                         </p>
                         <p className="text-xs text-yellow-400 text-right mt-1">
@@ -278,8 +278,8 @@ const WhatsAppChatButton: React.FC = () => {
                 )}
               </div>
             </div>
-            <div className="self-start text-black rounded-full mt-4">
-              <p className="mt-4 text-gray-600 text-sm">
+            <div className="self-start text-black rounded-full ">
+              <p className="mt-4 text-gray-800 text-xs">
                 Alternatively, send us a message directly on WhatsApp.
               </p>
               <div className="flex gap-5 animate-pulse                   ">
@@ -291,7 +291,7 @@ const WhatsAppChatButton: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex flex-row justify-center items-center"
                   >
-                    <FaWhatsapp className="w-5 h-5 " />
+                    <FaWhatsapp className="w-2 h-2 " />
                   </a>
                 </button>
               </div>
