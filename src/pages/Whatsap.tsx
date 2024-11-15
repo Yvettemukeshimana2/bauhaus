@@ -149,7 +149,7 @@ const WhatsAppChatButton: React.FC = () => {
             <div className="flex items-center justify-between  bg-gradient-to-t from-yellow-500 to-yellow-700 p-1 rounded-lg">
               <div className="flex items-center space-x-2">
                 <img
-                  src={Avatar}
+                  src={icon1}
                   alt="Profile"
                   className="w-10 h-10 rounded-full"
                 />
