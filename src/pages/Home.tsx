@@ -23,7 +23,6 @@ const images = [
       "Based in Kigali, Muhe Hospitality Services provides comprehensive planning and coordination services.",
   },
 ];
-
 const Home: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +33,6 @@ const Home: React.FC = () => {
 
     return () => clearInterval(interval);  
   }, []);
-
   return (
     <div className="flex flex-col items-center">
       <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">

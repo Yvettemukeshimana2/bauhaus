@@ -2,17 +2,8 @@
  import { ChevronRight } from "lucide-react";
  import { motion } from "framer-motion";  
  import bg from "../assets/images/3U8A0855.jpg";
- import c1 from "../assets/images/image1.avif";
- import c2 from "../assets/images/DSC_3894.jpg";
- import c3 from "../assets/images/planning-picture.jpg";
- import c4 from "../assets/images/LOLA-Event-Productions-Wedding-Planning-Tent-RichHarvestFarm-014.jpg";
-
- interface CardProps {
-   title: string;
-   description: string;
-   imageUrl: string;
-   index: number;
- }
+import CardComponent from "./Cardcomponent";
+ 
 
  interface JobCardProps {
    title: string;
@@ -47,35 +38,35 @@
    </motion.div>
  );
 
- const Card: React.FC<CardProps> = ({
-   title,
-   description,
-   imageUrl,
-   index,
- }) => (
-   <motion.div
-     initial={{ opacity: 0, y: 50 }}
-     animate={{ opacity: 1, y: 0 }}
-     transition={{ duration: 0.5, delay: index * 0.2 }}
-     whileHover={{ scale: 1.05 }}
-     className="w-full px-4 mb-8"
-   >
-     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-       <div className="h-48 overflow-hidden">
-         <img
-           src={imageUrl}
-           loading="lazy"
-           alt={title}
-           className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-         />
-       </div>
-       <div className="p-6">
-         <h6 className="text-xl font-semibold mb-2 text-yellow-500">{title}</h6>
-         <p className="text-gray-600">{description}</p>
-       </div>
-     </div>
-   </motion.div>
- );
+//  const home: React.FC<CardProps> = ({
+//    title,
+//    description,
+//    imageUrl,
+//    index,
+//  }) => (
+//    <motion.div
+//      initial={{ opacity: 0, y: 50 }}
+//      animate={{ opacity: 1, y: 0 }}
+//      transition={{ duration: 0.5, delay: index * 0.2 }}
+//      whileHover={{ scale: 1.05 }}
+//      className="w-full px-4 mb-8"
+//    >
+//      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+//        <div className="h-48 overflow-hidden">
+//          <img
+//            src={imageUrl}
+//            loading="lazy"
+//            alt={title}
+//            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+//          />
+//        </div>
+//        <div className="p-6">
+//          <h6 className="text-xl font-semibold mb-2 text-yellow-500">{title}</h6>
+//          <p className="text-gray-600">{description}</p>
+//        </div>
+//      </div>
+//    </motion.div>
+//  );
 
  const JobCard: React.FC<JobCardProps> = ({
    title,
@@ -163,7 +154,9 @@
            </motion.button>
          </div>
        </header>
-       <section className="py-16">
+
+      
+       {/* <section className="py-16">
          <motion.h2
            initial={{ opacity: 0 }}
            whileInView={{ opacity: 1 }}
@@ -205,7 +198,8 @@
              ))}
            </div>
          </div>
-       </section>
+       </section> */}
+       <CardComponent/>
        <motion.section
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}

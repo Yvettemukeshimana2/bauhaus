@@ -9,7 +9,6 @@
    subject: string;
    message: string;
  }
-
  const ContactPage = () => {
    const {
      register,
@@ -17,12 +16,10 @@
      reset,
      formState: { errors, isSubmitSuccessful },
    } = useForm<FormInputs>();
-
    const onSubmit = (data: FormInputs) => {
      console.log(data);
      reset();  
    };
-
    return (
      <motion.div
        initial={{ scale: 1.2 }}
@@ -78,9 +75,9 @@
              initial={{ y: 100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 1.1 }}
-             whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.4 }}
-             className="w-full h-64 bg-gray-200 mb-6 rounded-lg overflow-hidden"
+             whileHover={{ scale: 1.1 }} 
+             whileTap={{ scale: 0.4 }} 
+              className="w-full h-64 bg-gray-200 mb-6 rounded-lg overflow-hidden"
            >
              <iframe
                title="Kigali Office Location"

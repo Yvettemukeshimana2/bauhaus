@@ -40,7 +40,7 @@ import ach2 from "../assets/images/testmony2.jpg"
                Our Culture
              </h3>
              <p className="text-lg px-4">
-               Founded in [Year], we have grown from a small team of passionate
+               Founded in 2000, we have grown from a small team of passionate
                planners to a leading event management company in the region. Our
                diverse portfolio includes weddings, corporate events, and
                community gatherings.
@@ -122,5 +122,4 @@ import ach2 from "../assets/images/testmony2.jpg"
      </div>
    );
  };
-
  export default AboutUs;

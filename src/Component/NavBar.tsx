@@ -1,25 +1,13 @@
  import { useEffect, useState } from "react";
  import MenuItem from "../reusable/MenuItem.tsx";
  import { Link } from "react-router-dom";
- import {
-   FiHome,
-   FiPhone,
-   FiActivity,
-   FiPackage,
-   FiRadio,
-   FiBookmark,
-   FiChevronDown,
-   FiMenu,
-   FiX,
- } from "react-icons/fi";
+ import { FiHome, FiPhone, FiActivity, FiPackage, FiRadio, FiBookmark, FiChevronDown, FiMenu,  FiX, } from "react-icons/fi";
  import Logo from "../assets/Muhe-Logo-white.png";
  import Header from "./Header.tsx";
-
  const NavBar = () => {
    const [isScrolled, setIsScrolled] = useState(false);
    const [isServicesOpen, setIsServicesOpen] = useState(false);
    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
    useEffect(() => {
      const handleScroll = () => {
        setIsScrolled(window.scrollY > 0);
@@ -37,7 +25,6 @@
        setIsServicesOpen(false);
      }
    };
-
    return (
      <>
        <header
@@ -49,7 +36,6 @@
        >
          <div className="flex flex-col w-full max-w-7xl">
            <Header />
-
            <div className="flex justify-between items-center mb-8 bg-gradient-to-b from-yellow-800 to-yellow-500 rounded-t-sm w-full px-4">
              <Link to="/">
                <img
@@ -60,7 +46,6 @@
                  className="flex justify-start mr-80"
                />
              </Link>
-             {/* Hamburger menu for small and medium screens */}
              <div className="flex lg:hidden">
                <button
                  onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,8 +54,6 @@
                  {isMenuOpen ? <FiX /> : <FiMenu />}
                </button>
              </div>
-
-             {/* Navigation Menu */}
              <nav
                className={`${
                  isMenuOpen ? "flex" : "hidden"
@@ -101,15 +84,13 @@
                    onMouseEnter={() => setIsServicesOpen(true)}
                    onMouseLeave={() => setIsServicesOpen(false)}
                  >
-                  {/* Services Button */}
                    <div
                      className="flex items-center cursor-pointer"
                      onClick={(e) => {
-                       e.preventDefault(); 
-                       setIsServicesOpen((prev) => !prev);  
+                       e.preventDefault();
+                       setIsServicesOpen((prev) => !prev);
                      }}
                    >
-                      
                      <div className="flex items-center space-x-2 mt-2 text-white">
                        <FiRadio className="text-white lg:hidden" />
                        <span>Services</span>
@@ -120,20 +101,19 @@
                        }`}
                      />
                    </div>
-                   {/* Dropdown items */}
                    {isServicesOpen && (
                      <div className="absolute top-full left-0 bg-white dark:bg-dark-secondary text-center flex flex-col space-y-2 py-3">
                        <Link
                          to="/venue"
                          className="block px-4 py-2 hover:bg-yellow-500"
-                         onClick={() => setIsServicesOpen(false)}  
+                         onClick={() => setIsServicesOpen(false)}
                        >
                          Event
                        </Link>
                        <Link
                          to="/material"
                          className="block px-4 py-2 hover:bg-yellow-500"
-                         onClick={() => setIsServicesOpen(false)}  
+                         onClick={() => setIsServicesOpen(false)}
                        >
                          Material
                        </Link>
@@ -151,6 +131,12 @@
                    title="Publications"
                    address="/publication"
                    Icon={FiPackage}
+                   onClick={handleMenuItemClick}
+                 />
+                 <MenuItem
+                   title="Plan Your Event"
+                   address="/planevent"
+                   Icon={FiActivity}
                    onClick={handleMenuItemClick}
                  />
                </div>

@@ -89,7 +89,7 @@
        },
      },
      {
-       id: "2",
+       id: "5",
        name: "dish",
        description: "Elegant glass tableware and glassware for your events.",
        imageUrl:
@@ -104,7 +104,7 @@
        },
      },
      {
-       id: "2",
+       id: "6",
        name: "Cake Table",
        description: "Elegant glass tableware and glassware for your events.",
        imageUrl:
@@ -119,7 +119,7 @@
        },
      },
      {
-       id: "2",
+       id: "7",
        name: "Cake Table",
        description: "Elegant glass tableware and glassware for your events.",
        imageUrl:
@@ -134,19 +134,6 @@
        },
      },
    ]);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //    ... your existing materials array ...
-   
-
    const handleBookNow = (material: Material) => {
      setSelectedMaterial(material);
      setIsModalOpen(true);

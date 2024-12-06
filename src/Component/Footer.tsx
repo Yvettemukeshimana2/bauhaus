@@ -49,7 +49,7 @@
               <h2 className="text-xl text-yellow-500 font-bold">
                 {companyName}
               </h2>
-              <p className="text-white text-lg">
+              <p className="text-white text-md">
                 Providing quality services since {year}
               </p>
             </div>
@@ -63,14 +63,14 @@
                 <span className="text-yellow-500  font-bold text-xl mb-3">
                   {category}
                 </span>
-                <div className="  flex flex-col">
+                <div className="   flex flex-col">
                   {links
                     .filter((link) => link.category === category)
                     .map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
-                        className="hover:text-white text-white text-lg"
+                        className="hover:text-white text-white text-sm"
                       >
                         {link.label}
                       </a>
@@ -84,7 +84,7 @@
               <span className="text-yellow-500 font-bold ml-8 mb-3 text-xl">
                 Contact Us
               </span>
-              <div className=" text-white ml-8 text-lg">
+              <div className=" text-white ml-8 text-sm">
                 <p>Phone: +250788501009</p>
                 <p>
                   Email:{" "}
@@ -129,14 +129,14 @@
                 ))}
               </div>
               <Link to="/venue">
-                <button className=" md:block hidden justify-end ml-9 mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
+                <button className=" md:block hidden justify-end ml-9 text-sm mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
                   Work With Us
                 </button>
               </Link>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-6 pt-6 text-center">
-            <p className="text-white text-lg font-semibold">
+            <p className="text-white text-md font-semibold">
               © {year} {companyName}. All rights reserved.
             </p>
           </div>
