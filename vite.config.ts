@@ -13,4 +13,14 @@
         },
       },
     },
+    // server: {
+    //   proxy: {
+    //     "/item": {
+    //       target: "https://muheservices.vercel.app", // Your backend API URL
+    //       changeOrigin: true, // Adjust the origin header for requests
+    //       rewrite: (path) => path.replace(/^\/item/, ""), // Optional: Adjust path if needed
+    //     },
+    //   },
+    // },
   });
+
