@@ -86,7 +86,7 @@
          {categories.map((category) => (
            <div key={category.name} className=" ">
              <h2 className="text-3xl font-bold text-center text-yellow-500 mb-4">{category.name}</h2>
-             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
                {renderCategoryItems(category)}
              </div>
            </div>
