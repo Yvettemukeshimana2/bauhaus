@@ -74,12 +74,12 @@
                transition={{ duration: 1, delay: 0.5 }}
                className="text-center space-y-4"
              >
-               <h2 className="text-6xl font-bold tracking-wider">
+               <h2 className="text-2xl font-bold tracking-wider">
                  GET INSPIRED
                </h2>
                <div className="flex items-center justify-center gap-3">
-                 <span className="text-3xl text-yellow-500 font-bold">By</span>
-                 <h3 className="text-4xl font-bold text-yellow-500">
+                 <span className="text-2xl text-yellow-500 font-bold">By</span>
+                 <h3 className="text-2xl font-bold text-yellow-500">
                    Muhe Hospitality Services
                  </h3>
                </div>
@@ -93,7 +93,7 @@
              >
                <Link
                  to="/contactus"
-                 className="btn px-8 py-4 border-2 border-yellow-500 animate-spin   hover:bg-yellow-600 text-white text-xl font-semibold rounded-full transition duration-300"
+                 className="btn px-8 py-4 border-2 border-yellow-500 animate-spin   hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition duration-300"
                >
                  LET'S CONNECT
                </Link>
@@ -104,7 +104,7 @@
 
        {/* Second Section */}
        <section className="py-10">
-         <h1 className="page_title text-center text-4xl font-bold text-gray-400 mb-10">
+         <h1 className="page_title text-center text-2xl font-bold text-gray-600 mb-10">
            GRAB SOME INSPIRATION
          </h1>
 
@@ -121,7 +121,7 @@
                  }}
                >
                  <a href="#" className="test_click">
-                   <h1 className="test_title text-2xl font-semibold text-white mb-4 bg-opacity-60 p-2 rounded">
+                   <h1 className="test_title text-md font-semibold text-white mb-4 bg-opacity-60 p-2 rounded">
                      {item.title}
                    </h1>
                    <span className="test_link text-gray-300 text-3xl">
@@ -134,7 +134,7 @@
          </div>
        </section>
        <section className="section3_content container-fluid p-10 ml-20 mr-20 mb-5 bg-yellow-600">
-         <div id="instafeed-container" className="flex justify-center">
+         <div id="instafeed-container" className="flex justify-center text-sm">
            <p>
              "At Muhe Hospitality Services, we believe that true inspiration
              comes from dedication, passion, and an unwavering commitment to
@@ -145,14 +145,9 @@
            </p>
          </div>
        </section>
-       {/* <section
-         className="bg-cover bg-center h-96 py-20"
-         style={{
-           backgroundImage: "url('src/assets/images/service_background.jpg')",
-         }}
-       ></section> */}
+       
        <section className="mb-12 text-center">
-         <h2 className="text-2xl font-bold mb-6 text-yellow-500">
+         <h2 className="text-xl font-bold mb-6 text-yellow-500">
            Client Testimonials
          </h2>
          <div className="grid gap-6 md:grid-cols-2 p-10">

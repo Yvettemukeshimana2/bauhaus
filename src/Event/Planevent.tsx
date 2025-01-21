@@ -40,7 +40,7 @@
      return category.items.map((item) => (
        <div
          key={item.name}
-         className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
+         className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl  transition-all cursor-pointer"
          onClick={() => {
            setSelectedCategory(category.name);
            setSelectedItem(item);
@@ -53,7 +53,7 @@
          />
          <div className="mt-4">
            <h3 className="text-xl font-bold text-center">{item.name}</h3>
-           <p className="text-gray-600">{item.description}</p>
+           <p className="text-gray-600 text-sm">{item.description}</p>
          </div>
        </div>
      ));
@@ -68,7 +68,9 @@
    return (
      <div className="container mx-auto px-4 py-8 mt-28">
        <div className="flex justify-between items-center mb-8">
-         <h1 className="text-3xl font-bold text-yellow-500 ">Plan Your Event</h1>
+         <h1 className="text-2xl font-bold text-yellow-500 ">
+           Plan Your Event
+         </h1>
          <div
            className="relative cursor-pointer"
            onClick={() => setIsCartOpen(true)}
@@ -85,8 +87,10 @@
        <div className="space-y-8 ">
          {categories.map((category) => (
            <div key={category.name} className=" ">
-             <h2 className="text-3xl font-bold text-center text-yellow-500 mb-4">{category.name}</h2>
-             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
+             <h2 className="text-2xl font-bold text-center text-yellow-500 mb-4">
+               {category.name}
+             </h2>
+             <div className="grid grid-cols-1 text-sm sm:grid-cols-5 gap-3">
                {renderCategoryItems(category)}
              </div>
            </div>

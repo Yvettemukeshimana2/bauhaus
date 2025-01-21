@@ -1,4 +1,4 @@
- // src/pages/Home.tsx
+// src/pages/Home.tsx
 import React, { useState, useEffect } from "react";
 import im1 from "../assets/images/LOLA-Event-Productions-Wedding-Planning-Tent-RichHarvestFarm-034.jpg";
 import im2 from "../assets/images/image1.avif";
@@ -7,6 +7,7 @@ import OurServices from "./service";
 import AboutUs from "./Aboutus";
 import OurProcess from "./Ourprocess";
 import Specialties from "./Speciality";
+// const him = import.meta.env.VITE_HOST;
 const images = [
   {
     src: im1,
@@ -29,9 +30,9 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);  
+    }, 3000);
 
-    return () => clearInterval(interval);  
+    return () => clearInterval(interval);
   }, []);
   return (
     <div className="flex flex-col items-center">
@@ -53,11 +54,11 @@ const Home: React.FC = () => {
           ></div>
         </div>
         <div className="pl-10 pt-32 z-0">
-          <h1 className="text-2xl text-white font-semibold">
+          <h1 className="text-lg text-white font-semibold">
             {images[currentIndex].description}
           </h1>
-          <h1 className="text-5xl md:text-5xl font-bold mt-10 animate-pulse text-white text-center">
-            BATO <span className="text-yellow-500 ">BATARI GITO</span>
+          <h1 className="text-xl md:text-2xl font-bold mt-10 animate-pulse text-white text-center">
+            BATO <span className="text-yellow-500 ">BATARI GITO  </span>
           </h1>
         </div>
       </div>

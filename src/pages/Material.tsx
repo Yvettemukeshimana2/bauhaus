@@ -1,4 +1,4 @@
- import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import bg from "../assets/images/DSC_3894.jpg";
 import BookingModal, { BookingFormData } from "./Materialmodel";
@@ -14,51 +14,55 @@ interface Material {
 }
 
 const HospitalityMaterials: React.FC = () => {
-  const [selectedMaterial, setSelectedMaterial] = useState<Material | null>(null);
+  const [selectedMaterial, setSelectedMaterial] = useState<Material | null>(
+    null
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [materials, setMaterials] = useState<Material[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const token = "mysecret";  
+  const him = import.meta.env.VITE_HOST;
 
-  
   useEffect(() => {
     const fetchMaterials = async () => {
       setLoading(true);
       setError(null);
-try {
-  const response = await fetch("https://muheservices.vercel.app/item/all", {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${token}`,   
-    },
-  });
+      try {
+        const response = await fetch(him + "/item/all", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc`,
+          },
+        });
 
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
 
-  const data = await response.json();
-  const materialsData = data.data || [];
+        const data = await response.json();
+        const materialsData = data.data || [];
 
-  const transformedMaterials = materialsData.map((item: any) => ({
-    id: item.itemid.toString(),
-    name: item.itemname || "Unnamed Material",
-    description: item.itemdescription || "No description available",
-    imageUrl: item.Itemimage || "/default-image.jpg",
-    price: item.itemPPU || 0,
-    priceUnit: "unit",
-    category: item.Category?.catname || "Uncategorized",
-  }));
+        const transformedMaterials = materialsData.map((item: any) => ({
+          id: item.itemid.toString(),
+          name: item.itemname || "Unnamed Material",
+          description: item.itemdescription || "No description available",
+          imageUrl: item.itemimage || "https://www.elegantweddinginvites.com/wedding-blog/wp-content/uploads/2021/04/boho-rustic-wedding-table-settings-with-terracotta-tablecloth.jpg",
+          price: item.itemPPU || 0,
+          priceUnit: "unit",
+          category: item.Category?.catname || "Uncategorized",
+        }));
 
-  setMaterials(transformedMaterials);
-} catch (err) {
-  console.error("Failed to fetch materials:", err);
-  setError("Failed to load materials. Please check your network connection.");
-} finally {
-  setLoading(false);
-}
+        setMaterials(transformedMaterials);
+      } catch (err) {
+        console.error("Failed to fetch materials:", err);
+        setError(
+          "Failed to load materials. Please check your network connection." +
+            err
+        );
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchMaterials();
@@ -94,15 +98,15 @@ try {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-5xl absolute top-1/2 transform animate-bounce md:text-5xl font-bold text-white text-center"
+            className="text-2xl absolute top-1/2 transform animate-bounce md:text-2xl font-bold text-white text-center"
           >
-            BATO <span className="text-yellow-500">BATARI GITO</span>
+            BATO<span className="text-yellow-500 ml-2">BATARI GITO</span>
           </motion.h1>
           <motion.h1
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="absolute bottom-24 animate-pulse text-white text-4xl font-bold"
+            className="absolute bottom-40 animate-pulse text-white text-xl font-bold"
           >
             MHS (Muhe Hospitality Service)
           </motion.h1>
@@ -112,14 +116,14 @@ try {
             transition={{ duration: 1, delay: 1.1 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-3 rounded-md text-white text-4xl font-bold hover:bg-yellow-500 duration-300"
+            className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-20 rounded-md text-white text-xl font-bold hover:bg-yellow-500 duration-300"
           >
             Let's Talk
           </motion.button>
         </div>
       </header>
 
-      <h1 className="text-4xl font-bold mt-5 text-center text-yellow-500">
+      <h1 className="text-2xl font-bold mt-5 text-center text-yellow-500">
         Rental Materials
       </h1>
 
@@ -128,7 +132,7 @@ try {
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : materials.length > 0 ? (
-        <div className="grid grid-cols-1 p-10 md:grid-cols-4 w-full gap-8">
+        <div className="grid grid-cols-1 p-5 md:grid-cols-4 w-full gap-6">
           {materials.map((material) => (
             <div
               key={material.id}
@@ -142,20 +146,24 @@ try {
                 alt={material.name}
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 p-6 flex flex-col justify-center">
-                <h2 className="text-xl font-bold mb-2 text-white">
+              <div className="absolute inset-0 bg-black space-y-9 pt-20 bg-opacity-50 p-6 flex flex-col ">
+                <h2 className="text-sm font-bold mb-2 text-white">
                   {material.name}
                 </h2>
-                <p className="text-gray-300 mb-4">{material.description}</p>
-                <p className="text-gray-300 font-bold mb-4">
+                <p className="text-gray-300 mb-4 text-sm">
+                  {material.description}
+                </p>
+                <p className="text-gray-300 font-bold mb-4 text-sm">
                   ${material.price} per {material.priceUnit}
                 </p>
+                <div className="p-16">
                 <button
                   onClick={() => handleBookNow(material)}
-                  className="text-yellow-500 border-2 border-yellow-500 hover:text-yellow-700 font-bold py-2 px-4 rounded"
+                  className="text-yellow-500 border-2 text-sm p-2 border-yellow-500 hover:text-yellow-700 font-bold  rounded"
                 >
                   Book Now
                 </button>
+                </div>
               </div>
             </div>
           ))}
