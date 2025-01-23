@@ -44,7 +44,7 @@
              transition={{ duration: 1, delay: 0.5 }}
              className="text-2xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-2xl font-bold text-white "
            >
-             BATO{" "}
+             BATO
              <span className="text-yellow-500 text-2xl ml-2  ">
                BATARI GITO
              </span>
@@ -63,7 +63,7 @@
              transition={{ duration: 1, delay: 1.1 }}
              whileHover={{ scale: 1.1 }}
              whileTap={{ scale: 0.95 }}
-             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-10 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold hover:bg-yellow-500 transition-colors duration-300"
+             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-10 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-md font-bold hover:bg-yellow-500 transition-colors duration-300"
            >
              Contact Us
            </motion.button>
@@ -71,7 +71,7 @@
        </header>
        <div className="max-w-7xl mx-auto p-10 grid md:grid-cols-2 gap-8 ">
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-2xl font-bold mb-6 text-center ">
+           <h2 className="text-xl font-bold mb-6 text-center ">
              Our Location
            </h2>
            <motion.div
@@ -135,7 +135,7 @@
            </div>
          </div>
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-2xl font-bold mb-6 text-center">Get in Touch</h2>
+           <h2 className="text-xl font-bold mb-6 text-center">Get in Touch</h2>
            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
              <div className="space-y-2">
                <input

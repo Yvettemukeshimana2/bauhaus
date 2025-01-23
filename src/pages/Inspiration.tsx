@@ -161,9 +161,9 @@
                    src={testimonial.avatar}
                    loading="lazy"
                    alt={`${testimonial.name}'s avatar`}
-                   className="w-20 h-20 rounded-full mr-4"
+                   className="w-28 h-28 rounded-full mr-4"
                  />
-                 <div>
+                 <div className="flex justify-center">
                    <h3 className="font-semibold">{testimonial.name}</h3>
                    <p className="text-sm text-gray-600">{testimonial.role}</p>
                  </div>
@@ -172,8 +172,8 @@
                  {Array.from({ length: testimonial.rating }).map((_, i) => (
                    <i key={i} className="fa fa-star text-yellow-400"></i>
                  ))}
-               </div>
-               <p className="text-gray-700">{testimonial.comment}</p>
+               </div >
+               <p className="text-gray-700 items-center bg-yellow-500 p-3 rounded-sm">{testimonial.comment}</p>
              </article>
            ))}
          </div>

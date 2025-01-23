@@ -26,13 +26,13 @@ const services = [
 ];
 const OurServices: React.FC = () => {
   return (
-    <div className="flex flex-col items-center mt-10 z-20">
-      <h1 className="text-2xl font-bold mb-6 text-yellow-500">Our Services</h1>
-      <div className="grid grid-cols-3  gap-10 mb-5 justify-center">
+    <div className="flex flex-col lg:items-center mt-10 ">
+      <h1 className=" lg:text-2xl text-6xl font-bold mb-6 text-yellow-500">Our Services</h1>
+      <div className=" grid lg:grid-cols-3 grid-cols-1 gap-10 mb-5">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg p-5 max-w-xs flex flex-col items-center"
+            className="bg-white rounded-lg shadow-lg p-5 flex flex-col items-center"
           >
             <img
               src={service.img}
@@ -51,7 +51,7 @@ const OurServices: React.FC = () => {
         ))}
       </div>
       <a href="/services" className="mt-5">
-        <button className=" text-white border-2 text-sm bg-yellow-500 py-2 px-4 rounded">
+        <button className=" text-white border-2 lg:text-sm text-3xl bg-yellow-500 py-2 px-4 rounded">
           View All Services
         </button>
       </a>

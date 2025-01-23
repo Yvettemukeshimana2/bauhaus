@@ -36,7 +36,7 @@ const Home: React.FC = () => {
   }, []);
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-96 w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={images[currentIndex].src}
@@ -53,12 +53,12 @@ const Home: React.FC = () => {
             }}
           ></div>
         </div>
-        <div className="pl-10 pt-32 z-0">
-          <h1 className="text-lg text-white font-semibold">
+        <div className="pl-10 pt-32 z-0 text-xl sm:text-lg md:text-lg ">
+          <h1 className="text-xl sm:text-lg md:text-lg text-white font-semibold">
             {images[currentIndex].description}
           </h1>
-          <h1 className="text-xl md:text-2xl font-bold mt-10 animate-pulse text-white text-center">
-            BATO <span className="text-yellow-500 ">BATARI GITO  </span>
+          <h1 className="text-6xl md:text-2xl sm:text-2xl font-bold mt-10 animate-pulse text-white text-center">
+            BATO <span className="text-yellow-500 ">BATARI GITO </span>
           </h1>
         </div>
       </div>
