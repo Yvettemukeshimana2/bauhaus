@@ -43,7 +43,7 @@
 
      // Comprehensive types for different categories
      switch (itemName) {
-       case "Chairs":
+       case "photography":
          types = [
            { name: "Plastic Chair", price: 10 },
            { name: "Wooden Chair", price: 20 },

@@ -38,7 +38,7 @@
          };
 
          const vendorUrl = `${him}/cat/vendor`;
-         const venueUrl = `${him}/item/venues`;
+         const venueUrl = `${him}/cat/venue`;
          const materialUrl = `${him}/item/materials`;
 
          // Log URLs to verify the API endpoint
@@ -123,24 +123,25 @@
        >
          <img
            src={
-             item.Itemimage ||"https://www.bellanaijaweddings.com/wp-content/uploads/2023/02/Hope-Kassim-Rwandan-White-Wedding-BellaNaija-Weddings-63-520x400.jpg"
+             item.catimage ||
+             "https://www.bellanaijaweddings.com/wp-content/uploads/2023/02/Hope-Kassim-Rwandan-White-Wedding-BellaNaija-Weddings-63-520x400.jpg"
            } // Fallback image if no image is provided
-           alt={item.itemname}
+           alt={item.catname}
            className="w-full h-48 object-cover rounded-t-lg"
          />
          <div className="mt-4">
            <h3 className="lg:text-lg text-2xl font-bold text-center">
-             {item.itemname}
+             {item.catname}
            </h3>
            <p className="text-gray-600 lg:text-sm text-lg">
-             {item.itemdiscription || "No description available"}
+             {item.catdescription || "No description available"}
            </p>
-           <p className="text-gray-600 text-lg font-semibold">
-             Price: ${item.itemPPU}
-           </p>
-           <p className="text-gray-600 text-lg font-semibold">
+           {/* <p className="text-gray-600 text-lg font-semibold">
+             Price: ${item.cattype}
+           </p> */}
+           {/* <p className="text-gray-600 text-lg font-semibold">
              Quantity Available: {item.itemquantity}
-           </p>
+           </p> */}
          </div>
        </div>
      ));
