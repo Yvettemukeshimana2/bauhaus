@@ -42,7 +42,7 @@
 
     return (
       <footer className="bg-gradient-to-b from-yellow-800 to-yellow-500  text-white py-8">
-        <div className="container mx-auto px-4 ">
+        <div className=" mx-auto px-4 ">
           <div className="grid grid-cols-4 sm:grid-cols-5  mb-6">
             {/* Company Info */}
             <div>
@@ -129,7 +129,7 @@
                 ))}
               </div>
               <Link to="/venue">
-                <button className=" md:block hidden justify-end ml-9 text-sm mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
+                <button className="lg:block hidden justify-end ml-9 text-sm mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
                   Work With Us
                 </button>
               </Link>

@@ -16,7 +16,7 @@ const CardComponent: React.FC = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {cardsData.map((card) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -33,8 +33,8 @@ const CardComponent: React.FC = () => {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-gray-600 mt-2">
+                <h3 className="lg:text-lg text-2xl font-semibold">{card.title}</h3>
+                <p className="lg:text-sm text-2xl text-gray-600 mt-2">
                   {card.description.substring(0, 50)}...
                 </p>
               </div>

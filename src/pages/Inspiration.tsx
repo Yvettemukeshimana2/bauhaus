@@ -74,12 +74,14 @@
                transition={{ duration: 1, delay: 0.5 }}
                className="text-center space-y-4"
              >
-               <h2 className="text-2xl font-bold tracking-wider">
+               <h2 className="- text-4xl lg:text-2xl font-bold tracking-wider">
                  GET INSPIRED
                </h2>
                <div className="flex items-center justify-center gap-3">
-                 <span className="text-2xl text-yellow-500 font-bold">By</span>
-                 <h3 className="text-2xl font-bold text-yellow-500">
+                 <span className="lg:text-2xl text-3xl text-yellow-500 font-bold">
+                   By
+                 </span>
+                 <h3 className="lg:text-2xl text-3xl font-bold text-yellow-500">
                    Muhe Hospitality Services
                  </h3>
                </div>
@@ -93,7 +95,7 @@
              >
                <Link
                  to="/contactus"
-                 className="btn px-8 py-4 border-2 border-yellow-500 animate-spin   hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition duration-300"
+                 className="btn px-8 py-4 border-2 border-yellow-500 animate-spin   hover:bg-yellow-600 text-white lg:text-sm text-lg font-semibold rounded-full transition duration-300"
                >
                  LET'S CONNECT
                </Link>
@@ -104,24 +106,24 @@
 
        {/* Second Section */}
        <section className="py-10">
-         <h1 className="page_title text-center text-2xl font-bold text-gray-600 mb-10">
+         <h1 className="page_title text-center text-4xl lg:text-2xl font-bold text-gray-600 mb-10">
            GRAB SOME INSPIRATION
          </h1>
 
-         <div className="row grid sm:grid-cols-3 grid-cols-2 w-full justify-center">
+         <div className="row grid lg:grid-cols-3 grid-cols-2 w-full justify-center">
            {inspirations.map((item, index) => (
              <div
                key={index}
-               className="test_box w-full bg-opacity-20 bg-black h-72 p-4"
+               className="test_box w-full bg-opacity-90 bg-black h-72 p-4"
              >
                <div
-                 className="inner rounded-lg p-6 w-full h-full text-center transition transform hover:scale-105 bg-cover bg-center"
+                 className="inner rounded-lg p-6 w-full  h-full text-center transition transform hover:scale-105 bg-cover bg-center"
                  style={{
                    backgroundImage: `url(${item.image})`,
                  }}
                >
                  <a href="#" className="test_click">
-                   <h1 className="test_title text-md font-semibold text-white mb-4 bg-opacity-60 p-2 rounded">
+                   <h1 className="test_title text-2xl lg:text-md font-semibold text-white mb-4 bg-opacity-950 p-2 rounded">
                      {item.title}
                    </h1>
                    <span className="test_link text-gray-300 text-3xl">
@@ -134,7 +136,7 @@
          </div>
        </section>
        <section className="section3_content container-fluid p-10 ml-20 mr-20 mb-5 bg-yellow-600">
-         <div id="instafeed-container" className="flex justify-center text-sm">
+         <div id="instafeed-container" className="flex justify-center text-xl lg:text-sm">
            <p>
              "At Muhe Hospitality Services, we believe that true inspiration
              comes from dedication, passion, and an unwavering commitment to
@@ -145,12 +147,12 @@
            </p>
          </div>
        </section>
-       
+
        <section className="mb-12 text-center">
-         <h2 className="text-xl font-bold mb-6 text-yellow-500">
+         <h2 className="lg:text-xl text-3xl font-bold mb-6 text-yellow-500">
            Client Testimonials
          </h2>
-         <div className="grid gap-6 md:grid-cols-2 p-10">
+         <div className="grid gap-6 lg:grid-cols-2 p-10">
            {testimonials.map((testimonial) => (
              <article
                key={testimonial.id}
@@ -164,16 +166,18 @@
                    className="w-28 h-28 rounded-full mr-4"
                  />
                  <div className="flex justify-center">
-                   <h3 className="font-semibold">{testimonial.name}</h3>
-                   <p className="text-sm text-gray-600">{testimonial.role}</p>
+                   <h3 className="font-semibold text-xl lg:text-sm">{testimonial.name}</h3>
+                   <p className="lg:text-sm text-3xl text-gray-600">{testimonial.role}</p>
                  </div>
                </div>
                <div className="flex mb-2">
                  {Array.from({ length: testimonial.rating }).map((_, i) => (
                    <i key={i} className="fa fa-star text-yellow-400"></i>
                  ))}
-               </div >
-               <p className="text-gray-700 items-center bg-yellow-500 p-3 rounded-sm">{testimonial.comment}</p>
+               </div>
+               <p className="text-gray-700 items-center bg-yellow-500 p-3 text-2xl lg:text-sm rounded-sm">
+                 {testimonial.comment}
+               </p>
              </article>
            ))}
          </div>

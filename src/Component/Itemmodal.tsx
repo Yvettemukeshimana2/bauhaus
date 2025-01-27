@@ -52,6 +52,24 @@
            { name: "Bar Stool", price: 15 },
          ];
          break;
+       case "Kabeza":
+         types = [
+           { name: "Plastic Chair", price: 10 },
+           { name: "Wooden Chair", price: 20 },
+           { name: "Cushioned Chair", price: 25 },
+           { name: "Chiavari Chair", price: 30 },
+           { name: "Bar Stool", price: 15 },
+         ];
+         break;
+       case "Gisozi":
+         types = [
+           { name: "Plastic Chair", price: 10 },
+           { name: "Wooden Chair", price: 20 },
+           { name: "Cushioned Chair", price: 25 },
+           { name: "Chiavari Chair", price: 30 },
+           { name: "Bar Stool", price: 15 },
+         ];
+         break;
        case "Tables":
          types = [
            { name: "Round Table", price: 50 },

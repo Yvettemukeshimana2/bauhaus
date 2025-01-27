@@ -1,7 +1,7 @@
  import { useEffect, useState } from "react";
  import MenuItem from "../reusable/MenuItem.tsx";
  import { Link } from "react-router-dom";
- import { FiHome, FiPhone, FiActivity, FiPackage, FiRadio, FiBookmark, FiChevronDown, FiMenu,  FiX, } from "react-icons/fi";
+ import { FiHome, FiPhone, FiActivity, FiPackage, FiBookmark, FiChevronDown, FiMenu,  FiX, } from "react-icons/fi";
  import Logo from "../assets/Muhe-Logo-white.png";
  import Header from "./Header.tsx";
  const NavBar = () => {
@@ -46,20 +46,108 @@
                  className="flex justify-start mr-80"
                />
              </Link>
-             <div className="flex lg:hidden">
-               <button
-                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                 className="text-white text-sm "
-               >
-                 {isMenuOpen ? <FiX /> : <FiMenu />}
-               </button>
-             </div>
-             <nav
-               className={`${
-                 isMenuOpen ? "flex" : "hidden"
-               } lg:flex flex-row lg:flex-row items-center lg:bg-transparent w-full lg:w-auto h-full lg:h-auto top-0 right-0 z-50 sm:p-5 lg:p-0`}
-             >
-               <div className="flex flex-row lg:flex-row gap-3 lg:gap-6 w-full text-sm lg:w-auto mt-8 lg:mt-0">
+             <div className="relative">
+               {/* Menu Button for Mobile */}
+               <div className="flex lg:hidden">
+                 <button
+                   onClick={() => setIsMenuOpen(!isMenuOpen)}
+                   className="text-white mr-8  text-sm"
+                 >
+                   {isMenuOpen ? <FiX /> : <FiMenu />}
+                 </button>
+               </div>
+
+               {/* Popup Menu for Mobile */}
+               {isMenuOpen && (
+                 <div className="fixed top-10 right-0 w-1/4 h-5/6 bg-yellow-500 z-20 flex flex-col justify-center items-center">
+                   <button
+                     className="absolute top-4 right-4 text-white text-lg"
+                     onClick={() => setIsMenuOpen(false)}
+                   >
+                     <FiX />
+                   </button>
+
+                   <nav className="flex flex-col space-y-6 text-center">
+                     <MenuItem
+                       title="Home"
+                       address="/"
+                       Icon={FiHome}
+                       onClick={handleMenuItemClick}
+                     />
+                     <MenuItem
+                       title="About Us"
+                       address="/aboutus1"
+                       Icon={FiBookmark}
+                       onClick={handleMenuItemClick}
+                     />
+                     <MenuItem
+                       title="Contact"
+                       address="/contactus"
+                       Icon={FiPhone}
+                       onClick={handleMenuItemClick}
+                     />
+                     <div
+                       className="relative"
+                       onMouseEnter={() => setIsServicesOpen(true)}
+                       onMouseLeave={() => setIsServicesOpen(false)}
+                     >
+                       <div
+                         className="flex items-center justify-center cursor-pointer"
+                         onClick={(e) => {
+                           e.preventDefault();
+                           setIsServicesOpen((prev) => !prev);
+                         }}
+                       >
+                         <span className="pb-2 text-white">Services</span>
+                         <FiChevronDown
+                           className={`text-white transition-transform ${
+                             isServicesOpen ? "rotate-180" : ""
+                           }`}
+                         />
+                       </div>
+                       {isServicesOpen && (
+                         <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white text-black shadow-lg mt-2 p-4 rounded-lg">
+                           <Link
+                             to="/venue"
+                             className="block px-4 py-2 hover:bg-yellow-300"
+                             onClick={() => setIsServicesOpen(false)}
+                           >
+                             Event
+                           </Link>
+                           <Link
+                             to="/material"
+                             className="block px-4 py-2 hover:bg-yellow-300"
+                             onClick={() => setIsServicesOpen(false)}
+                           >
+                             Material
+                           </Link>
+                         </div>
+                       )}
+                     </div>
+                     <MenuItem
+                       title="Inspirations"
+                       address="/insipirations"
+                       Icon={FiActivity}
+                       onClick={handleMenuItemClick}
+                     />
+                     <MenuItem
+                       title="Publications"
+                       address="/publication"
+                       Icon={FiPackage}
+                       onClick={handleMenuItemClick}
+                     />
+                     <MenuItem
+                       title="Plan Your Event"
+                       address="/planevent"
+                       Icon={FiActivity}
+                       onClick={handleMenuItemClick}
+                     />
+                   </nav>
+                 </div>
+               )}
+
+               {/* Normal Navigation for Large Screens */}
+               <nav className="hidden lg:flex flex-row items-center gap-6">
                  <MenuItem
                    title="Home"
                    address="/"
@@ -78,7 +166,6 @@
                    Icon={FiPhone}
                    onClick={handleMenuItemClick}
                  />
-
                  <div
                    className="relative"
                    onMouseEnter={() => setIsServicesOpen(true)}
@@ -91,28 +178,25 @@
                        setIsServicesOpen((prev) => !prev);
                      }}
                    >
-                     <div className="flex items-center space-x-2 mt-2 text-white">
-                       <FiRadio className="text-white lg:hidden" />
-                       <span>Services</span>
-                     </div>
+                     <span className="pb-2 text-white">Services</span>
                      <FiChevronDown
-                       className={`absolute -right-5 text-white top-1/2 w-5 h-5 transform -translate-y-1/2 transition-transform ${
+                       className={` text-white transition-transform ${
                          isServicesOpen ? "rotate-180" : ""
                        }`}
                      />
                    </div>
                    {isServicesOpen && (
-                     <div className="absolute top-full left-0 bg-white dark:bg-dark-secondary text-center flex flex-col space-y-2 py-3">
+                     <div className="absolute top-full left-0 bg-white text-black shadow-lg mt-2 p-4 rounded-lg">
                        <Link
                          to="/venue"
-                         className="block px-4 py-2 hover:bg-yellow-500"
+                         className="block px-4 py-2 hover:bg-yellow-300"
                          onClick={() => setIsServicesOpen(false)}
                        >
                          Event
                        </Link>
                        <Link
                          to="/material"
-                         className="block px-4 py-2 hover:bg-yellow-500"
+                         className="block px-4 py-2 hover:bg-yellow-300"
                          onClick={() => setIsServicesOpen(false)}
                        >
                          Material
@@ -120,7 +204,6 @@
                      </div>
                    )}
                  </div>
-
                  <MenuItem
                    title="Inspirations"
                    address="/insipirations"
@@ -139,8 +222,8 @@
                    Icon={FiActivity}
                    onClick={handleMenuItemClick}
                  />
-               </div>
-             </nav>
+               </nav>
+             </div>
            </div>
          </div>
        </header>

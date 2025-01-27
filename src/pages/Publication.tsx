@@ -52,9 +52,9 @@ import CardComponent from "./Cardcomponent";
      className="w-full mb-4"
    >
      <div className="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
-       <h5 className="text-lg font-semibold text-yellow-500 mb-2">{title}</h5>
+       <h5 className="lg:text-lg text-3xl font-semibold text-yellow-500 mb-2">{title}</h5>
        {description && (
-         <p className="text-sm text-gray-600 mb-3">{description}</p>
+         <p className="lg:text-sm text-xl text-gray-600 mb-3">{description}</p>
        )}
        <button
          onClick={onClick}
@@ -99,7 +99,7 @@ import CardComponent from "./Cardcomponent";
              initial={{ y: -100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 0.5 }}
-             className="text-2xl absolute top-1/2  transform animate-bounce   md:text-2xl font-bold text-white text-center"
+             className="lg:text-2xl text-4xl absolute top-1/2  transform animate-bounce font-bold text-white text-center"
            >
              BATO <span className="text-yellow-500  ">BATARI GITO</span>
            </motion.h1>
@@ -107,7 +107,7 @@ import CardComponent from "./Cardcomponent";
              initial={{ y: 100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 0.8 }}
-             className="absolute bottom-28 animate-pulse transform   text-white text-2xl font-bold"
+             className="absolute bottom-28 animate-pulse transform   text-white lg:text-2xl text-3xl font-bold"
            >
              MHS(Muhe Hospitality Service)
            </motion.h1>
@@ -117,7 +117,7 @@ import CardComponent from "./Cardcomponent";
              transition={{ duration: 1, delay: 1.1 }}
              whileHover={{ scale: 1.1 }}
              whileTap={{ scale: 0.95 }}
-             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-8 rounded-md  text-white text-xl font-bold hover:bg-yellow-500 transition-colors duration-300"
+             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-8 rounded-md  text-white text-2xl lg:text-xl font-bold hover:bg-yellow-500 transition-colors duration-300"
            >
              let's Talk
            </motion.button>
@@ -176,8 +176,8 @@ import CardComponent from "./Cardcomponent";
          className="py-16 bg-yellow-100"
        >
          <div className="container mx-auto px-4">
-           <h3 className="text-2xl font-bold text-center mb-12">Tenders</h3>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+           <h3 className="lg:text-2xl text-4xl font-bold text-center mb-12">Tenders</h3>
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
              <JobCard
                title="A Video-grapher"
                description="We Are Looking for an experienced Video-grapher who can Record Our Summer Weddings"
@@ -202,7 +202,7 @@ import CardComponent from "./Cardcomponent";
          className="py-16 bg-[#fb911f] text-black"
        >
          <div>
-           <h3 className="text-2xl font-bold text-center mb-5">Careers</h3>
+           <h3 className="lg:text-2xl text-4xl font-bold text-center mb-5">Careers</h3>
            <div className="container mx-auto px-4 pl-20 pr-20 flex justify-center items-center">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                <motion.div
@@ -210,19 +210,19 @@ import CardComponent from "./Cardcomponent";
                  whileInView={{ x: 0, opacity: 1 }}
                  transition={{ duration: 0.8 }}
                >
-                 <h5 className="text-xl font-semibold mb-4">
+                 <h5 className="lg:text-xl text-2xl font-semibold mb-4">
                    Join Our Team in making a positive impact on our society!
                  </h5>
-                 <p className="mb-6 text-sm">
+                 <p className="mb-6 text-2xl lg:text-sm">
                    Are you a talented individual, bursting with enthusiasm for
                    event and hospitality management? At MHS Company, we are
                    always on the lookout for talented individuals who feel they
                    would thrive in the ever-changing events industry!
                  </p>
-                 <h5 className="text-xl font-semibold mb-4">
+                 <h5 className="lg:text-xl text-2xl font-semibold mb-4">
                    We love team members who are:
                  </h5>
-                 <div className="space-y-1 text-sm">
+                 <div className="space-y-1 text-2xl lg:text-sm">
                    {teamQualities.map((quality, index) => (
                      <TeamQuality key={index} text={quality} index={index} />
                    ))}
@@ -233,10 +233,10 @@ import CardComponent from "./Cardcomponent";
                  whileInView={{ x: 0, opacity: 1 }}
                  transition={{ duration: 0.8 }}
                >
-                 <h5 className="text-xl font-semibold text-center mb-8">
+                 <h5 className="lg:text-xl text-3xl lg:font-semibold font-bold text-center mb-8">
                    Available Job Positions
                  </h5>
-                 <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                    <JobCard
                      title="Event Staffing Officer"
                      buttonText="Apply Here"

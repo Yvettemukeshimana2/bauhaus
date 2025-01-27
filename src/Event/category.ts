@@ -1,4 +1,18 @@
-export const categories = [
+
+
+// Define the ItemType for items in each category
+export type ItemType = {
+  name: string;
+  description: string;
+  image: string;
+};
+
+// Define the CategoryType for categories containing items
+export type CategoryType = {
+  name: string;
+  items: ItemType[];
+};
+export const categories:CategoryType[] = [
   {
     name: "Vendor",
     items: [
@@ -44,64 +58,64 @@ export const categories = [
     name: "Venue",
     items: [
       {
-        name: "Intare Conference Arena",
+        name: "Bugesera",
         description: "Spacious and elegant halls for events.",
         image:
           "https://gmkintlpartners.com/wp-content/uploads/2022/02/INTARE-ARENA-@-GMK-1-768x461.jpg",
       },
       {
-        name: "Jalia Hall and Garden",
+        name: "Kicukiro",
         description: "Beautiful gardens for outdoor events.",
         image: "https://intare.rw/images/gallery/popup/pavillion-01-popup.jpg",
       },
       {
-        name: "Romantic Garden Gisozi",
+        name: "Gisozi",
         description: "Stylish terraces with stunning views.",
         image:
           "https://tse2.mm.bing.net/th?id=OIP.dXfsIMct-UIe17KVanZDhwHaE8&pid=Api&P=0&h=220",
       },
       {
-        name: "Pinnacle Garden Kigali",
+        name: "Kacyiru",
         description: "Stylish terraces with stunning views.",
         image:
           "https://pinnaclegardenskigali.com/wp-content/uploads/2022/03/243031491_1998490510324949_1643438225091676155_n.jpg",
       },
       {
-        name: "Wonderland Kinyinya Hill",
+        name: "Kabeza",
         description: "Stylish terraces with stunning views.",
         image:
           "https://www.newtimes.co.rw/uploads/imported_images/files/main/articles/2019/02/27/cactus-green-park-project_0.jpg",
       },
-      {
-        name: "Heaven Garden Rebero",
-        description: "Stylish terraces with stunning views.",
-        image:
-          "https://i.ytimg.com/vi/uV7S7auN8ZA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWChRMA8=&rs=AOn4CLAo_S-_oExaHPF2OrfRD9565jrTMA",
-      },
-      {
-        name: "Parkland Garden",
-        description: "Stylish terraces with stunning views.",
-        image:
-          "https://tse3.mm.bing.net/th?id=OIP.HORNhePfvH7gw_OUWg1-dQHaFj&pid=Api&P=0&h=220",
-      },
-      {
-        name: "Kagarama Garden",
-        description: "Stylish terraces with stunning views.",
-        image:
-          "https://i.pinimg.com/736x/1b/51/0c/1b510c839548c52d83c62d0918f0ef68--le-pain-green-walls.jpg",
-      },
-      {
-        name: "Sunday Park",
-        description: "Stylish terraces with stunning views.",
-        image:
-          "https://cdn.pixabay.com/photo/2016/11/06/15/58/sunday-1803312_1280.jpg",
-      },
-      {
-        name: "Parnarama Hope Garden",
-        description: "Stylish terraces with stunning views.",
-        image:
-          "https://lh5.googleusercontent.com/p/AF1QipPzp-zOJ0grRnjHwtZYMczVOIku_B9xm54zysS9=w408-h306-k-no",
-      },
+      // {
+      //   name: "Heaven Garden Rebero",
+      //   description: "Stylish terraces with stunning views.",
+      //   image:
+      //     "https://i.ytimg.com/vi/uV7S7auN8ZA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWChRMA8=&rs=AOn4CLAo_S-_oExaHPF2OrfRD9565jrTMA",
+      // },
+      // {
+      //   name: "Parkland Garden",
+      //   description: "Stylish terraces with stunning views.",
+      //   image:
+      //     "https://tse3.mm.bing.net/th?id=OIP.HORNhePfvH7gw_OUWg1-dQHaFj&pid=Api&P=0&h=220",
+      // },
+      // {
+      //   name: "Kagarama Garden",
+      //   description: "Stylish terraces with stunning views.",
+      //   image:
+      //     "https://i.pinimg.com/736x/1b/51/0c/1b510c839548c52d83c62d0918f0ef68--le-pain-green-walls.jpg",
+      // },
+      // {
+      //   name: "Sunday Park",
+      //   description: "Stylish terraces with stunning views.",
+      //   image:
+      //     "https://cdn.pixabay.com/photo/2016/11/06/15/58/sunday-1803312_1280.jpg",
+      // },
+      // {
+      //   name: "Parnarama Hope Garden",
+      //   description: "Stylish terraces with stunning views.",
+      //   image:
+      //     "https://lh5.googleusercontent.com/p/AF1QipPzp-zOJ0grRnjHwtZYMczVOIku_B9xm54zysS9=w408-h306-k-no",
+      // },
     ],
   },
   {

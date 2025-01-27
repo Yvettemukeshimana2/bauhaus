@@ -69,9 +69,9 @@
            </motion.button>
          </div>
        </header>
-       <div className="max-w-7xl mx-auto p-10 grid md:grid-cols-2 gap-8 ">
+       <div className="max-w-7xl mx-auto p-10 grid  grid-cols-1 lg:grid-cols-2 gap-8 ">
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-xl font-bold mb-6 text-center ">
+           <h2 className=" text-4xl lg:text-xl font-bold mb-6 text-center ">
              Our Location
            </h2>
            <motion.div
@@ -94,48 +94,50 @@
            </motion.div>
 
            <div className="space-y-4">
-            <div className="flex justify-between">
-             <div className="flex items-start text-sm space-x-3">
-               <MapPin className="w-5 h-5 text-blue-600 mt-1" />
-               <div className="text-sm">
-                 <h3 className="font-semibold">Address</h3>
-                 <p className="text-gray-600"> KG 17 Ave, Kigali – Rwanda</p>
-                 <p className="text-gray-600"> 24X8+MM Kigali</p>
+             <div className="flex justify-between">
+               <div className="flex items-start text-xl lg:text-sm space-x-3">
+                 <MapPin className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Address</h3>
+                   <p className="text-gray-600"> KG 17 Ave, Kigali – Rwanda</p>
+                   <p className="text-gray-600"> 24X8+MM Kigali</p>
+                 </div>
                </div>
-             </div>
 
-             <div className="flex text-sm items-start space-x-3">
-               <Phone className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Phone</h3>
-                 <p className="text-gray-600">(+250) 788501009</p>
+               <div className="flex text-xl lg:text-sm items-start space-x-3">
+                 <Phone className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Phone</h3>
+                   <p className="text-gray-600">(+250) 788501009</p>
+                 </div>
                </div>
              </div>
-</div>
-      <div className="flex justify-between"> 
-             <div className="flex text-sm items-start space-x-3">
-               <Mail className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Email</h3>
-                 <p className="text-gray-600">info@muheservices.com</p>
+             <div className="flex justify-between">
+               <div className="flex text-xl lg:text-sm items-start space-x-3">
+                 <Mail className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Email</h3>
+                   <p className="text-gray-600">info@muheservices.com</p>
+                 </div>
                </div>
-             </div>
 
-             <div className="flex text-sm items-start space-x-3">
-               <Clock className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Working Hours</h3>
-                 <p className="text-gray-600">
-                   Monday - Friday: 8:00 AM - 6:00 PM
-                 </p>
-                 <p className="text-gray-600">Saturday: 9:00 AM - 3:00 PM</p>
+               <div className="flex  text-xl lg:text-sm items-start space-x-3">
+                 <Clock className="w-5 h-5 text-blue-600 mt-1" />
+                 <div>
+                   <h3 className="font-semibold">Working Hours</h3>
+                   <p className="text-gray-600">
+                     Monday - Friday: 8:00 AM - 6:00 PM
+                   </p>
+                   <p className="text-gray-600">Saturday: 9:00 AM - 3:00 PM</p>
+                 </div>
                </div>
-             </div>
              </div>
            </div>
          </div>
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-xl font-bold mb-6 text-center">Get in Touch</h2>
+           <h2 className=" font-bold text-4xl lg:text-xl mb-6 text-center">
+             Get in Touch
+           </h2>
            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
              <div className="space-y-2">
                <input
@@ -219,7 +221,7 @@
 
              <button
                type="submit"
-               className="w-96 font-bold sm:ml-16  border-2 hover:border-yellow-500 hover:bg-white text-black py-2 px-4 rounded-md bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
+               className="w-96 font-bold sm:ml-16 text-2xl lg:text-sm border-2 hover:border-yellow-500 hover:bg-white text-black py-2 px-4 rounded-md bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
              >
                Send Message
              </button>

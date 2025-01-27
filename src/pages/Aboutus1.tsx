@@ -36,7 +36,7 @@ import { Link } from "react-router-dom";
    ];
 
    return (
-     <div className="min-h-screen   bg-white">
+     <div className="min-h-screen bg-white">
        <div className=" h-[80vh] overflow-hidden bg-black">
          <img
            src={bg}
@@ -46,21 +46,21 @@ import { Link } from "react-router-dom";
          />
          <div className="absolute inset-0 flex justify-center space-y-1 text-center mt-7">
            <div className="container mx-auto px-6  top-36  absolute  ">
-             <h1 className="text-3xl md:text-3xl t font-bold text-white mb-4">
+             <h1 className="text-4xl lg:text-3xl t font-bold text-white mb-4">
                Welcome to <span className="text-yellow-500">MHC</span>
              </h1>
-             <h1 className="text-xl md:text-xl  font-bold mt-10  text-white ">
+             <h1 className="text-2xl lg:text-xl  font-bold mt-10  text-white ">
                BATO <span className="text-yellow-500">BATARI GITO</span>
              </h1>
            </div>
          </div>
        </div>
-       <div className="container mx-auto  ">
+       <div className=" ">
          <div className="text-center mb-20">
-           <h2 className="text-xl font-bold mb-6">
+           <h2 className="lg:text-xl  text-2xl font-bold mt-4">
              Crafting Memorable Experiences
            </h2>
-           <p className="  bg-gradient-to-t p-9 text-white text-sm  from-yellow-400 to-yellow-500 ">
+           <p className="  bg-gradient-to-t p-9 text-white lg:text-sm text-2xl m-10 from-yellow-400 to-yellow-500 ">
              At HMC, we believe every event tells a unique story. Our passion
              lies in bringing these stories to life through meticulous planning,
              creative design, and flawless execution. Creating extraordinary
@@ -68,7 +68,7 @@ import { Link } from "react-router-dom";
              perfect execution.
            </p>
          </div>
-         <div className="grid md:grid-cols-2 gap-12 mb-20">
+         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-20">
            {sections.map((section) => (
              <div
                key={section.title}
@@ -76,18 +76,18 @@ import { Link } from "react-router-dom";
              >
                <div className="flex items-center mb-6">
                  {section.icon}
-                 <h3 className="text-xl font-bold ml-3">{section.title}</h3>
+                 <h3 className="text-4xl lg:text-xl font-bold ml-3">{section.title}</h3>
                </div>
-               <p className="text-gray-600 text-sm mb-8">
+               <p className="text-gray-600 lg:text-sm text-2xl mb-8">
                  {section.description}
                </p>
                <div className="grid grid-cols-3 gap-4">
                  {section.stats.map((stat) => (
                    <div key={stat.label} className="text-center">
-                     <div className="text-sm font-bold text-yellow-500">
+                     <div className="text-3xl lg:text-sm font-bold text-yellow-500">
                        {stat.value}
                      </div>
-                     <div className="text-sm text-gray-500">{stat.label}</div>
+                     <div className=" text-2xl lg:text-sm text-gray-500">{stat.label}</div>
                    </div>
                  ))}
                </div>
@@ -97,18 +97,18 @@ import { Link } from "react-router-dom";
          <div className="bg-yellow-50 rounded-lg p-8 mb-20">
            <div className="flex items-center mb-8">
              <Award className="w-8 h-8 text-yellow-600" />
-             <h3 className="text-xl font-bold ml-3 text-yellow-500">
+             <h3 className="text-4xl lg:text-xl font-bold ml-3 text-yellow-500">
                Our Achievements
              </h3>
            </div>
-           <div className="grid md:grid-cols-2 gap-6">
+           <div className="grid lg:grid-cols-2 gap-6">
              {achievements.map((achievement, index) => (
                <div
                  key={index}
                  className="flex items-center bg-white p-4 rounded-lg shadow"
                >
                  <ChevronRight className=" text-yellow-500 " />
-                 <span className="text-sm">{achievement}</span>
+                 <span className=" text-2xl lg:text-sm">{achievement}</span>
                </div>
              ))}
            </div>

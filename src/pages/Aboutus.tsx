@@ -17,7 +17,7 @@ import ach2 from "../assets/images/testmony2.jpg"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
-             <h3 className="lg:text-2xl text-6xl  text-yellow-500 font-bold mb-2">
+             <h3 className="lg:text-2xl text-5xl  text-yellow-500 font-bold mb-2">
                Our Mission
              </h3>
              <p className="lg:text-sm text-3xl px-4">
@@ -36,7 +36,7 @@ import ach2 from "../assets/images/testmony2.jpg"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
-             <h3 className="lg:text-2xl text-6xl font-bold mb-2 text-yellow-500">
+             <h3 className="lg:text-2xl text-5xl font-bold mb-2 text-yellow-500">
                Our Culture
              </h3>
              <p className="lg:text-sm text-3xl px-4">
@@ -55,7 +55,7 @@ import ach2 from "../assets/images/testmony2.jpg"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
-             <h3 className="lg:text-2xl text-6xl font-bold mb-2 text-yellow-500">
+             <h3 className="lg:text-2xl text-5xl font-bold mb-2 text-yellow-500">
                Our Vision
              </h3>
              <p className="lg:text-sm text-3xl px-4">
@@ -67,9 +67,9 @@ import ach2 from "../assets/images/testmony2.jpg"
          </div>
        </div>
 
-       <div className="flex flex-col-reverse lg:flex-row gap-6 items-center">
+       <div className="flex flex-col lg:flex-row gap-6 items-center">
          <div className="lg:w-1/2 p-6 mx-auto bg-gray-50 rounded-lg shadow-lg">
-           <h3 className="lg:text-2xl text-6xl font-bold mb-4 text-yellow-500 text-center">
+           <h3 className="lg:text-2xl text-5xl font-bold mb-4 text-yellow-500 text-center">
              Our History
            </h3>
            <p className="lg:text-sm text-3xl text-gray-700">
@@ -78,7 +78,7 @@ import ach2 from "../assets/images/testmony2.jpg"
              includes weddings, corporate events, and community gatherings.
            </p>
          </div>
-         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
+         <div className="lg:w-1/2  w-full  p-5 lg:p-0 grid grid-cols-2 focus-within  gap-4">
            <img
              src={h1}
              alt="History Image 1"
@@ -94,7 +94,7 @@ import ach2 from "../assets/images/testmony2.jpg"
          </div>
        </div>
        <div className="flex flex-col lg:flex-row gap-6  items-center">
-         <div className="lg:w-1/2 grid grid-cols-2 gap-4 order-2 md:order-1">
+         <div className="lg:w-1/2  w-full  p-5 lg:p-0  grid grid-cols-2 gap-4 order-2 md:order-1">
            <img
              src={ach2}
              alt="Achievements Image 1"
@@ -109,7 +109,7 @@ import ach2 from "../assets/images/testmony2.jpg"
            />
          </div>
          <div className="lg:w-1/2 p-6 bg-gray-50 rounded-lg shadow-lg order-1 lg:order-2">
-           <h3 className="lg:text-2xl text-6xl font-bold mb-4 text-yellow-500 text-center">
+           <h3 className="lg:text-2xl text-5xl font-bold mb-4 text-yellow-500 text-center">
              Our Achievements
            </h3>
            <p className="lg:text-sm text-3xl text-gray-700">

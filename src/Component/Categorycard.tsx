@@ -1,9 +1,10 @@
  import React from "react";
  import { X } from "lucide-react";
+ import { useForm, SubmitHandler } from "react-hook-form";
 
  type CartItem = {
    category: string;
-   name: string;
+   name: string; // Includes item name and selected type
    quantity: number;
    price: number;
  };
@@ -15,94 +16,138 @@
    closeModal: () => void;
  };
 
+ type FormData = {
+   email: string;
+   phone: string;
+   eventDate: string;
+ };
+
  const CartModal: React.FC<CartModalProps> = ({
    cart,
    removeFromCart,
    updateQuantity,
    closeModal,
  }) => {
-   // Calculate the total price of the cart
-   const total = cart.reduce(
-     (sum, item) => sum + item.price * item.quantity,
-     0
-   );
+   const {
+     register,
+     handleSubmit,
+     formState: { errors },
+   } = useForm<FormData>();
 
-   // Handle the order submission
-   const handleSubmitOrder = () => {
-     alert("Order submitted!");
+   const onSubmit: SubmitHandler<FormData> = (data) => {
+     alert(`Order submitted! Details:\n${JSON.stringify(data, null, 2)}`);
    };
 
    return (
      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-       <div className="bg-white rounded-lg p-6 w-96">
+       <div className="bg-white rounded-lg p-6 w-2/3">
          <div className="flex justify-between items-center mb-4">
-           <h2 className="text-2xl font-bold text-yellow-500">Your Cart</h2>
+           <h2 className="text-2xl font-bold">Your Cart</h2>
            <button onClick={closeModal}>
              <X className="text-gray-600" />
            </button>
          </div>
 
-         <div className="space-y-4">
-           {cart.length > 0 ? (
-             cart.map((item, index) => (
-               <div
-                 key={index}
-                 className="flex justify-between items-center border-b py-2"
-               >
-                 <div>
-                   <p>{item.name}</p>
-                   <p className="text-gray-600">${item.price}</p>
-                 </div>
-                 <div className="flex items-center">
-                   <button
-                     onClick={() => updateQuantity(index, item.quantity - 1)}
-                     className="bg-gray-300 text-black px-2 py-1 rounded"
-                     disabled={item.quantity <= 1}
-                   >
-                     -
-                   </button>
-                   <span className="mx-2">{item.quantity}</span>
-                   <button
-                     onClick={() => updateQuantity(index, item.quantity + 1)}
-                     className="bg-gray-300 text-black px-2 py-1 rounded"
-                   >
-                     +
-                   </button>
-                   <button
-                     onClick={() => removeFromCart(index)}
-                     className="ml-4 text-red-500"
-                   >
-                     Remove
-                   </button>
-                 </div>
-               </div>
-             ))
-           ) : (
-             <p>Your cart is empty.</p>
-           )}
-         </div>
-         <div className=" flex space-x-3">
-           {cart.length > 0 && (
-             <div className="mt-4 flex space-x-3 items-center ">
-               <p className="text-sm  font-bold">Total: ${total.toFixed(2)}</p>
-               <button
-                 onClick={handleSubmitOrder}
-                 className="w-32 bg-yellow-500 text-white py-2 rounded"
-               >
-                 Submit Order
-               </button>
-             </div>
-           )}
+         {cart.length === 0 ? (
+           <p>Your cart is empty.</p>
+         ) : (
+           <table className="w-full table-auto border-collapse">
+             <thead>
+               <tr className="bg-gray-200">
+                 <th className="p-2 border">Item</th>
+                 <th className="p-2 border">Category</th>
+                 <th className="p-2 border">Quantity</th>
+                 <th className="p-2 border">Price</th>
+                 <th className="p-2 border">Actions</th>
+               </tr>
+             </thead>
+             <tbody>
+               {cart.map((item, index) => (
+                 <tr key={index}>
+                   <td className="p-2 border">{item.name}</td>
+                   <td className="p-2 border">{item.category}</td>
+                   <td className="p-2 border">
+                     <div className="flex items-center gap-2">
+                       <button
+                         onClick={() =>
+                           updateQuantity(index, item.quantity - 1)
+                         }
+                         className="px-2 py-1 bg-gray-300 rounded"
+                       >
+                         -
+                       </button>
+                       <span>{item.quantity}</span>
+                       <button
+                         onClick={() =>
+                           updateQuantity(index, item.quantity + 1)
+                         }
+                         className="px-2 py-1 bg-gray-300 rounded"
+                       >
+                         +
+                       </button>
+                     </div>
+                   </td>
+                   <td className="p-2 border">${item.price * item.quantity}</td>
+                   <td className="p-2 border">
+                     <button
+                       onClick={() => removeFromCart(index)}
+                       className="px-4 py-2 bg-red-500 text-white rounded"
+                     >
+                       Remove
+                     </button>
+                   </td>
+                 </tr>
+               ))}
+             </tbody>
+           </table>
+         )}
 
-           <div className="mt-4 flex justify-between items-center">
-             <button
-               onClick={closeModal}
-               className="w-14 bg-black text-white py-2 rounded"
-             >
-               Close
-             </button>
+         <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
+           <h3 className="text-lg font-bold mb-2">Order Details</h3>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+             <div>
+               <label className="block font-medium">Email</label>
+               <input
+                 type="email"
+                 {...register("email", { required: true })}
+                 className="w-full p-2 border rounded"
+               />
+               {errors.email && (
+                 <span className="text-red-500 text-sm">Email is required</span>
+               )}
+             </div>
+             <div>
+               <label className="block font-medium">Phone</label>
+               <input
+                 type="tel"
+                 {...register("phone", { required: true })}
+                 className="w-full p-2 border rounded"
+               />
+               {errors.phone && (
+                 <span className="text-red-500 text-sm">Phone is required</span>
+               )}
+             </div>
+             <div>
+               <label className="block font-medium">Event Date</label>
+               <input
+                 type="date"
+                 {...register("eventDate", { required: true })}
+                 className="w-full p-2 border rounded"
+               />
+               {errors.eventDate && (
+                 <span className="text-red-500 text-sm">
+                   Event date is required
+                 </span>
+               )}
+             </div>
            </div>
-         </div>
+           <button
+             type="submit"
+             className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded"
+           >
+             Submit Order
+           </button>
+         </form>
        </div>
      </div>
    );

@@ -21,7 +21,7 @@ const HospitalityMaterials: React.FC = () => {
   const [materials, setMaterials] = useState<Material[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+ ``
   const him = import.meta.env.VITE_HOST;
 
   useEffect(() => {
@@ -124,7 +124,7 @@ const HospitalityMaterials: React.FC = () => {
       </header>
 
       <h1 className="text-2xl font-bold mt-5 text-center text-yellow-500">
-        Rental Materials
+        Rentals
       </h1>
 
       {loading ? (
@@ -132,7 +132,7 @@ const HospitalityMaterials: React.FC = () => {
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : materials.length > 0 ? (
-        <div className="grid grid-cols-1 p-5 md:grid-cols-4 w-full gap-6">
+        <div className="grid grid-cols-3 p-5 lg:grid-cols-4 w-full gap-6">
           {materials.map((material) => (
             <div
               key={material.id}
@@ -147,22 +147,22 @@ const HospitalityMaterials: React.FC = () => {
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-black space-y-9 pt-20 bg-opacity-50 p-6 flex flex-col ">
-                <h2 className="text-sm font-bold mb-2 text-white">
+                <h2 className="lg:text-sm text-lg font-bold mb-2 text-white">
                   {material.name}
                 </h2>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-gray-300 mb-4 lg:text-sm text-xl">
                   {material.description}
                 </p>
-                <p className="text-gray-300 font-bold mb-4 text-sm">
+                <p className="text-gray-300 font-bold mb-4 lg:text-sm text-xl">
                   ${material.price} per {material.priceUnit}
                 </p>
-                <div className="p-16">
-                <button
-                  onClick={() => handleBookNow(material)}
-                  className="text-yellow-500 border-2 text-sm p-2 border-yellow-500 hover:text-yellow-700 font-bold  rounded"
-                >
-                  Book Now
-                </button>
+                <div className="p-10 lg:p-16">
+                  <button
+                    onClick={() => handleBookNow(material)}
+                    className="text-yellow-500 border-2 text-sm p-2  border-yellow-500 hover:text-yellow-700 font-bold  rounded"
+                  >
+                    Book Now
+                  </button>
                 </div>
               </div>
             </div>
