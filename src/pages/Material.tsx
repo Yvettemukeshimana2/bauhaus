@@ -28,10 +28,10 @@ const HospitalityMaterials: React.FC = () => {
       setLoading(true);
       setError(null);
 try {
-  const response = await fetch("https://muheservices.vercel.app/item/all", {
+  const response = await fetch("http://localhost:3000/item/vendors", {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${token}`,   
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc`,   
     },
   });
 
