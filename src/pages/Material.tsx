@@ -56,10 +56,7 @@ const HospitalityMaterials: React.FC = () => {
         setMaterials(transformedMaterials);
       } catch (err) {
         console.error("Failed to fetch materials:", err);
-        setError(
-          "Failed to load materials. Please check your network connection." +
-            err
-        );
+        setError( "Failed to load materials. Please check your network connection." + err);
       } finally {
         setLoading(false);
       }

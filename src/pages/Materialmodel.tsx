@@ -24,14 +24,14 @@
    returnDate: string;
  }
 
- const materialTypes = [
-   "Premium Tent",
-   "Glass Dining Set",
-   "Chiavari Chairs",
-   "Wine Glass",
-   "Dish",
-   "Cake Table",
- ];
+//  const materialTypes = [
+//    "Premium Tent",
+//    "Glass Dining Set",
+//    "Chiavari Chairs",
+//    "Wine Glass",
+//    "Dish",
+//    "Cake Table",
+//  ];
 
  const BookingModal: React.FC<BookingModalProps> = ({
    isOpen,
@@ -131,25 +131,42 @@
                >
                  Material Type
                </label>
-               <select
-                 id="materialType"
+               <input
+                 id="materialname"
+                 type="text"
                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
-                 {...register("materialType", {
-                   required: "Material type is required",
+                 {...register("name", {
+                   required: "Naterial name is required",
+                   minLength: {
+                     value: 4,
+                     message: "Name must be at least 4characters",
+                   },
                  })}
-               >
-                 <option value="">Select a material type</option>
-                 {materialTypes.map((type) => (
-                   <option key={type} value={type}>
-                     {type}
-                   </option>
-                 ))}
-               </select>
+               />
                {errors.materialType && (
                  <p className="text-sm text-red-500 mt-1">
                    {errors.materialType.message}
                  </p>
                )}
+               {/* <select
+                 id="materialType"
+                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+                 {...register("materialType", {
+                   required: "Material type is required",
+                 })}
+               > */}
+               {/* <option value="">Select a material type</option>
+                 {materialTypes.map((type) => (
+                   <option key={type} value={type}>
+                     {type}
+                   </option>
+                 ))} */}
+               {/* </select> */}
+               {/* {errors.materialType && (
+                 <p className="text-sm text-red-500 mt-1">
+                   {errors.materialType.message}
+                 </p>
+               )} */}
              </div>
            </div>
 

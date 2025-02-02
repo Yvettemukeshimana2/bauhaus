@@ -5,7 +5,7 @@
 
  // Define types for Cart and Category
  type CartItem = {
-   category: string;
+   category: "Chairs" | "Tables" | "Glass" | "DJ" | "Photography" | "Catering";
    name: string;
    quantity: number;
    price: number;
@@ -19,15 +19,16 @@
  const EventPlannerPage: React.FC = () => {
    const [cart, setCart] = useState<CartItem[]>([]);
    const [isCartOpen, setIsCartOpen] = useState(false);
-   const [selectedCategory, setSelectedCategory] = useState<string | null>(
-     null
-   );
+   const [selectedCategory, setSelectedCategory] = useState<
+     "Chairs" | "Tables" | "Glass" | "DJ" | "Photography" | "Catering" | null
+   >(null);
    const [selectedItem, setSelectedItem] = useState<any>(null);
    const [categories, setCategories] = useState<Category[]>([]); // State for categories
    const [loading, setLoading] = useState<boolean>(true); // Loading state
 
    const him = import.meta.env.VITE_HOST;
-   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc"; // Make sure to replace with a valid token
+   const token =
+     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc"; // Make sure to replace with a valid token
 
    // Fetch categories on component mount
    useEffect(() => {
@@ -41,17 +42,11 @@
          const venueUrl = `${him}/cat/venue`;
          const materialUrl = `${him}/item/materials`;
 
-         // Log URLs to verify the API endpoint
-        //  console.log("Vendor URL:", vendorUrl);
-        //  console.log("Venue URL:", venueUrl);
-        //  console.log("Material URL:", materialUrl);
-
          // Fetch data from API
          const vendorResponse = await fetch(vendorUrl, { headers });
          const venueResponse = await fetch(venueUrl, { headers });
          const materialResponse = await fetch(materialUrl, { headers });
 
-         
          if (!vendorResponse.ok || !venueResponse.ok || !materialResponse.ok) {
            console.error("Error fetching categories");
            return;
@@ -61,11 +56,6 @@
          const vendorData = await vendorResponse.json();
          const venueData = await venueResponse.json();
          const materialData = await materialResponse.json();
-
-         // Log raw data for debugging
-        //  console.log("Vendor Data:", vendorData);
-        //  console.log("Venue Data:", venueData);
-        //  console.log("Material Data:", materialData);
 
          // Check if 'data' exists and is an array before using it
          const allCategories = [
@@ -83,9 +73,6 @@
            },
          ];
 
-         // Log categories before setting state
-         console.log("All Categories:", allCategories);
-
          // Set the categories state
          setCategories(allCategories);
          setLoading(false);
@@ -98,7 +85,16 @@
      fetchCategories();
    }, []);
 
-   const addToCart = (category: string, item: any) => {
+   const addToCart = (
+     category:
+       | "Chairs"
+       | "Tables"
+       | "Glass"
+       | "DJ"
+       | "Photography"
+       | "Catering",
+     item: any
+   ) => {
      const newCartItem: CartItem = {
        category,
        name: item.name,
@@ -117,7 +113,15 @@
          key={item.itemid} // Assuming each item has a unique `itemid`
          className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
          onClick={() => {
-           setSelectedCategory(category.name);
+           setSelectedCategory(
+             category.name as
+               | "Chairs"
+               | "Tables"
+               | "Glass"
+               | "DJ"
+               | "Photography"
+               | "Catering"
+           );
            setSelectedItem(item);
          }}
        >
@@ -136,12 +140,6 @@
            <p className="text-gray-600 lg:text-sm text-lg">
              {item.catdescription || "No description available"}
            </p>
-           {/* <p className="text-gray-600 text-lg font-semibold">
-             Price: ${item.cattype}
-           </p> */}
-           {/* <p className="text-gray-600 text-lg font-semibold">
-             Quantity Available: {item.itemquantity}
-           </p> */}
          </div>
        </div>
      ));
@@ -192,7 +190,7 @@
        {selectedItem && (
          <ItemModal
            item={selectedItem}
-           category={selectedCategory!}
+           category={selectedCategory}
            onAddToCart={addToCart}
            onClose={() => setSelectedItem(null)}
          />

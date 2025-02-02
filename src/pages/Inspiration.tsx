@@ -123,7 +123,7 @@
                  }}
                >
                  <a href="#" className="test_click">
-                   <h1 className="test_title text-2xl lg:text-md font-semibold text-white mb-4 bg-opacity-950 p-2 rounded">
+                   <h1 className="text-2xl lg:text-md font-semibold text-white pt-44 bg-opacity-950 p-2 rounded">
                      {item.title}
                    </h1>
                    <span className="test_link text-gray-300 text-3xl">
