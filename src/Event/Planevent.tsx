@@ -1,149 +1,218 @@
- import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect, useCallback } from "react";
  import { ShoppingCart } from "lucide-react";
  import CartModal from "../Component/Categorycard";
  import ItemModal from "../Component/Itemmodal";
 
- // Define types for Cart and Category
+ // Type Definitions
+ type ItemType = {
+   name: string;
+   price: number;
+ };
+
  type CartItem = {
-   category: "Chairs" | "Tables" | "Glass" | "DJ" | "Photography" | "Catering";
+   category: string;
    name: string;
    quantity: number;
    price: number;
  };
 
  type Category = {
-   name: string;
-   items: any[];
+   catid: number;
+   catname: string;
+   cattype: string;
+   catimage: string;
+   catdescription: string;
+   type: "Vendor" | "Venue" | "Materials";
+ };
+
+ type Item = {
+   itemid: number;
+   itemname: string;
+   catid: number;
+   itemPPU: number;
+   itemquantity: number;
+   Itemimage: string | null;
+   itemdiscription: string | null;
+   Category: {
+     catname: string;
+     cattype: string;
+   };
  };
 
  const EventPlannerPage: React.FC = () => {
+   // State Management
    const [cart, setCart] = useState<CartItem[]>([]);
    const [isCartOpen, setIsCartOpen] = useState(false);
-   const [selectedCategory, setSelectedCategory] = useState<
-     "Chairs" | "Tables" | "Glass" | "DJ" | "Photography" | "Catering" | null
-   >(null);
-   const [selectedItem, setSelectedItem] = useState<any>(null);
-   const [categories, setCategories] = useState<Category[]>([]); // State for categories
-   const [loading, setLoading] = useState<boolean>(true); // Loading state
+   const [selectedCategory, setSelectedCategory] = useState<Category | null>(
+     null
+   );
+   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+   const [categories, setCategories] = useState<Category[]>([]);
+   const [items, setItems] = useState<Item[]>([]);
+   const [loading, setLoading] = useState(true);
+   const [filteredItems, setFilteredItems] = useState<Item[]>([]);
 
    const him = import.meta.env.VITE_HOST;
    const token =
-     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc"; // Make sure to replace with a valid token
+     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc";
 
-   // Fetch categories on component mount
+   // Data Fetching
+   const fetchData = useCallback(async () => {
+     try {
+       const headers = { Authorization: `Bearer ${token}` };
+       const categoryUrls = {
+         vendor: `${him}/cat/vendor`,
+         venue: `${him}/cat/venue`,
+         material: `${him}/item/materials`,
+       };
+       const itemsUrl = `${him}/item/all`;
+
+       const [vendorData, venueData, materialData, itemsData] =
+         await Promise.all([
+           fetch(categoryUrls.vendor, { headers }).then((res) => res.json()),
+           fetch(categoryUrls.venue, { headers }).then((res) => res.json()),
+           fetch(categoryUrls.material, { headers }).then((res) => res.json()),
+           fetch(itemsUrl, { headers }).then((res) => res.json()),
+         ]);
+
+       const allCategories: Category[] = [
+         ...vendorData.data.map((cat: Category) => ({
+           ...cat,
+           type: "Vendor",
+         })),
+         ...venueData.data.map((cat: Category) => ({ ...cat, type: "Venue" })),
+         ...materialData.data.map((cat: Category) => ({
+           ...cat,
+           type: "Materials",
+         })),
+       ];
+
+       setCategories(allCategories);
+       setItems(itemsData.data);
+     } catch (error) {
+       console.error("Error fetching data:", error);
+     } finally {
+       setLoading(false);
+     }
+   }, [him, token]);
+
+   // Effects
    useEffect(() => {
-     const fetchCategories = async () => {
-       try {
-         const headers = {
-           Authorization: `Bearer ${token}`,
-         };
+     fetchData();
+   }, [fetchData]);
 
-         const vendorUrl = `${him}/cat/vendor`;
-         const venueUrl = `${him}/cat/venue`;
-         const materialUrl = `${him}/item/materials`;
+   useEffect(() => {
+     if (selectedCategory) {
+       const filtered = items.filter(
+         (item) => item.Category.catname === selectedCategory.catname
+       );
+       setFilteredItems(filtered);
+     }
+   }, [selectedCategory, items]);
 
-         // Fetch data from API
-         const vendorResponse = await fetch(vendorUrl, { headers });
-         const venueResponse = await fetch(venueUrl, { headers });
-         const materialResponse = await fetch(materialUrl, { headers });
-
-         if (!vendorResponse.ok || !venueResponse.ok || !materialResponse.ok) {
-           console.error("Error fetching categories");
-           return;
-         }
-
-         // Get data from responses
-         const vendorData = await vendorResponse.json();
-         const venueData = await venueResponse.json();
-         const materialData = await materialResponse.json();
-
-         // Check if 'data' exists and is an array before using it
-         const allCategories = [
-           {
-             name: "Vendors",
-             items: Array.isArray(vendorData.data) ? vendorData.data : [],
-           },
-           {
-             name: "Venues",
-             items: Array.isArray(venueData.data) ? venueData.data : [],
-           },
-           {
-             name: "Materials",
-             items: Array.isArray(materialData.data) ? materialData.data : [],
-           },
-         ];
-
-         // Set the categories state
-         setCategories(allCategories);
-         setLoading(false);
-       } catch (error) {
-         console.error("Error fetching categories:", error);
-         setLoading(false);
-       }
-     };
-
-     fetchCategories();
-   }, []);
-
-   const addToCart = (
-     category:
-       | "Chairs"
-       | "Tables"
-       | "Glass"
-       | "DJ"
-       | "Photography"
-       | "Catering",
-     item: any
+   // Cart Management
+   const handleAddToCart = (
+     category: string,
+     selectedItem: Item,
+     type?: ItemType,
+     quantity: number = 1
    ) => {
      const newCartItem: CartItem = {
        category,
-       name: item.name,
-       quantity: 1,
-       price: item.price || 0, // Set price if available
+       name: type?.name
+         ? `${selectedItem.itemname} - ${type.name}`
+         : selectedItem.itemname,
+       quantity,
+       price: type?.price ?? selectedItem.itemPPU,
      };
 
-     setCart((prevCart) => [...prevCart, newCartItem]);
+     setCart((prev) => [...prev, newCartItem]);
      setSelectedItem(null);
      setSelectedCategory(null);
    };
 
-   const renderCategoryItems = (category: { name: string; items: any[] }) => {
-     return category.items.map((item) => (
-       <div
-         key={item.itemid} // Assuming each item has a unique `itemid`
-         className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
-         onClick={() => {
-           setSelectedCategory(
-             category.name as
-               | "Chairs"
-               | "Tables"
-               | "Glass"
-               | "DJ"
-               | "Photography"
-               | "Catering"
-           );
-           setSelectedItem(item);
-         }}
-       >
-         <img
-           src={
-             item.catimage ||
-             "https://www.bellanaijaweddings.com/wp-content/uploads/2023/02/Hope-Kassim-Rwandan-White-Wedding-BellaNaija-Weddings-63-520x400.jpg"
-           } // Fallback image if no image is provided
-           alt={item.catname}
-           className="w-full h-48 object-cover rounded-t-lg"
-         />
-         <div className="mt-4">
-           <h3 className="lg:text-lg text-2xl font-bold text-center">
-             {item.catname}
-           </h3>
-           <p className="text-gray-600 lg:text-sm text-lg">
-             {item.catdescription || "No description available"}
-           </p>
-         </div>
-       </div>
-     ));
+   const handleUpdateCart = (index: number, quantity: number) => {
+     setCart((prev) =>
+       prev.map((item, i) =>
+         i === index ? { ...item, quantity: Math.max(1, quantity) } : item
+       )
+     );
    };
+
+   const handleRemoveFromCart = (index: number) => {
+     setCart((prev) => prev.filter((_, i) => i !== index));
+   };
+
+   // UI Components
+   const CategoryCard: React.FC<{ category: Category }> = ({ category }) => (
+     <div
+       className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
+       onClick={() => setSelectedCategory(category)}
+     >
+       <img
+         src={
+           category.catimage || "https://wallpaperaccess.com/full/5458954.jpg"
+         }
+         alt={category.catname}
+         className="w-full h-48 object-cover rounded-t-lg"
+         onError={(e) => {
+           const imgElement = e.target as HTMLImageElement;
+           imgElement.src = "https://wallpaperaccess.com/full/5458954.jpg";
+         }}
+       />
+       <div className="mt-4">
+         <h3 className="lg:text-lg text-2xl font-bold text-center">
+           {category.catname}
+         </h3>
+         <p className="text-gray-600 lg:text-sm text-lg">
+           {category.catdescription || "No description available"}
+         </p>
+       </div>
+     </div>
+   );
+
+   const ItemCard: React.FC<{ item: Item }> = ({ item }) => (
+     <div
+       className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
+       onClick={() => setSelectedItem(item)}
+     >
+       <img
+         src={item.Itemimage || "https://wallpaperaccess.com/full/5458954.jpg"}
+         alt={item.itemname}
+         className="w-full h-48 object-cover rounded-t-lg"
+         onError={(e) => {
+           const imgElement = e.target as HTMLImageElement;
+           imgElement.src = "https://wallpaperaccess.com/full/5458954.jpg";
+         }}
+       />
+       <div className="mt-4">
+         <h3 className="lg:text-lg text-2xl font-bold text-center">
+           {item.itemname}
+         </h3>
+         <p className="text-gray-600 lg:text-sm text-lg">
+           {item.itemdiscription || "No description available"}
+         </p>
+         <p className="text-yellow-500 font-bold text-center">
+           ${item.itemPPU}
+         </p>
+       </div>
+     </div>
+   );
+
+   const CategorySection: React.FC<{ type: Category["type"] }> = ({ type }) => (
+     <div>
+       <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
+         {type}
+       </h2>
+       <div className="grid grid-cols-3 lg:text-sm text-xl lg:grid-cols-4 gap-3">
+         {categories
+           .filter((cat) => cat.type === type)
+           .map((category) => (
+             <CategoryCard key={category.catid} category={category} />
+           ))}
+       </div>
+     </div>
+   );
 
    const totalItemsInCart = cart.reduce(
      (total, item) => total + item.quantity,
@@ -171,27 +240,48 @@
 
        <div className="space-y-8">
          {loading ? (
-           <p>Loading categories...</p> // Display loading message while fetching
+           <p>Loading categories...</p>
          ) : (
-           categories.map((category) => (
-             <div key={category.name}>
-               <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
-                 {category.name}
-               </h2>
-               <div className="grid grid-cols-3 lg:text-sm text-xl lg:grid-cols-5 gap-3">
-                 {renderCategoryItems(category)}{" "}
-                 {/* Map items of each category */}
+           <>
+             {!selectedCategory ? (
+               ["Vendor", "Venue", "Materials"].map((type) => (
+                 <CategorySection key={type} type={type as Category["type"]} />
+               ))
+             ) : (
+               <div>
+                 <button
+                   onClick={() => setSelectedCategory(null)}
+                   className="mb-4 px-4 py-2 bg-yellow-500 text-white rounded"
+                 >
+                   Back to Categories
+                 </button>
+                 <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
+                   {selectedCategory.catname}
+                 </h2>
+                 <div className="grid grid-cols-3 lg:text-sm text-xl lg:grid-cols-5 gap-3">
+                   {filteredItems.map((item) => (
+                     <ItemCard key={item.itemid} item={item} />
+                   ))}
+                 </div>
                </div>
-             </div>
-           ))
+             )}
+           </>
          )}
        </div>
 
        {selectedItem && (
          <ItemModal
-           item={selectedItem}
-           category={selectedCategory}
-           onAddToCart={addToCart}
+           item={{
+             name: selectedItem.itemname,
+             description: selectedItem.itemdiscription || "",
+             image:
+               selectedItem.Itemimage ||
+               "https://wallpaperaccess.com/full/5458954.jpg",
+           }}
+           category={selectedCategory?.cattype || null}
+           onAddToCart={(category, _, type, quantity) =>
+             handleAddToCart(category, selectedItem, type, quantity)
+           }
            onClose={() => setSelectedItem(null)}
          />
        )}
@@ -199,18 +289,8 @@
        {isCartOpen && (
          <CartModal
            cart={cart}
-           removeFromCart={(index) =>
-             setCart((prevCart) => prevCart.filter((_, i) => i !== index))
-           }
-           updateQuantity={(index, quantity) =>
-             setCart((prevCart) =>
-               prevCart.map((item, i) =>
-                 i === index
-                   ? { ...item, quantity: Math.max(1, quantity) }
-                   : item
-               )
-             )
-           }
+           removeFromCart={handleRemoveFromCart}
+           updateQuantity={handleUpdateCart}
            closeModal={() => setIsCartOpen(false)}
          />
        )}

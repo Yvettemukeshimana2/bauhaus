@@ -147,7 +147,7 @@
                )}
 
                {/* Normal Navigation for Large Screens */}
-               <nav className="hidden lg:flex flex-row items-center gap-6">
+               <nav className="hidden lg:flex flex-row pr-14 items-center gap-6">
                  <MenuItem
                    title="Home"
                    address="/"
