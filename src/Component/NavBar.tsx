@@ -166,20 +166,23 @@
                    Icon={FiPhone}
                    onClick={handleMenuItemClick}
                  />
-                 <div
+                 {/* <div
                    className="relative"
                    onMouseEnter={() => setIsServicesOpen(true)}
                    onMouseLeave={() => setIsServicesOpen(false)}
-                 >
-                   <div
+                 > */}
+                 {/* <div
                      className="flex items-center cursor-pointer"
                      onClick={(e) => {
                        e.preventDefault();
                        setIsServicesOpen((prev) => !prev);
                      }}
-                   >
-                     <span className="pb-2 text-white">Services</span>
-                     <FiChevronDown
+                   > */}
+                 {/* <Link to="/venue">
+                   {" "}
+                   <span className="top-5  text-white">Services</span>
+                 </Link> */}
+                 {/* <FiChevronDown
                        className={` text-white transition-transform ${
                          isServicesOpen ? "rotate-180" : ""
                        }`}
@@ -202,11 +205,17 @@
                          Material
                        </Link>
                      </div>
-                   )}
-                 </div>
+                   )} */}
+                 {/* </div> */}
+                 <MenuItem
+                   title="Services"
+                   address="/venue"
+                   Icon={FiActivity}
+                   onClick={handleMenuItemClick}
+                 />
                  <MenuItem
                    title="Inspirations"
-                   address="/insipirations"
+                   address="/inspirations"
                    Icon={FiActivity}
                    onClick={handleMenuItemClick}
                  />

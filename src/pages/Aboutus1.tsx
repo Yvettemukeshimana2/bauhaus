@@ -1,12 +1,6 @@
  import { useState } from "react";
  import bg from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-Harold-Washington-Library_0610.jpg";
- import {
-   ChevronRight,
-   ChevronDown,
-   Award,
-   History,
-   Compass,
- } from "lucide-react";
+ import {ChevronRight,ChevronDown,Award,History,Compass} from "lucide-react";
  import OurTeam from "./Ourteam";
  import { Link } from "react-router-dom";
 
@@ -76,7 +70,7 @@
                Welcome to <span className="text-yellow-500">MHC</span>
              </h1>
              <h1 className="text-2xl lg:text-xl font-bold mt-10 text-white">
-               BATO <span className="text-yellow-500">BATARI GITO</span>
+                MOMENT <span className="text-yellow-500">MADE PERFECT</span>
              </h1>
            </div>
          </div>

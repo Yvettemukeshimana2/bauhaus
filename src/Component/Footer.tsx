@@ -28,7 +28,7 @@
       },
       {
         href: "/venue",
-        label: "Hosipitality",
+        label: "Hospitality",
         category: "Services",
       },
       {
@@ -36,23 +36,33 @@
         label: "Concierge",
         category: "Services",
       },
+      {
+        href: "/venue",
+        label: "Our Brands",
+        category: "Brand",
+      },
+      {
+        href: "/venue",
+        label: "More Information",
+        category: "Brand",
+      },
     ];
 
-    const categories = ["Useful Links", "Services"];
+    const categories = ["Brand","Useful Links", "Services",];
 
     return (
       <footer className="bg-gradient-to-b from-yellow-800 to-yellow-500  text-white py-8">
         <div className=" mx-auto px-4 ">
           <div className="grid grid-cols-4 sm:grid-cols-5  mb-6">
             {/* Company Info */}
-            <div>
+            {/* <div>
               <h2 className="text-xl text-yellow-500 font-bold">
                 {companyName}
               </h2>
               <p className="text-white text-md">
                 Providing quality services since {year}
               </p>
-            </div>
+            </div> */}
 
             {/* Links and Services */}
             {categories.map((category) => (
@@ -89,10 +99,10 @@
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:ifo@muheservices.com"
+                    href="mailto:info@muheservices.com"
                     className="hover:text-yellow-400"
                   >
-                    ifo@muheservices.com
+                    info@muheservices.com
                   </a>
                 </p>
                 <p>Physical Address:KG 17 Ave, Kigali-Rwanda</p>

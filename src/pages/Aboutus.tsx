@@ -37,7 +37,7 @@ import ach2 from "../assets/images/testmony2.jpg"
            />
            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-60">
              <h3 className="lg:text-2xl text-5xl font-bold mb-2 text-yellow-500">
-               Our Culture
+               Our Value
              </h3>
              <p className="lg:text-sm text-3xl px-4">
                Founded in 2000, we have grown from a small team of passionate

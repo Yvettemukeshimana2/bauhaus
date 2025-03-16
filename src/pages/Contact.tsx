@@ -44,9 +44,9 @@
              transition={{ duration: 1, delay: 0.5 }}
              className="text-2xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-2xl font-bold text-white "
            >
-             BATO
+             MOMENT
              <span className="text-yellow-500 text-2xl ml-2  ">
-               BATARI GITO
+               MAKE PERFECT
              </span>
            </motion.h1>
            <motion.h1
@@ -65,7 +65,7 @@
              whileTap={{ scale: 0.95 }}
              className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-10 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-md font-bold hover:bg-yellow-500 transition-colors duration-300"
            >
-             Contact Us
+             Let's Connect
            </motion.button>
          </div>
        </header>

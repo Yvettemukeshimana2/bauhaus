@@ -99,9 +99,9 @@ import CardComponent from "./Cardcomponent";
              initial={{ y: -100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 0.5 }}
-             className="lg:text-2xl text-4xl absolute top-1/2  transform animate-bounce font-bold text-white text-center"
+             className="lg:text-4xl text-4xl absolute top-1/2  transform animate-bounce font-bold text-white text-center"
            >
-             BATO <span className="text-yellow-500  ">BATARI GITO</span>
+            MOMENT <span className="text-yellow-500  ">MADE PERFECT</span>
            </motion.h1>
            <motion.h1
              initial={{ y: 100, opacity: 0 }}
@@ -117,14 +117,11 @@ import CardComponent from "./Cardcomponent";
              transition={{ duration: 1, delay: 1.1 }}
              whileHover={{ scale: 1.1 }}
              whileTap={{ scale: 0.95 }}
-             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-8 rounded-md  text-white text-2xl lg:text-xl font-bold hover:bg-yellow-500 transition-colors duration-300"
-           >
-             let's Talk
+             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-8 rounded-md  text-white text-2xl lg:text-xl font-bold hover:bg-yellow-500 transition-colors duration-300">
+             Let's Connect
            </motion.button>
          </div>
        </header>
-
-      
        {/* <section className="py-16">
          <motion.h2
            initial={{ opacity: 0 }}

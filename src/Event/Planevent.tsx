@@ -225,6 +225,7 @@
          <h1 className="lg:text-2xl text-4xl font-bold text-yellow-500">
            Plan Your Event
          </h1>
+
          <div
            className="relative cursor-pointer"
            onClick={() => setIsCartOpen(true)}
@@ -236,6 +237,10 @@
              </div>
            )}
          </div>
+       </div>
+       <div className="pb-6">
+         <h3 className="text-2xl font-bold ">Concierge</h3>
+         <h1> When you want to plan your event, Muhe Hospitality Services acts as your personal concierge, ensuring every detail is handled with care,professionalism, and excellence.</h1>
        </div>
 
        <div className="space-y-8">

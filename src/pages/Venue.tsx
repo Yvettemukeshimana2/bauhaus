@@ -1,21 +1,6 @@
  import React, { useState } from "react";
  import { useNavigate } from "react-router-dom";
- import {
-   Calendar,
-   Clock,
-   Mail,
-   User,
-   ChevronRight,
-   CheckCircle,
-   AlertCircle,
-   Briefcase,
-   UtensilsCrossed,
-   Share2,
-   Heart,
-   Building2,
-   Users,
-   X,
- } from "lucide-react";
+ import {Calendar,Clock,Mail, User, ChevronRight,CheckCircle, AlertCircle, UtensilsCrossed, Heart,Users,X} from "lucide-react";
 
  // Constants
  const API_URL = import.meta.env.VITE_HOST;
@@ -32,51 +17,56 @@
 
  // Services Data with Lucide icons
  const SERVICES: Service[] = [
+   //  {
+   //    id: 1,
+   //    title: "Concierge",
+   //    description:
+   //      "Providing exceptional personal assistance services tailored to your needs",
+   //    image: "https://i.pinimg.com/originals/a4/b2/c9/a4b2c9d092c8ba93aebaf1f277ad21e4.jpg",
+   //    icon: <Briefcase className="w-6 h-6" />,
+   //  },
    {
      id: 1,
-     title: "Concierge",
-     description:
-       "Providing exceptional personal assistance services tailored to your needs",
-     image: "https://i.pinimg.com/originals/a4/b2/c9/a4b2c9d092c8ba93aebaf1f277ad21e4.jpg",
-     icon: <Briefcase className="w-6 h-6" />,
+     title: "Event planing",
+     description: "Comprehensive wedding planning and coordination services",
+
+     image:
+       "https://tse3.mm.bing.net/th?id=OIP.XKksq7AJ4PmMXodcAqx4SAHaE8&pid=Api&P=0&h=220",
+     icon: <UtensilsCrossed className="w-6 h-6" />,
    },
+   //  {
+   //    id: 3,
+   //    title: "Social Media",
+   //    description:
+   //      "Strategic social media management across all major platforms",
+   //    image: "https://tse1.mm.bing.net/th?id=OIP.9oUjPJRWN2eKK58-IqQYrAHaFG&pid=Api&P=0&h=220",
+   //    icon: <Share2 className="w-6 h-6" />,
+   //  },
+
+   //  {
+   //    id: 5,
+   //    title: "Hospitality",
+   //    description: "Premium hospitality services for events of all sizes",
+   //    image: "https://cdn-images.go2africa.com/wp-content/uploads/2020/03/18090933/Madikwe-Safari-Lodge.jpg",
+   //    icon: <Building2 className="w-6 h-6" />,
+   //  },
    {
      id: 2,
-     title: "Event Catering",
+     title: " Event Staffing",
      description:
-       "Professional food and beverage planning, preparation, and service for all events",
-     image: "https://tse3.mm.bing.net/th?id=OIP.XKksq7AJ4PmMXodcAqx4SAHaE8&pid=Api&P=0&h=220",
-     icon: <UtensilsCrossed className="w-6 h-6" />,
+       "Professional event staffing solutions for seamless execution",
+     image:
+       "https://catalystforbusiness.com/wp-content/uploads/2018/01/staffing-tips.jpg",
+     icon: <Users className="w-6 h-6" />,
    },
    {
      id: 3,
-     title: "Social Media",
+     title: "Event cattering",
      description:
-       "Strategic social media management across all major platforms",
-     image: "https://tse1.mm.bing.net/th?id=OIP.9oUjPJRWN2eKK58-IqQYrAHaFG&pid=Api&P=0&h=220",
-     icon: <Share2 className="w-6 h-6" />,
-   },
-   {
-     id: 4,
-     title: "Event Wedding",
-     description: "Comprehensive wedding planning and coordination services",
-     image: "https://media.weddingz.in/images/1f03a66c7add9e61422d0d1203aeb083/best-wedding-reception-halls-in-patna-you-will-absolutely-fall-in-love-with.jpg",
+       "Professional food and beverage planning, preparation, and service for all events",
+     image:
+       "https://media.weddingz.in/images/1f03a66c7add9e61422d0d1203aeb083/best-wedding-reception-halls-in-patna-you-will-absolutely-fall-in-love-with.jpg",
      icon: <Heart className="w-6 h-6" />,
-   },
-   {
-     id: 5,
-     title: "Hospitality",
-     description: "Premium hospitality services for events of all sizes",
-     image: "https://cdn-images.go2africa.com/wp-content/uploads/2020/03/18090933/Madikwe-Safari-Lodge.jpg",
-     icon: <Building2 className="w-6 h-6" />,
-   },
-   {
-     id: 6,
-     title: "Staffing",
-     description:
-       "Professional event staffing solutions for seamless execution",
-     image: "https://catalystforbusiness.com/wp-content/uploads/2018/01/staffing-tips.jpg",
-     icon: <Users className="w-6 h-6" />,
    },
  ];
 
@@ -383,7 +373,7 @@
          />
          <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
            <h1 className="text-4xl font-bold text-white animate-bounce">
-             BATO <span className="text-yellow-500">BATARI GITO</span>
+             MOMENT <span className="text-yellow-500">MAKE PERFECT</span>
            </h1>
            <h2 className="text-3xl font-bold text-white">Our Services</h2>
          </div>

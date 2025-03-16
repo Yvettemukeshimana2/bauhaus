@@ -12,17 +12,18 @@ import Publication from "../pages/Publication";
 import ContactPage from "../pages/Contact";
 import InspirationPage from "../pages/Inspiration";
 import HospitalityMaterials from "../pages/Material";
- 
+import InspirationDetailPage from "../pages/Inspirationdetail";
 import CardDetailPage from "../pages/Carddetail";
 import PlanYourEventPage from "../Event/Planevent";
+
 export const Error404 = () => <div>Page not found</div>;
 
 const ServiceDetailWrapper = () => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const onBookService = () => { alert("Booking initiated!"); };
-  const onBackClick = () => {   navigate("/services"); };
- 
+  const onBackClick = () => { navigate("/services"); };
+
   return (
     <ServiceDetail
       serviceId={parseInt(id || "0", 10)}
@@ -30,7 +31,8 @@ const ServiceDetailWrapper = () => {
       onBackClick={onBackClick}
     />
   );
-};
+};// ✅ Wrapper not required for InspirationDetail, but can use if you need extra logic
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -45,11 +47,13 @@ const routes = createBrowserRouter([
       { path: "services/:id", element: <ServiceDetailWrapper /> },
       { path: "publication", element: <Publication /> },
       { path: "contactus", element: <ContactPage /> },
-      { path: "insipirations", element: <InspirationPage /> },
+      { path: "inspirations", element: <InspirationPage /> },
+      { path: "inspirations/:id", element: <InspirationDetailPage /> },
       { path: "material", element: <HospitalityMaterials /> },
-      { path: "/card-detail/:id", element: <CardDetailPage /> },
-      {path:"planevent",element:<PlanYourEventPage/>}
+      { path: "card-detail/:id", element: <CardDetailPage /> },
+      { path: "planevent", element: <PlanYourEventPage /> },
     ],
   },
 ]);
+
 export default routes;

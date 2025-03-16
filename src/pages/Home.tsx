@@ -11,17 +11,16 @@ import Specialties from "./Speciality";
 const images = [
   {
     src: im1,
-    description: "MHS a five-star quality service",
+    description: "MHS ",
   },
   {
     src: im2,
-    description:
-      "From weddings to corporate gatherings, we bring your visions to life. BATO BATARI GITO",
+    description:"MHS",
   },
   {
     src: im3,
     description:
-      "Based in Kigali, Muhe Hospitality Services provides comprehensive planning and coordination services.",
+      "MHS",
   },
 ];
 const Home: React.FC = () => {
@@ -54,11 +53,13 @@ const Home: React.FC = () => {
           ></div>
         </div>
         <div className="pl-10 pt-32 z-0 text-xl sm:text-lg md:text-lg ">
-          <h1 className="text-2xl  lg:text-lg text-white font-semibold">
+          <h1 className="text-2xl ml-36 lg:text-6xl text-white font-semibold">
+            
             {images[currentIndex].description}
           </h1>
-          <h1 className="text-4xl md:text-2xl sm:text-2xl font-bold mt-10 animate-pulse text-white text-center">
-            BATO <span className="text-yellow-500 ">BATARI GITO </span>
+          <h1 className="text-yellow-500 text-xs pl-36 font-semibold">Muhe Hospitality Service</h1>
+          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+            MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
           </h1>
         </div>
       </div>
