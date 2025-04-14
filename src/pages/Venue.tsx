@@ -27,11 +27,11 @@
    //  },
    {
      id: 1,
-     title: "Event planing",
+     title: "Event Planning",
      description: "Comprehensive wedding planning and coordination services",
 
      image:
-       "https://tse3.mm.bing.net/th?id=OIP.XKksq7AJ4PmMXodcAqx4SAHaE8&pid=Api&P=0&h=220",
+       "src/assets/plan1.jpeg",
      icon: <UtensilsCrossed className="w-6 h-6" />,
    },
    //  {
@@ -56,16 +56,15 @@
      description:
        "Professional event staffing solutions for seamless execution",
      image:
-       "https://catalystforbusiness.com/wp-content/uploads/2018/01/staffing-tips.jpg",
+       "src/assets/history.jpeg",
      icon: <Users className="w-6 h-6" />,
    },
    {
      id: 3,
-     title: "Event cattering",
+     title: "Event Catering",
      description:
        "Professional food and beverage planning, preparation, and service for all events",
-     image:
-       "https://media.weddingz.in/images/1f03a66c7add9e61422d0d1203aeb083/best-wedding-reception-halls-in-patna-you-will-absolutely-fall-in-love-with.jpg",
+     image:"src/assets/catering2.jpeg",
      icon: <Heart className="w-6 h-6" />,
    },
  ];
@@ -79,7 +78,7 @@
      <img
        src={service.image}
        alt={service.title}
-       className="w-full h-40 object-fill"
+       className="w-full h-60 object-cover"
      />
      <div className="p-4">
        <div className="flex items-center gap-2 mb-2">
@@ -233,7 +232,7 @@
 
          <div>
            <label className=" text-sm font-medium mb-1 flex items-center gap-2">
-             {selectedService?.icon} Event Type
+             {selectedService?.icon} Services
            </label>
            <select
              value={formData.eventType}
@@ -243,7 +242,7 @@
              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 outline-none"
              required
            >
-             <option value="">Select Event Type</option>
+             <option value="">Select Services</option>
              {SERVICES.map((service) => (
                <option key={service.id} value={service.title}>
                  {service.title}
@@ -255,7 +254,7 @@
          <div className="grid grid-cols-2 gap-4">
            <div>
              <label className=" text-sm font-medium mb-1 flex items-center gap-2">
-               <Calendar className="w-4 h-4" /> Start Date
+               <Calendar className="w-4 h-4" /> Date
              </label>
              <input
                type="date"
@@ -284,7 +283,7 @@
          </div>
 
          <div className="grid grid-cols-2 gap-4">
-           <div>
+           {/* <div>
              <label className="text-sm font-medium mb-1 flex items-center gap-2">
                <Calendar className="w-4 h-4" /> End Date
              </label>
@@ -297,7 +296,7 @@
                className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 outline-none"
                required
              />
-           </div>
+           </div> */}
            <div>
              <label className=" text-sm font-medium mb-1 flex items-center gap-2">
                <Clock className="w-4 h-4" /> End Time
@@ -371,11 +370,18 @@
            alt="Services Header"
            className="w-full h-96 object-cover opacity-40"
          />
-         <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
-           <h1 className="text-4xl font-bold text-white animate-bounce">
-             MOMENT <span className="text-yellow-500">MAKE PERFECT</span>
-           </h1>
-           <h2 className="text-3xl font-bold text-white">Our Services</h2>
+         <div className="absolute inset-0 flex justify-center text-center mt-7">
+           <div className="container mx-auto px-6 top-36 absolute">
+             <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+               MHS
+             </h1>
+             <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
+               Muhe Hospitality Services
+             </h1>
+             <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+               MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+             </h1>
+           </div>
          </div>
        </header>
 
@@ -386,7 +392,7 @@
        </div>
 
        <div className="container mx-auto px-4 py-8">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
            {SERVICES.map((service) => (
              <ServiceCard
                key={service.id}

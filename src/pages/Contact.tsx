@@ -44,26 +44,26 @@
              transition={{ duration: 1, delay: 0.5 }}
              className="text-2xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-2xl font-bold text-white "
            >
-             MOMENT
-             <span className="text-yellow-500 text-2xl ml-2  ">
-               MAKE PERFECT
-             </span>
+             <div className=" absolute">
+               <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+                 MHS
+               </h1>
+               <h1 className="text-yellow-500 text-xs font-semibold">
+                 Muhe Hospitality Services
+               </h1>
+               <h1 className="text-4xl md:text-3xl sm:text-4xl mt-5 font-bold  w-96 animate-pulse text-white ">
+                 MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+               </h1>
+             </div>
            </motion.h1>
-           <motion.h1
-             initial={{ y: 100, opacity: 0 }}
-             animate={{ y: 0, opacity: 1 }}
-             transition={{ duration: 1, delay: 0.8 }}
-             className="absolute bottom-32  animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold"
-           >
-             MHS(Muhe Hospitality Service)
-           </motion.h1>
+           
            <motion.button
              initial={{ y: 100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 1.1 }}
              whileHover={{ scale: 1.1 }}
              whileTap={{ scale: 0.95 }}
-             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-10 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-md font-bold hover:bg-yellow-500 transition-colors duration-300"
+             className="absolute p-3 border-2 animate-pulse  border-yellow-400 bottom-5 rounded-full  transform -translate-x-1/2 -translate-y-1/2 text-white text-md font-bold hover:bg-yellow-500 transition-colors duration-300"
            >
              Let's Connect
            </motion.button>

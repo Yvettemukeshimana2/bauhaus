@@ -80,8 +80,8 @@
      ],
      images: [
        //  "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600",
-       " https://images.pexels.com/photos/11439455/pexels-photo-11439455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-       " https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&cs=tinysrgb&w=600",
+       "/src/assets/plan2.jpeg",
+       "/src/assets/plan4.jpeg",
        wed1,
      ],
      testimonials: [
@@ -107,9 +107,9 @@
      id: 2,
      title: "DO YOU NEED EVENT STAFFING SOLUTIONS SERVICE?",
      description:
-       " Are you tired, and stressed like there are never enough hours in a day? Let Us Help, with “Yes I Can Spirit”, It’s like having your assistant, call on us when you need an extra pair of hands. We can assist with just about anything as long as it’s legal and ethical.  We blend broad industry knowledge and established expertise with data and research, providing recommendations that will have an impact commercially. We see our role as one of empowering leaders, and helping you, rather than creating an ongoing need for us and our services We pride ourselves in being a one-stop shop for wedding and event rentals, with items and services you may require for your special ceremony. We have our own equipment which we use in any events or weddings we execute or rent…. Also our top-notch and vetted resources, we can provide vendor services specializing in these respective crafts Wedding and Event Venues, Caterers, Planners, Stationery, Photo and videographers, Décors, Florists, Cakes, Beauty and health, Dress and attire, Equipment Rentals, Transportation, Accommodation, Entertainers, Staff & Security and more!                                  ",
+       "  MHS is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff. The MHS team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events. Includes Event Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry.                                   ",
      fullDescription:
-       " MHS is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff.   The MHS team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events.   and Wedding Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more!  We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry. ",
+       " MHS is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff.   The MHS team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events.   and Wedding Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry. ",
      features: [
        "24/7 availability",
        "Comprehensive travel planning",

@@ -1,5 +1,5 @@
  import { useState } from "react";
- import bg from "../assets/images/LOLA-Event-Productions-Moody-Wedding-Chicago-Harold-Washington-Library_0610.jpg";
+ import bg from "../assets/history.jpeg";
  import {ChevronRight,ChevronDown,Award,History,Compass} from "lucide-react";
  import OurTeam from "./Ourteam";
  import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@
        description:
          "We deliver exceptional event experiences that transform visions into unforgettable moments. Our dedicated team combines creativity with precision to ensure every detail reflects your unique story.",
        stats: [
-         { value: "1000+", label: "Events Completed" },
+         { value: "500+", label: "Events Completed" },
          { value: "98%", label: "Client Satisfaction" },
          { value: "50+", label: "Team Members" },
        ],
@@ -25,7 +25,7 @@
        description:
          "From our humble beginnings to becoming a leading event management company, our journey has been marked by continuous innovation and dedication to excellence. Each event has added to our expertise and refined our craft.",
        stats: [
-         { value: "15+", label: "Years Experience" },
+         { value: "7+", label: "Years Experience" },
          { value: "24/7", label: "Support" },
          { value: "Global", label: "Reach" },
        ],
@@ -39,7 +39,7 @@
          "We were recognized for our outstanding event planning and execution, setting industry standards for creativity and precision.",
      },
      {
-       title: "Excellence in Customer Service Award",
+       title: "Excellence in Consumers Choice Award 2022",
        description:
          "Awarded for our commitment to delivering unparalleled customer service and ensuring client satisfaction.",
      },
@@ -62,15 +62,18 @@
            src={bg}
            alt="Event Space"
            loading="lazy"
-           className="w-full h-96 object-cover opacity-40"
+           className="w-full h-96 object-cover pt-16 opacity-40"
          />
          <div className="absolute inset-0 flex justify-center text-center mt-7">
            <div className="container mx-auto px-6 top-36 absolute">
-             <h1 className="text-4xl lg:text-3xl font-bold text-white mb-4">
-               Welcome to <span className="text-yellow-500">MHC</span>
+             <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+                MHS
              </h1>
-             <h1 className="text-2xl lg:text-xl font-bold mt-10 text-white">
-                MOMENT <span className="text-yellow-500">MADE PERFECT</span>
+             <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
+               Muhe Hospitality Services
+             </h1>
+             <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+               MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
              </h1>
            </div>
          </div>
@@ -81,7 +84,7 @@
            Crafting Memorable Experiences
          </h2>
          <p className="bg-gradient-to-t p-9 text-white lg:text-sm text-2xl m-10 from-yellow-400 to-yellow-500">
-           At HMC, we believe every event tells a unique story. Our passion lies
+           At MHS, we believe every event tells a unique story. Our passion lies
            in bringing these stories to life through meticulous planning,
            creative design, and flawless execution.
          </p>

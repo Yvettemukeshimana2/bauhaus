@@ -1,7 +1,7 @@
  import React from "react";
  import { Link } from "react-router-dom";
  import { motion } from "framer-motion";
- import bg from "../assets/images/ourTeam.jpg";
+ import bg from "../assets/bgrng.jpeg";
 
  import im1 from "../assets/images/DSC_3894.jpg";
  import im6 from "../assets/images/testimony1.jpg";
@@ -134,7 +134,7 @@
          </section>
 
          {/* Inspiration Cards */}
-         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-10">
+         <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 px-10">
            {inspirations.map((item) => (
              <Link
                key={item.id}

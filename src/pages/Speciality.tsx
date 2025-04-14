@@ -17,7 +17,7 @@ const specialtiesData = [
       "https://michiganbarnwedding.com/wp-content/uploads/2016/11/wedding-vendor.jpg",
   },
   {
-    title: "MATERIALS",
+    title: "RENTALS",
     description:
       "MHS  Provides or sources high-quality materials tailored to your theme ,Ensures materials match your color scheme, brand, or occasion Manages setup and teardown of all materials.",
     image: partyImage,

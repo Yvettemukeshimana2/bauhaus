@@ -11,31 +11,31 @@
       { href: "/", label: "Home", category: "Useful Links" },
       { href: "/aboutus1", label: "About", category: "Useful Links" },
       { href: "/contactus", label: "Contact", category: "Useful Links" },
+      // {
+      //   href: "/material",
+      //   label: "Event Cattering",
+      //   category: "Services",
+      // },
       {
-        href: "/material",
-        label: "Event Cattering",
+        href: "/venue",
+        label: "Event Planning",
         category: "Services",
       },
       {
         href: "/venue",
-        label: "Social Media Managment",
+        label: "Event Staffing",
         category: "Services",
       },
       {
         href: "/venue",
-        label: "Event Wedding",
+        label: "Event Catering",
         category: "Services",
       },
-      {
-        href: "/venue",
-        label: "Hospitality",
-        category: "Services",
-      },
-      {
-        href: "/venue",
-        label: "Concierge",
-        category: "Services",
-      },
+      // {
+      //   href: "/venue",
+      //   label: "Concierge",
+      //   category: "Services",
+      // },
       {
         href: "/venue",
         label: "Our Brands",
@@ -105,7 +105,7 @@
                     info@muheservices.com
                   </a>
                 </p>
-                <p>Physical Address:KG 17 Ave, Kigali-Rwanda</p>
+                <p>Address:KG 17 Ave, Kigali-Rwanda</p>
               </div>
             </div>
 
@@ -154,5 +154,4 @@
       </footer>
     );
   };
-
   export default Footer;

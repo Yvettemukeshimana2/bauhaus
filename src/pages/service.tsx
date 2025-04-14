@@ -7,19 +7,19 @@
  const services = [
    {
      img: im1,
-     title: "Wedding Planning",
+     title: "Event Planning",
      description: "Expertise in organizing beautiful weddings.",
      link: "/services/wedding-planning",
    },
    {
      img: im2,
-     title: "Corporate Events",
+     title: "Event Staffing",
      description: "Tailored services for professional gatherings.",
      link: "/services/corporate-events",
    },
    {
      img: im3,
-     title: "Event Coordination",
+     title: "Event Catering",
      description: "Comprehensive coordination for all types of events.",
      link: "/services/event-coordination",
    },

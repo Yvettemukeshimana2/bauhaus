@@ -53,10 +53,8 @@
    const [filteredItems, setFilteredItems] = useState<Item[]>([]);
 
    const him = import.meta.env.VITE_HOST;
-   const token =
-     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc";
-
-   // Data Fetching
+   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc";
+    // Data Fetching
    const fetchData = useCallback(async () => {
      try {
        const headers = { Authorization: `Bearer ${token}` };
@@ -168,6 +166,7 @@
            {category.catdescription || "No description available"}
          </p>
        </div>
+      
      </div>
    );
 
@@ -204,7 +203,7 @@
        <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
          {type}
        </h2>
-       <div className="grid grid-cols-3 lg:text-sm text-xl lg:grid-cols-4 gap-3">
+       <div className="grid grid-cols-1 lg:text-sm text-xl lg:grid-cols-4 gap-3">
          {categories
            .filter((cat) => cat.type === type)
            .map((category) => (
@@ -240,7 +239,20 @@
        </div>
        <div className="pb-6">
          <h3 className="text-2xl font-bold ">Concierge</h3>
-         <h1> When you want to plan your event, Muhe Hospitality Services acts as your personal concierge, ensuring every detail is handled with care,professionalism, and excellence.</h1>
+         <h1>
+           {" "}
+           Are you tired, and stressed like there are never enough hours in a
+           day? Let Us Help, with “Yes I Can Spirit”, It’s like having your
+           assistant, call on us when you need an extra pair of hands. We can
+           assist with just about anything as long as it’s legal and ethical.
+           Our services combine industry expertise and personalized assistance
+           to empower you. We’re also your one-stop shop for wedding and event
+           rentals, with our own equipment and a network of top-rated vendors,
+           including venues, caterers, planners, photographers, décor, dresses,
+           transport, and more. Let us make your life easier, call us when you
+           need a helping hand.
+           <br />
+         </h1>
        </div>
 
        <div className="space-y-8">
@@ -272,6 +284,12 @@
              )}
            </>
          )}
+         <h1 className="font-bold">
+    
+           Please remember, if you have booked the event venue, vendors and
+           rentals through www.muheservices.com, to claim your exclusive offers
+           and discounts with our MHS Accredited Suppliers
+         </h1>
        </div>
 
        {selectedItem && (
