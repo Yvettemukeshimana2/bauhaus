@@ -7,19 +7,19 @@ const specialtiesData = [
     description:
       " MHS,Recommends and secures the perfect location based on your event type and guest sizeHandles venue setup, seating, lighting, and technical arrangements  .",
     image:
-      "https://media.cntraveler.com/photos/56e0811762c2faba1dda7045/master/pass/peabody-opera-house-wedding-cr-mnc-photography.jpg",
+      "We recommend Muhe Venue to help you secure the perfect location at a great price, tailored to your event type and guest size, ensuring an ideal setting for your occasion. Our team manages all venue setup, including seating, lighting, and technical arrangements, delivering a seamless and stress-free experience from start to finish.",
   },
   {
     title: "VENDORS",
     description:
-      "MHS  Ensures each vendor delivers on time and meets quality standards.",
+      "Looking for amazing vendors to make your day truly spectacular? With our top-notch, vetted resources, we provide MUHE vendor services tailored to weddings and events of all kinds. Our trusted network of professionals ensures your event has the perfect dream team, delivering excellence and creativity at every step.",
     image:
       "https://michiganbarnwedding.com/wp-content/uploads/2016/11/wedding-vendor.jpg",
   },
   {
     title: "RENTALS",
     description:
-      "MHS  Provides or sources high-quality materials tailored to your theme ,Ensures materials match your color scheme, brand, or occasion Manages setup and teardown of all materials.",
+      "Muhe Rentals provides and sources high-quality materials tailored to your event’s theme, ensuring everything aligns with your color scheme, brand, or occasion. We handle the setup and teardown of all materials, delivering a seamless and stress-free experience from start to finish.",
     image: partyImage,
   },
 ];

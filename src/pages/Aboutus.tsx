@@ -21,10 +21,10 @@ import ach2 from "../assets/achv1.jpeg"
                Our Mission
              </h3>
              <p className="lg:text-sm text-3xl px-4">
-               Our mission is to deliver exceptional event planning and
-               coordination services that prioritize our clients' needs and
-               visions. We strive for excellence in every detail, ensuring a
-               seamless experience from start to finish.
+               Your one-stop solution for extraordinary events from concept to
+               clean-up, we handle planning, staffing, catering, and vendor
+               management with passion and precision in every detail, ensuring a
+               seamless experience from start to finish
              </p>
            </div>
          </div>
@@ -40,10 +40,13 @@ import ach2 from "../assets/achv1.jpeg"
                Our Value
              </h3>
              <p className="lg:text-sm text-3xl px-4">
-               Founded in 2000, we have grown from a small team of passionate
-               planners to a leading event management company in the region. Our
-               diverse portfolio includes weddings, corporate events, and
-               community gatherings.
+               Do it right.
+               <br />
+               Do it with heart.
+               <br />
+               Do it together.
+               <br />
+               Every event we plan is a reflection of these beliefs.
              </p>
            </div>
          </div>
@@ -61,7 +64,9 @@ import ach2 from "../assets/achv1.jpeg"
              <p className="lg:text-sm text-3xl px-4">
                We envision a world where every event, big or small, is executed
                flawlessly, leaving lasting memories for our clients and their
-               guests.
+               guests. Our mission is to make event planning easy, exciting, and
+               stress-free, becoming the first choice for those who want it all
+               handled with heart, creativity, and style.
              </p>
            </div>
          </div>
@@ -73,9 +78,11 @@ import ach2 from "../assets/achv1.jpeg"
              Our History
            </h3>
            <p className="lg:text-sm text-3xl text-gray-700">
-             We have grown from a small team of passionate planners to a leading
-             event management company in the region. Our diverse portfolio
-             includes weddings, corporate events, and community gatherings.
+             Our journey began with a simple idea to take the stress out of
+             event planning and replace it with joy, creativity, and
+             unforgettable moments. What began as a dream among young
+             hospitality students has grown into a full-service event company
+             with 7 years of experience.
            </p>
          </div>
          <div className="lg:w-1/2  w-full  p-5 lg:p-0 grid grid-cols-2 focus-within  gap-4">
@@ -113,10 +120,12 @@ import ach2 from "../assets/achv1.jpeg"
              Our Achievements
            </h3>
            <p className="lg:text-sm text-3xl text-gray-700">
-             Over the years, we have successfully executed numerous high-profile
-             events, earning recognition for our creativity and attention to
-             detail. Our commitment to excellence has garnered us a loyal client
-             base and numerous awards in the industry.
+             From high-profile events like our first family wedding to receiving
+             the Consumer's Choice Award in 2022, our commitment to creativity
+             and excellence has earned us industry recognition and a loyal
+             client base. With a passion for hospitality, we've planned hundreds
+             of events, offering expert planning, staffing, catering, and vendor
+             solutions for unforgettable experiences.
            </p>
          </div>
        </div>

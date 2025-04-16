@@ -2,6 +2,7 @@
  import bg from "../assets/history.jpeg";
  import {ChevronRight,ChevronDown,Award,History,Compass} from "lucide-react";
  import OurTeam from "./Ourteam";
+ import { motion } from "framer-motion";
  import { Link } from "react-router-dom";
 
  const AboutUs = () => {
@@ -58,7 +59,10 @@
    return (
      <div className="min-h-screen bg-white">
        <div className="h-[80vh] overflow-hidden bg-black relative">
-         <img
+         <motion.img
+           initial={{ scale: 1.2 }}
+           animate={{ scale: 1 }}
+           transition={{ duration: 1.5 }}
            src={bg}
            alt="Event Space"
            loading="lazy"
@@ -67,7 +71,7 @@
          <div className="absolute inset-0 flex justify-center text-center mt-7">
            <div className="container mx-auto px-6 top-36 absolute">
              <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
-                MHS
+               MHS
              </h1>
              <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
                Muhe Hospitality Services

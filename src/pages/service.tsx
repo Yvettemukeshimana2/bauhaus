@@ -8,19 +8,19 @@
    {
      img: im1,
      title: "Event Planning",
-     description: "Expertise in organizing beautiful weddings.",
+     description: "Comprehensive Event & Wedding Planning and Coordination Services.",
      link: "/services/wedding-planning",
    },
    {
      img: im2,
      title: "Event Staffing",
-     description: "Tailored services for professional gatherings.",
+     description: "Your trusted source for expert event and hospitality staffing executed seamlessly.",
      link: "/services/corporate-events",
    },
    {
      img: im3,
      title: "Event Catering",
-     description: "Comprehensive coordination for all types of events.",
+     description: "Exceptional food and beverage catering tailored to your taste, theme, and guests from intimate gatherings to grand celebrations.",
      link: "/services/event-coordination",
    },
  ];

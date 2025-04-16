@@ -1,4 +1,5 @@
  import React, { useState } from "react";
+ import { motion } from "framer-motion";
  import { useNavigate } from "react-router-dom";
  import {Calendar,Clock,Mail, User, ChevronRight,CheckCircle, AlertCircle, UtensilsCrossed, Heart,Users,X} from "lucide-react";
 
@@ -365,7 +366,10 @@
    return (
      <div className="min-h-screen bg-gray-100">
        <header className="relative bg-black">
-         <img
+         <motion.img
+           initial={{ scale: 1.2 }}
+           animate={{ scale: 1 }}
+           transition={{ duration: 1.5 }}
            src="https://i.pinimg.com/originals/a9/da/67/a9da672561bd0d5142f944d7244d7379.jpg"
            alt="Services Header"
            className="w-full h-96 object-cover opacity-40"
