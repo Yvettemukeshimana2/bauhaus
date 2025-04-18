@@ -4,7 +4,7 @@
 import h1 from "../assets/histo.jpeg";
 import h2 from "../assets/history.jpeg";
 import ach1 from "../assets/achv2.jpeg";
-import ach2 from "../assets/achv1.jpeg"
+import ach2 from "../assets/h4.jpeg"
  const AboutUs = () => {
    return (
      <div className=" space-y-6">
@@ -90,13 +90,13 @@ import ach2 from "../assets/achv1.jpeg"
              src={h1}
              alt="History Image 1"
              loading="lazy"
-             className="w-full h-56 object-cover rounded-lg shadow-md"
+             className="w-full h-56 object-cover mr-5 rounded-lg shadow-md"
            />
            <img
              src={h2}
              alt="History Image 2"
              loading="lazy"
-             className="w-full h-56 object-cover rounded-lg shadow-md"
+             className="w-full h-56 object-cover mr-10 rounded-lg shadow-md"
            />
          </div>
        </div>
@@ -106,13 +106,13 @@ import ach2 from "../assets/achv1.jpeg"
              src={ach2}
              alt="Achievements Image 1"
              loading="lazy"
-             className="w-full h-56 object-fill rounded-lg shadow-md"
+             className="w-full h-72 ml-2 object-cover rounded-lg shadow-md"
            />
            <img
              src={ach1}
              alt="Achievements Image 2"
              loading="lazy"
-             className="w-full h-56 object-fill rounded-lg shadow-md"
+             className="w-full h-72 object-cover  rounded-lg shadow-md"
            />
          </div>
          <div className="lg:w-1/2 p-6 bg-gray-50 rounded-lg shadow-lg order-1 lg:order-2">
