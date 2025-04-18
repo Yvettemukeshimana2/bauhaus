@@ -31,7 +31,7 @@ import ach2 from "../assets/h3.jpeg"
          <div className="relative">
            <img
              src={img1}
-             alt="Our Culture"
+             alt="Our Value"
              loading="lazy"
              className="w-full h-80 object-cover rounded-lg opacity-70"
            />
