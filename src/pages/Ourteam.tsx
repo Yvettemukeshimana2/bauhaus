@@ -46,12 +46,12 @@ const BannerSection: React.FC = () => (
     <div className="absolute inset-0 bg-opacity-50"></div>
     <div className=" container mx-auto text-center">
       <h1 className="text-4xl font-bold text-yellow-500 mb-4">
-        <h3 className="text-2xl font-bold mb-4">
+        <h3 className=" text-2xl lg:text-lg font-bold mb-4">
           Ready to Create Something Amazing?
         </h3>
       </h1>
-      <p className="text-2xl text-gray-700 font-semibold">
-        <p className="text-gray-600 mb-8">
+      <p className="text-xl text-gray-700 font-semibold">
+        <p className="text-gray-600  text-lg lg:text-sm mb-8">
           Let's work together to bring your vision to life.
         </p>
       </p>
@@ -98,11 +98,13 @@ const CEOSection: React.FC = () => {
           />
         </div>
         <div className="lg:w-2/3 space-y-4">
-          <h2 className="text-3xl font-bold text-gray-800">Salton MUHETO</h2>
-          <h3 className="text-xl font-semibold text-yellow-500">
+          <h2 className="lg:text-xl text-2xl font-bold text-gray-800">Salton MUHETO</h2>
+          <h3 className="lg:text-lg text-xl font-semibold text-yellow-500">
             CEO & Founder
           </h3>
-          <ExpandableText text={ceoContent} maxLength={500} />
+          <div className=" text-lg lg:text-sm">
+            <ExpandableText text={ceoContent} maxLength={500} />
+          </div>
         </div>
       </CardContent>
     </Card>
@@ -121,18 +123,21 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
         />
       </div>
       <div className="space-y-2">
-        <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
+        <h3 className="text-md font-bold text-gray-800">{member.name}</h3>
         <p className="text-yellow-500 font-medium">{member.title}</p>
-        {member.bio && <ExpandableText text={member.bio} maxLength={150} />}
+        <div className="text-sm">
+          {member.bio && <ExpandableText text={member.bio} maxLength={150} />}
+        </div>
       </div>
-      <div className="flex justify-center space-x-6 mt-6">
-        <SocialLink href={member.email} icon={<Mail />} label="Email" />
+      <div className="flex justify-center  space-x-3 mt-6">
+
+        <SocialLink  href={member.email} icon={<Mail size={14} />} label="Email" />
         <SocialLink
           href={member.linkedin}
-          icon={<Linkedin />}
+          icon={<Linkedin  size={14}/>}
           label="LinkedIn"
         />
-        <SocialLink href={member.phone} icon={<Phone />} label="Phone" />
+        <SocialLink href={member.phone} icon={<Phone size={14} />} label="Phone" />
       </div>
     </CardContent>
   </Card>
@@ -154,12 +159,14 @@ const TeamSection: React.FC = () => (
   <section className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-yellow-500">MHS TEAM</h2>
-        <p className="text-xl text-gray-600 mt-2">Meet Our Exceptional Team</p>
+        <h2 className=" text-2xl lg:text-xl font-bold text-yellow-500">MHS TEAM</h2>
+        <p className="lg:text-lg text-lg text-gray-600 mt-2">Meet Our Exceptional Team</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  mx-auto">
+      <div className="grid grid-cols-1 text-xl lg:text-lg lg:grid-cols-3 gap-8  mx-auto">
         {teamMembers.map((member) => (
-          <TeamMemberCard key={member.name} member={member} />
+           
+            <TeamMemberCard key={member.name} member={member} />
+       
         ))}
       </div>
     </div>

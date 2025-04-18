@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+#ignoring the Environement configurtions 
+/Muhe_backend
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

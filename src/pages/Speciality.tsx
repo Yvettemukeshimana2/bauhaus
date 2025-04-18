@@ -1,25 +1,42 @@
 import React from "react";
-import weddingImage from "../assets/images/planning-picture.jpg";
+ 
 import partyImage from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0699.jpg";
 const specialtiesData = [
   {
-    title: "WEDDINGS",
+    title: "VENUES",
     description:
-      "At MHS, we specialize in orchestrating weddings and corporate events at offsite locations. We offer a wide range of services, including venue scouting, transportation, accommodations, dining, and decor, ensuring every detail is meticulously planned for a memorable event.",
-    image: weddingImage,
+      " MHS,Recommends and secures the perfect location based on your event type and guest sizeHandles venue setup, seating, lighting, and technical arrangements  .",
+    image:
+      "We recommend Muhe Venue to help you secure the perfect location at a great price, tailored to your event type and guest size, ensuring an ideal setting for your occasion. Our team manages all venue setup, including seating, lighting, and technical arrangements, delivering a seamless and stress-free experience from start to finish.",
   },
   {
-    title: "PARTIES",
+    title: "VENDORS",
     description:
-      "MHS is your go-to choice for offsite party planning. Our comprehensive services encompass venue selection, transportation, accommodations, decor, and more, providing a seamless experience for various events, from parties to corporate gatherings. Our expert team ensures your event is productive or relaxing, tailored to your needs.",
+      "Looking for amazing vendors to make your day truly spectacular? With our top-notch, vetted resources, we provide MUHE vendor services tailored to weddings and events of all kinds. Our trusted network of professionals ensures your event has the perfect dream team, delivering excellence and creativity at every step.",
+    image:
+      "https://michiganbarnwedding.com/wp-content/uploads/2016/11/wedding-vendor.jpg",
+  },
+  {
+    title: "RENTALS",
+    description:
+      "Muhe Rentals provides and sources high-quality materials tailored to your event’s theme, ensuring everything aligns with your color scheme, brand, or occasion. We handle the setup and teardown of all materials, delivering a seamless and stress-free experience from start to finish.",
     image: partyImage,
   },
 ];
 const Specialties: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto  ">
-      <h2 className="text-4xl font-bold text-center text-yellow-500 mt-10">Our Specialties</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <h2 className="lg:text-2xl text-5xl font-bold text-center text-yellow-500 mt-10">
+        Our Specialties
+      </h2>
+      <h1 className="text-sm">
+        At Muhe Hospitality Services (MHS), our specialty is simple: “We plan
+        your event – or help you plan it yourself, just the way you wish!”
+        Whether you want a fully-managed experience or prefer to be involved in
+        every detail, MHS offers flexible, personalized concierge-style support
+        tailored to your needs.
+      </h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
         {specialtiesData.map((specialty, index) => (
           <div key={index} className="  p-6 rounded-lg ">
             <img
@@ -28,10 +45,12 @@ const Specialties: React.FC = () => {
               alt={specialty.title}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-semibold mb-4 text-yellow-500">
+            <h3 className="lg:text-lg text-3xl font-semibold mb-4 text-yellow-500">
               {specialty.title}
             </h3>
-            <p className="text-md text-gray-700">{specialty.description}</p>
+            <p className="lg:text-sm text-xl text-gray-700">
+              {specialty.description}
+            </p>
           </div>
         ))}
       </div>

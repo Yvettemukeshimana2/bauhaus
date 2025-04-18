@@ -1,26 +1,26 @@
- // src/pages/Home.tsx
+// src/pages/Home.tsx
 import React, { useState, useEffect } from "react";
-import im1 from "../assets/images/LOLA-Event-Productions-Wedding-Planning-Tent-RichHarvestFarm-034.jpg";
-import im2 from "../assets/images/image1.avif";
-import im3 from "../assets/images/3U8A0855.jpg";
+import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
+import im2 from "../assets/h1.jpeg";
+import im3 from "../assets/h2.jpeg";
 import OurServices from "./service";
 import AboutUs from "./Aboutus";
 import OurProcess from "./Ourprocess";
 import Specialties from "./Speciality";
+// const him = import.meta.env.VITE_HOST;
 const images = [
   {
     src: im1,
-    description: "",
+    description: "MHS ",
   },
   {
     src: im2,
-    description:
-      " MHS",
+    description:"MHS",
   },
   {
     src: im3,
     description:
-      "",
+      "MHS",
   },
 ];
 const Home: React.FC = () => {
@@ -29,13 +29,13 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);  
+    }, 3000);
 
-    return () => clearInterval(interval);  
+    return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <div className="flex flex-col  items-center">
+      <div className="relative  w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={images[currentIndex].src}
@@ -48,16 +48,18 @@ const Home: React.FC = () => {
           <div
             className="absolute inset-0 bg-black"
             style={{
-              opacity: 0.4,
+              opacity: 0.6,
             }}
           ></div>
         </div>
-        <div className="pl-10 pt-32 z-0">
-          <h1 className="text-2xl text-white font-semibold">
+        <div className="pl-10 pt-32 z-0 text-xl sm:text-lg md:text-lg ">
+          <h1 className="text-2xl ml-36 lg:text-6xl text-white font-semibold">
+            
             {images[currentIndex].description}
           </h1>
-          <h1 className="text-5xl md:text-5xl font-bold mt-10 animate-pulse text-white text-center">
-            "Moments<span className="text-yellow-500 "> Made Perfect."</span>
+          <h1 className="text-yellow-500 text-xs pl-36 font-semibold">Muhe Hospitality Services</h1>
+          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+            MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
           </h1>
         </div>
       </div>

@@ -37,47 +37,50 @@
            alt="Our Services"
            className="w-full h-96 object-cover opacity-40 bg-black"
          />
-          <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
-         <motion.h1
-           initial={{ y: -100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.5 }}
-           className="text-5xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-5xl font-bold text-white "
-         >
-           BATO <span className="text-yellow-500  ">BATARI GITO</span>
-         </motion.h1>
-         <motion.h1
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 0.8 }}
-           className="absolute bottom-28  animate-pulse transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold"
-         >
-           MHS(Muhe Hospitality Service)
-         </motion.h1>
-         <motion.button
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 1, delay: 1.1 }}
-           whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.95 }}
-           className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-4 rounded-md  transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold hover:bg-yellow-500 transition-colors duration-300"
-         >
-           Contact Us
-         </motion.button>
+         <div className="absolute inset-0 flex justify-center space-y-5 text-center ">
+           <motion.h1
+             initial={{ y: -100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 0.5 }}
+             className="text-2xl absolute top-1/3 mt-9 flex justify-center text-center transform animate-bounce -translate-x-1/2 -translate-y-1/2 md:text-2xl font-bold text-white "
+           >
+             <div className=" absolute">
+               <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+                 MHS
+               </h1>
+               <h1 className="text-yellow-500 text-xs font-semibold">
+                 Muhe Hospitality Services
+               </h1>
+               <h1 className="text-4xl md:text-3xl sm:text-4xl mt-5 font-bold  w-96 animate-pulse text-white ">
+                 MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+               </h1>
+             </div>
+           </motion.h1>
+           
+           <motion.button
+             initial={{ y: 100, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 1.1 }}
+             whileHover={{ scale: 1.1 }}
+             whileTap={{ scale: 0.95 }}
+             className="absolute p-3 border-2 animate-pulse  border-yellow-400 bottom-5 rounded-full  transform -translate-x-1/2 -translate-y-1/2 text-white text-md font-bold hover:bg-yellow-500 transition-colors duration-300"
+           >
+             Let's Connect
+           </motion.button>
          </div>
        </header>
-       <div className="max-w-7xl mx-auto p-10 grid md:grid-cols-2 gap-8 ">
+       <div className="max-w-7xl mx-auto p-10 grid  grid-cols-1 lg:grid-cols-2 gap-8 ">
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-2xl font-bold mb-6 text-center ">
+           <h2 className=" text-4xl lg:text-xl font-bold mb-6 text-center ">
              Our Location
            </h2>
            <motion.div
              initial={{ y: 100, opacity: 0 }}
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 1.1 }}
-             whileHover={{ scale: 1.1 }} 
-             whileTap={{ scale: 0.4 }} 
-              className="w-full h-64 bg-gray-200 mb-6 rounded-lg overflow-hidden"
+             whileHover={{ scale: 1.1 }}
+             whileTap={{ scale: 0.4 }}
+             className="w-full h-64 bg-gray-200 mb-6 rounded-lg overflow-hidden"
            >
              <iframe
                title="Kigali Office Location"
@@ -91,45 +94,50 @@
            </motion.div>
 
            <div className="space-y-4">
-             <div className="flex items-start space-x-3">
-               <MapPin className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Address</h3>
-                 <p className="text-gray-600"> KG 17 Ave, Kigali – Rwanda</p>
-                 <p className="text-gray-600"> 24X8+MM Kigali</p>
+             <div className="flex justify-between">
+               <div className="flex items-start text-xl lg:text-sm space-x-3">
+                 <MapPin className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Address</h3>
+                   <p className="text-gray-600"> KG 17 Ave, Kigali – Rwanda</p>
+                   <p className="text-gray-600"> 24X8+MM Kigali</p>
+                 </div>
+               </div>
+
+               <div className="flex text-xl lg:text-sm items-start space-x-3">
+                 <Phone className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Phone</h3>
+                   <p className="text-gray-600">(+250) 788501009</p>
+                 </div>
                </div>
              </div>
-
-             <div className="flex items-start space-x-3">
-               <Phone className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Phone</h3>
-                 <p className="text-gray-600">(+250) 788501009</p>
+             <div className="flex justify-between">
+               <div className="flex text-xl lg:text-sm items-start space-x-3">
+                 <Mail className="w-5 h-5 text-blue-600 mt-1" />
+                 <div className="text-xl lg:text-sm">
+                   <h3 className="font-semibold">Email</h3>
+                   <p className="text-gray-600">info@muheservices.com</p>
+                 </div>
                </div>
-             </div>
 
-             <div className="flex items-start space-x-3">
-               <Mail className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Email</h3>
-                 <p className="text-gray-600">info@muheservices.com</p>
-               </div>
-             </div>
-
-             <div className="flex items-start space-x-3">
-               <Clock className="w-5 h-5 text-blue-600 mt-1" />
-               <div>
-                 <h3 className="font-semibold">Working Hours</h3>
-                 <p className="text-gray-600">
-                   Monday - Friday: 8:00 AM - 6:00 PM
-                 </p>
-                 <p className="text-gray-600">Saturday: 9:00 AM - 3:00 PM</p>
+               <div className="flex  text-xl lg:text-sm items-start space-x-3">
+                 <Clock className="w-5 h-5 text-blue-600 mt-1" />
+                 <div>
+                   <h3 className="font-semibold">Working Hours</h3>
+                   <p className="text-gray-600">
+                     Monday - Friday: 8:00 AM - 6:00 PM
+                   </p>
+                   <p className="text-gray-600">Saturday: 9:00 AM - 3:00 PM</p>
+                 </div>
                </div>
              </div>
            </div>
          </div>
          <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-yellow-500">
-           <h2 className="text-2xl font-bold mb-6 text-center">Get in Touch</h2>
+           <h2 className=" font-bold text-4xl lg:text-xl mb-6 text-center">
+             Get in Touch
+           </h2>
            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
              <div className="space-y-2">
                <input
@@ -213,7 +221,7 @@
 
              <button
                type="submit"
-               className="w-96 font-bold sm:ml-16  border-2 hover:border-yellow-500 hover:bg-white text-black py-2 px-4 rounded-md bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
+               className="w-96 font-bold sm:ml-16 text-2xl lg:text-sm border-2 hover:border-yellow-500 hover:bg-white text-black py-2 px-4 rounded-md bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
              >
                Send Message
              </button>
