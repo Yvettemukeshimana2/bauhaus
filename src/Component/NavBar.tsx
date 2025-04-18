@@ -108,7 +108,7 @@
                          className="block px-4 py-2 hover:bg-yellow-500"
                          onClick={() => setIsServicesOpen(false)}
                        >
-                         Event
+                         Event service
                        </Link>
                        <Link
                          to="/material"
