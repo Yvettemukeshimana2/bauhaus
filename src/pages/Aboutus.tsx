@@ -4,7 +4,7 @@
 import h1 from "../assets/histo.jpeg";
 import h2 from "../assets/history.jpeg";
 import ach1 from "../assets/achv2.jpeg";
-import ach2 from "../assets/h4.jpeg"
+import ach2 from "../assets/h3.jpeg"
  const AboutUs = () => {
    return (
      <div className=" space-y-6">
