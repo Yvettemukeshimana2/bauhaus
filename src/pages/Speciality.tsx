@@ -6,15 +6,13 @@ const specialtiesData = [
     title: "VENUES",
     description:
       " MHS,Recommends and secures the perfect location based on your event type and guest sizeHandles venue setup, seating, lighting, and technical arrangements  .",
-    image:
-      "We recommend Muhe Venue to help you secure the perfect location at a great price, tailored to your event type and guest size, ensuring an ideal setting for your occasion. Our team manages all venue setup, including seating, lighting, and technical arrangements, delivering a seamless and stress-free experience from start to finish.",
+    image: "https://fivetofivehotel.com/wp-content/uploads/2021/06/ubukwe11.jpg",
   },
   {
     title: "VENDORS",
     description:
       "Looking for amazing vendors to make your day truly spectacular? With our top-notch, vetted resources, we provide MUHE vendor services tailored to weddings and events of all kinds. Our trusted network of professionals ensures your event has the perfect dream team, delivering excellence and creativity at every step.",
-    image:
-      "https://michiganbarnwedding.com/wp-content/uploads/2016/11/wedding-vendor.jpg",
+    image: "/src/assets/vendor2.jpg",
   },
   {
     title: "RENTALS",

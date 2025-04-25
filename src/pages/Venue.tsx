@@ -15,58 +15,32 @@
    image: string;
    icon: React.ReactNode;
  }
-
- // Services Data with Lucide icons
  const SERVICES: Service[] = [
-   //  {
-   //    id: 1,
-   //    title: "Concierge",
-   //    description:
-   //      "Providing exceptional personal assistance services tailored to your needs",
-   //    image: "https://i.pinimg.com/originals/a4/b2/c9/a4b2c9d092c8ba93aebaf1f277ad21e4.jpg",
-   //    icon: <Briefcase className="w-6 h-6" />,
-   //  },
+    
    {
      id: 1,
      title: "Event Planning",
-     description: "Comprehensive wedding planning and coordination services",
-
-     image:
-       "src/assets/plan1.jpeg",
-     icon: <UtensilsCrossed className="w-6 h-6" />,
+     description:
+       " Comprehensive Event & Wedding Planning and Coordination Services.Comprehensive Event & Wedding Planning and Coordination Services.",
+     icon: <Heart className="w-4 h-4" />,
+     image: "/src/assets/staffing1.jpeg",
    },
-   //  {
-   //    id: 3,
-   //    title: "Social Media",
-   //    description:
-   //      "Strategic social media management across all major platforms",
-   //    image: "https://tse1.mm.bing.net/th?id=OIP.9oUjPJRWN2eKK58-IqQYrAHaFG&pid=Api&P=0&h=220",
-   //    icon: <Share2 className="w-6 h-6" />,
-   //  },
-
-   //  {
-   //    id: 5,
-   //    title: "Hospitality",
-   //    description: "Premium hospitality services for events of all sizes",
-   //    image: "https://cdn-images.go2africa.com/wp-content/uploads/2020/03/18090933/Madikwe-Safari-Lodge.jpg",
-   //    icon: <Building2 className="w-6 h-6" />,
-   //  },
+  
    {
      id: 2,
      title: " Event Staffing",
      description:
-       "Professional event staffing solutions for seamless execution",
-     image:
-       "src/assets/history.jpeg",
-     icon: <Users className="w-6 h-6" />,
+       "Your trusted source for expert event and hospitality staffing executed seamlessly.",
+     image: "src/assets/history.jpeg",
+     icon: <Users className="w-4 h-4" />,
    },
    {
      id: 3,
      title: "Event Catering",
      description:
-       "Professional food and beverage planning, preparation, and service for all events",
-     image:"src/assets/catering2.jpeg",
-     icon: <Heart className="w-6 h-6" />,
+       "Exceptional food and beverage catering tailored to your taste, theme, and guests from intimate gatherings to grand celebrations.",
+     image: "src/assets/catering2.jpeg",
+     icon: <UtensilsCrossed className="w-4 h-4" />,
    },
  ];
 
@@ -84,20 +58,20 @@
      <div className="p-4">
        <div className="flex items-center gap-2 mb-2">
          {service.icon}
-         <h2 className="text-xl font-bold">{service.title}</h2>
+         <h2 className="text-sm font-bold">{service.title}</h2>
        </div>
-       <p className="text-gray-700 mb-4">{service.description}</p>
+       <p className="text-gray-700 mb-4 text-sm">{service.description}</p>
        <div className="flex justify-between items-center">
          <button
            onClick={() => onReadMore(service.id)}
-           className="flex items-center text-yellow-500 hover:text-yellow-600 group"
+           className="flex items-center text-yellow-500 text-sm hover:text-yellow-600 group"
          >
            Read More
            <ChevronRight className="ml-1 transition-transform group-hover:translate-x-1" />
          </button>
          <button
            onClick={() => onBook(service)}
-           className="border-2 border-yellow-500 px-4 py-2 text-black hover:bg-yellow-50 transition-colors rounded-lg"
+           className="border-2 border-yellow-500 px-4 py-2 text-sm text-black hover:bg-yellow-50 transition-colors rounded-lg"
          >
            Book Service
          </button>
@@ -284,20 +258,7 @@
          </div>
 
          <div className="grid grid-cols-2 gap-4">
-           {/* <div>
-             <label className="text-sm font-medium mb-1 flex items-center gap-2">
-               <Calendar className="w-4 h-4" /> End Date
-             </label>
-             <input
-               type="date"
-               value={formData.endDate}
-               onChange={(e) =>
-                 setFormData((prev) => ({ ...prev, endDate: e.target.value }))
-               }
-               className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 outline-none"
-               required
-             />
-           </div> */}
+            
            <div>
              <label className=" text-sm font-medium mb-1 flex items-center gap-2">
                <Clock className="w-4 h-4" /> End Time

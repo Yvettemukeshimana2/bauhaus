@@ -1,7 +1,7 @@
  import React from "react";
- import im1 from "../assets/images/mettings.jpg";
- import im2 from "../assets/images/LOLA-Event-Productions-Wedding-Planning-Tent-RichHarvestFarm-034.jpg";
- import im3 from "../assets/images/image1.avif";
+ import im1 from "../assets/planning1.jpg";
+ import im2 from "../assets/staffing.jpg";
+ import im3 from "../assets/Catering.jpg";
  import { Link } from "react-router-dom";
 
  const services = [
@@ -41,7 +41,7 @@
                src={service.img}
                loading="lazy"
                alt={service.title}
-               className="rounded mb-3 w-full h-40 object-cover"
+               className=" mb-3 w-28 h-28  object-cover"
              />
              <h2 className="font-semibold lg:text-lg text-2xl mb-2 text-center">
                {service.title}
@@ -58,7 +58,7 @@
          ))}
        </div>
        <a href="/services" className="mt-5 lg:w-full flex justify-center">
-         <button className="text-white border-2 text-lg bg-yellow-500 py-2 px-6 rounded w-full sm:w-auto">
+         <button className="text-white border-2 text-lg bg-yellow-500 py-2 px-6 rounded-full w-full sm:w-auto">
            View All Services
          </button>
        </a>

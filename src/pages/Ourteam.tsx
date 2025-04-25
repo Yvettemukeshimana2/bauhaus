@@ -1,6 +1,6 @@
  import React, { useState, ReactNode } from "react";
-import { Mail, Linkedin, Phone } from "lucide-react";
-import salto from "../assets/images/saltobackgroundless.png"
+import { Mail, Phone } from "lucide-react";
+import salto from "../assets/mh3.jpg"
 // Types
 interface CardProps {
   children: ReactNode;
@@ -23,7 +23,6 @@ interface TeamMember {
   title: string;
   image: string;
   email: string;
-  linkedin: string;
   phone: string;
   bio?: string;
 }
@@ -119,7 +118,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
           src={member.image}
           loading="lazy"
           alt={member.name}
-          className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg"
+          className="w-40 h-44 rounded-full mx-auto object-cover shadow-lg"
         />
       </div>
       <div className="space-y-2">
@@ -132,11 +131,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
       <div className="flex justify-center  space-x-3 mt-6">
 
         <SocialLink  href={member.email} icon={<Mail size={14} />} label="Email" />
-        <SocialLink
-          href={member.linkedin}
-          icon={<Linkedin  size={14}/>}
-          label="LinkedIn"
-        />
+        
         <SocialLink href={member.phone} icon={<Phone size={14} />} label="Phone" />
       </div>
     </CardContent>
@@ -178,30 +173,29 @@ const teamMembers: TeamMember[] = [
     name: "Emmy",
     title: "Business Development Manager",
     image: "/path/to/t3.png",
-    email: "mailto:emmy@mhs.com",
-    linkedin: "#",
-    phone: "tel:+123456789",
-    bio: "Emmy brings over 5 years of experience in business development and strategic planning. Specializing in market expansion and client relations, Emmy has successfully led numerous high-profile projects."
+    email: "info@muheservices.com",
+ 
+    phone: "0788501009",
+    bio: "Emmy brings over 5 years of experience in business development and strategic planning. Specializing in market expansion and client relations, Emmy has successfully led numerous high-profile projects.",
   },
   {
     name: "Paul",
     title: "Project Manager",
     image: "/path/to/t1.jpg",
-    email: "mailto:paul@mhs.com",
-    linkedin: "#",
-    phone: "tel:+123456789",
-    bio: "With expertise in event management and coordination, Paul ensures seamless execution of all our projects. His attention to detail and client-focused approach delivers exceptional results."
+    email: "info@muheservices.com",
+    
+    phone: "0788501009",
+    bio: "With expertise in event management and coordination, Paul ensures seamless execution of all our projects. His attention to detail and client-focused approach delivers exceptional results.",
   },
-  
+
   {
     name: "Alain",
     title: "Sales & Marketing Manager",
-    image: "/path/to/t1.jpg",
-    email: "mailto:alain@mhs.com",
-    linkedin: "#",
-    phone: "tel:+123456789",
-    bio: "Alain leads our marketing initiatives with innovative strategies. His understanding of market trends and customer needs drives our business growth."
-  }
+    image: "/src/assets/A.jpg",
+    email: "info@muheservices.com",
+    phone: "0788501009",
+    bio: "Alain leads our marketing initiatives with innovative strategies. His understanding of market trends and customer needs drives our business growth.",
+  },
 ];
 const OurTeam: React.FC = () => {
   return (

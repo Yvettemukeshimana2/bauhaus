@@ -22,46 +22,6 @@
  }
 
  const services: Service[] = [
-   //  {
-   //    id: 1,
-   //    title: " Do You Need Concierge?",
-   //    description:
-   //      "Are you tired, and stressed like there are never enough hours in a day? Let Us Help, with “Yes I Can Spirit”, It’s like having your assistant, call on us when you need an extra pair of hands. We can assist with just about anything as long as it’s legal and ethical.  We blend broad industry knowledge and established expertise with data and research, providing recommendations that will have an impact commercially. We see our role as one of empowering leaders, and helping you, rather than creating an ongoing need for us and our services We pride ourselves in being a one-stop shop for wedding and event rentals, with items and services you may require for your special ceremony. We have our own equipment which we use in any events or weddings we execute or rent…. Also our top-notch and vetted resources, we can provide vendor services specializing in these respective crafts Wedding and Event Venues, Caterers, Planners, Stationery, Photo and videographers, Décors, Florists, Cakes, Beauty and health, Dress and attire, Equipment Rentals, Transportation, Accommodation, Entertainers, Staff & Security and more!                                  ",
-   //    fullDescription:
-   //      "  MHS helps you with various tasks, like booking hotels, making restaurant reservations, and arranging travel plans. They provide personalized assistance to make your life easier, often in hotels or luxury services.",
-   //    features: [
-   //      "24/7 availability",
-   //      "Comprehensive travel planning",
-   //      "Restaurant bookings",
-   //      "Event management",
-   //      "Personal shopping",
-   //      "Emergency assistance",
-   //      "Access to exclusive events",
-   //    ],
-   //    images: [
-   //      "https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2012/10/10110233/careers-in-hotel-management.jpg",
-   //      "https://myaolcc.com/wp-content/uploads/2019/10/Oct-16-hospitality-training-1200x800-1.jpg",
-   //      "https://esoftskills.com/hospitality/wp-content/uploads/2023/11/Building-a-Strong-Hospitality-Team-Through-Training-and-Development.jpg",
-   //    ],
-   //    testimonials: [
-   //      {
-   //        id: 1,
-   //        name: "Sarah Johnson",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony,
-   //      },
-   //      {
-   //        id: 2,
-   //        name: "Sarah ",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony1,
-   //      },
-   //    ],
-   //  },
    {
      id: 1,
      title: "DO YOU NEED EVENT OR WEDDING PLANNING SERVICES?",
@@ -70,20 +30,21 @@
      fullDescription:
        "  Wedding planning services help couples organize their special day by handling details such as venue selection, vendor coordination, budget management, and event design, ensuring a seamless and memorable celebration",
      features: [
-       "24/7 availability",
-       "Comprehensive travel planning",
-       "Restaurant bookings",
-       "Event management",
-       "Personal shopping",
-       "Emergency assistance",
-       "Access to exclusive events",
+        "Venue Scouting",
+       "Full Vendor Resourcing",
+       " Floor Plan Design",
+       " Mood Board & Design",
+       " Budget Analysis",
+       " Timeline Development & Management",
+       " Vendor Coordination",
+       " Client & Vendor Meetings",
+       " Venue Walk-through",
+       " Ceremony Rehearsal",
+       " Unlimited Phone & Email Communication",
+       " Day-of Coordination through the breakdown",
+     
      ],
-     images: [
-       //  "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600",
-       "/src/assets/plan2.jpeg",
-       "/src/assets/plan4.jpeg",
-       wed1,
-     ],
+     images: ["/src/assets/plan2.jpeg", "/src/assets/plan4.jpeg", wed1],
      testimonials: [
        {
          id: 1,
@@ -151,13 +112,18 @@
      fullDescription:
        "  MHS provide menu customization to setup and cleanup, these services ensure a seamless dining experience for occasions like weddings, corporate gatherings, and parties, tailored to guests' preferences and dietary needs",
      features: [
-       "24/7 availability",
-       "Comprehensive travel planning",
-       "Restaurant bookings",
-       "Event management",
-       "Personal shopping",
-       "Emergency assistance",
-       "Access to exclusive events",
+       "Venue Scouting",
+       "Full Vendor Resourcing",
+       " Floor Plan Design",
+       " Mood Board & Design",
+       " Budget Analysis",
+       " Timeline Development & Management",
+       " Vendor Coordination",
+       " Client & Vendor Meetings",
+       " Venue Walk-through",
+       " Ceremony Rehearsal",
+       " Unlimited Phone & Email Communication",
+       " Day-of Coordination through the breakdown",
      ],
      images: [
        " https://i.pinimg.com/736x/4c/0a/3c/4c0a3c451352432b9662fd47871e4f2b.jpg",
@@ -183,87 +149,6 @@
        },
      ],
    },
-   //  {
-   //    id: 3,
-   //    title: "DO YOU NEED SOCIAL MEDIA MARKETING SERVICE?",
-   //    description:
-   //      "  We are a top-ranked social media marketing agency dedicated to you. We are passionate about providing you with the right tools and strategies needed to jumpstart your business. With MHS Marketing, you will see a great improvement in the quality of your ad content, lead-generating efforts, conversion campaigns, and much more. But that’s not all! We are not just an advertising company; we are also a full-service digital marketing agency. That means we can handle all of your marketing needs. Whether you need content creation, website design, social media marketing services, search engine optimization (SEO), email marketing, or anything else in this realm, we have got you covered! Our team of expert marketers and strategists will help you develop an effective marketing strategy based on your goals, implement the necessary components, assist with monitoring benchmark metrics, and optimize your results. If you want a company that can help you generate higher brand awareness, engagement, return on investment, and more, then give us a call! ",
-   //    fullDescription:
-   //      "Social media management involves creating, scheduling, and engaging with content to build brand awareness and connect with audiences.",
-   //    features: [
-   //      "24/7 availability",
-   //      "Comprehensive travel planning",
-   //      "Restaurant bookings",
-   //      "Event management",
-   //      "Personal shopping",
-   //      "Emergency assistance",
-   //      "Access to exclusive events",
-   //    ],
-   //    images: [
-   //      "https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2012/10/10110233/careers-in-hotel-management.jpg",
-   //      "https://myaolcc.com/wp-content/uploads/2019/10/Oct-16-hospitality-training-1200x800-1.jpg",
-   //      "https://esoftskills.com/hospitality/wp-content/uploads/2023/11/Building-a-Strong-Hospitality-Team-Through-Training-and-Development.jpg",
-   //    ],
-   //    testimonials: [
-   //      {
-   //        id: 1,
-   //        name: "Sarah Johnson",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony,
-   //      },
-   //      {
-   //        id: 2,
-   //        name: "Sarah ",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony1,
-   //      },
-   //    ],
-   //  },
-
-   //  {
-   //    id: 5,
-   //    title: " DO YOU NEED EVENT AND HOSPITALITY CONSULTANCY SERVICES?",
-   //    description:
-   //      " We bring together experts from the world of events and hospitality to help our clients and venture partners realize the value of food and beverages in their business. Our work and experience are diverse from supporting established brands in defining their future strategy to event and hotel companies on specific asset development.  Our teams are hospitality leaders in their own right, much more than consultants, we own and operate our own businesses, sit on the boards of many companies and have extensive global experience in our sector. Working with us you know you are in safe hands.  We bring an extensive black book of contacts to our projects, as well as preferred partners covering an array of services, helping us to tackle almost any brief. We specialize in thinking, defining the right strategy, and challenging thinking.                   ",
-   //    fullDescription:
-   //      "  MHS helps you with various tasks, like booking hotels, making restaurant reservations, and arranging travel plans. They provide personalized assistance to make your life easier, often in hotels or luxury services.",
-   //    features: [
-   //      "24/7 availability",
-   //      "Comprehensive travel planning",
-   //      "Restaurant bookings",
-   //      "Event management",
-   //      "Personal shopping",
-   //      "Emergency assistance",
-   //      "Access to exclusive events",
-   //    ],
-   //    images: [
-   //      "https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2012/10/10110233/careers-in-hotel-management.jpg",
-   //      "https://myaolcc.com/wp-content/uploads/2019/10/Oct-16-hospitality-training-1200x800-1.jpg",
-   //      "https://esoftskills.com/hospitality/wp-content/uploads/2023/11/Building-a-Strong-Hospitality-Team-Through-Training-and-Development.jpg",
-   //    ],
-   //    testimonials: [
-   //      {
-   //        id: 1,
-   //        name: "Sarah Johnson",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony,
-   //      },
-   //      {
-   //        id: 2,
-   //        name: "Sarah ",
-   //        role: "Corporate Executive",
-   //        comment: "The team anticipated my needs perfectly!",
-   //        rating: 5,
-   //        avatar: testmony1,
-   //      },
-   //    ],
-   //  },
  ];
 
  interface ServiceDetailProps {
@@ -284,17 +169,27 @@
    }
 
    return (
-     <div className="mt-24 h-full">
+     <div className=" h-full">
        <header className="relative bg-black">
          <img
            src={img1}
            loading="lazy"
            alt="Our Services"
-           className="w-full h-48 object-cover opacity-40 bg-black"
+           className="w-full h-96 object-cover opacity-40 bg-black"
          />
-         <h1 className="text-5xl absolute top-1 left-96 md:text-5xl font-bold mt-10 animate-pulse text-white text-center">
-           BATO <span className="text-yellow-500 ">BATARI GITO</span>
-         </h1>
+         <div className="absolute inset-0 flex justify-center top-32 text-center">
+           <div className="container mx-auto px-6 absolute">
+             <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+               MHS
+             </h1>
+             <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
+               Muhe Hospitality Services
+             </h1>
+             <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+               MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+             </h1>
+           </div>
+         </div>
        </header>
 
        <header className="mb-8 p-10 text-center">
