@@ -12,7 +12,7 @@ const specialtiesData = [
     title: "VENDORS",
     description:
       "Looking for amazing vendors to make your day truly spectacular? With our top-notch, vetted resources, we provide MUHE vendor services tailored to weddings and events of all kinds. Our trusted network of professionals ensures your event has the perfect dream team, delivering excellence and creativity at every step.",
-    image: "/src/assets/vendor2.jpg",
+    image: " https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT3eJ5JFEJvH4Ls2NJKT3n4HZnwUtMWhJ6lXfJxH0sEf8yqkAac",
   },
   {
     title: "RENTALS",
