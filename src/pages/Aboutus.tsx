@@ -106,13 +106,13 @@ import ach2 from "../assets/h3.jpeg"
              src={ach2}
              alt="Achievements Image 1"
              loading="lazy"
-             className="w-full h-72 ml-2 object-cover rounded-lg shadow-md"
+             className="w-full h-80 p-2 mt-4 ml-2 object-cover rounded-lg shadow-md"
            />
            <img
              src={ach1}
              alt="Achievements Image 2"
              loading="lazy"
-             className="w-full h-72 object-cover  rounded-lg shadow-md"
+             className="w-full h-80 p-2 mt-4 object-cover  rounded-lg shadow-md"
            />
          </div>
          <div className="lg:w-1/2 p-6 bg-gray-50 rounded-lg shadow-lg order-1 lg:order-2">

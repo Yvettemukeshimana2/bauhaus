@@ -1,4 +1,4 @@
-# Logs
+ # Logs
 logs
 *.log
 npm-debug.log*
@@ -7,13 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules and build outputs
 node_modules
 dist
 dist-ssr
 *.local
 
-#ignoring the Environement configurtions 
+# Ignoring the Environment configurations
 /Muhe_backend
+.env   # <<<<< ADD THIS LINE
 
 # Editor directories and files
 .vscode/*
