@@ -18,17 +18,17 @@
       // },
       {
         href: "/venue",
-        label: "Event Planning",
+        label: "NIght Club",
         category: "Services",
       },
       {
         href: "/venue",
-        label: "Event Staffing",
+        label: "Resto-Bar",
         category: "Services",
       },
       {
         href: "/venue",
-        label: "Event Catering",
+        label: "Karaoke",
         category: "Services",
       },
       // {
@@ -51,12 +51,12 @@
     const categories = ["Brand","Useful Links", "Services",];
 
     return (
-      <footer className="bg-gradient-to-b from-yellow-800 to-yellow-500  text-white py-8">
+      <footer className="bg-gradient-to-b from-customGreen-960 to-customGreen-960  text-white py-8">
         <div className=" mx-auto px-4 ">
           <div className="grid grid-cols-4 sm:grid-cols-5  mb-6">
             {/* Company Info */}
             {/* <div>
-              <h2 className="text-xl text-yellow-500 font-bold">
+              <h2 className="text-xl text-black font-bold">
                 {companyName}
               </h2>
               <p className="text-white text-md">
@@ -70,7 +70,7 @@
                 key={category}
                 className="flex font-normal ml-8 flex-col mb-6"
               >
-                <span className="text-yellow-500  font-bold text-xl mb-3">
+                <span className="text-black  font-bold text-xl mb-3">
                   {category}
                 </span>
                 <div className="   flex flex-col">
@@ -91,18 +91,18 @@
 
             {/* Location Info */}
             <div className="flex font-normal flex-col mb-6 ">
-              <span className="text-yellow-500 font-bold ml-8 mb-3 text-xl">
+              <span className="text-black font-bold ml-8 mb-3 text-xl">
                 Contact Us
               </span>
               <div className=" text-white ml-8 text-sm">
-                <p>Phone: +250788501009</p>
+                <p>Phone: +250788888889</p>
                 <p>
                   Email:{" "}
                   <a
                     href="mailto:info@muheservices.com"
                     className="hover:text-yellow-400"
                   >
-                    info@muheservices.com
+                    info@bauhause.com
                   </a>
                 </p>
                 <p>Address:KG 17 Ave, Kigali-Rwanda</p>
@@ -144,7 +144,7 @@
               </div>
 
               <Link to="/venue">
-                <button className="lg:block hidden justify-end ml-9 text-sm mt-12 font-bold rounded-full bg-yellow-500 text-yellow-100  px-10 py-2">
+                <button className="lg:block hidden justify-end ml-9 text-sm mt-12 font-bold rounded-full bg-custtext-black text-yellow-100  px-10 py-2">
                   Work With Us
                 </button>
               </Link>

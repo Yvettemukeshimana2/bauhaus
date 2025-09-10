@@ -1,26 +1,23 @@
 // src/pages/Home.tsx
 import React, { useState, useEffect } from "react";
-import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
-import im2 from "../assets/h1.jpeg";
-import im3 from "../assets/h2.jpeg";
+// import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
+// import im2 from "../assets/h1.jpeg";
+// import im3 from "../assets/h2.jpeg";
 import OurServices from "./service";
 import AboutUs from "./Aboutus";
-import OurProcess from "./Ourprocess";
 import Specialties from "./Speciality";
-// const him = import.meta.env.VITE_HOST;
 const images = [
   {
-    src: im1,
-    description: "MHS ",
+    src: "https://i.ytimg.com/vi/fFFQSdTK5c0/maxresdefault.jpg",
+    description: " ",
   },
   {
-    src: im2,
-    description:"MHS",
+    src: "http://www.partybus.co.uk/wp-content/uploads/2.jpg",
+    description: "",
   },
   {
-    src: im3,
-    description:
-      "MHS",
+    src: "https://img.freepik.com/premium-photo/group-friends-sing-karaoke-together-party-laughing-having-good-time_14117-899607.jpg",
+    description: "",
   },
 ];
 const Home: React.FC = () => {
@@ -57,16 +54,15 @@ const Home: React.FC = () => {
             
             {images[currentIndex].description}
           </h1>
-          <h1 className="text-yellow-500 text-xs pl-36 font-semibold">Muhe Hospitality Services</h1>
-          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-            MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+          {/* <h1 className="text-yellow-500 text-xs pl-36 font-semibold">Muhe Hospitality Services</h1> */}
+          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center"><span className="text-white ">BAUHAUS ENTERTAINMENT</span>
           </h1>
         </div>
       </div>
       <AboutUs />
       <OurServices />
       <Specialties />
-      <OurProcess />
+      
     </div>
   );
 };

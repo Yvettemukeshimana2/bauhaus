@@ -338,13 +338,13 @@
          <div className="absolute inset-0 flex justify-center text-center mt-7">
            <div className="container mx-auto px-6 top-36 absolute">
              <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
-               MHS
+               Bauhaus
              </h1>
              <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
-               Muhe Hospitality Services
+               Bauhaus Entertainment
              </h1>
              <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-               MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+               PREMIUM <span className="text-yellow-500 ">ENTERTAINMENT</span>
              </h1>
            </div>
          </div>

@@ -23,14 +23,14 @@
      title: "Pamella Wedding",
      image: im1,
      message:
-       "Muhe Hospitality made my wedding stress-free and elegant. Their staff handled everything perfectly from ceremony to reception!",
+       "Bauhaus made my wedding stress-free and elegant. Their staff handled everything perfectly from ceremony to reception!",
    },
    {
      id: "annie-black-show",
      title: "Annie Black Show Offs",
      image: im6,
      message:
-       "The show was classy and energetic, thanks to the ambiance and attention to detail provided by Muhe Hospitality.",
+       "The show was classy and energetic, thanks to the ambiance and attention to detail provided by Bauhaus.",
    },
    {
      id: "lounge-party",
@@ -44,7 +44,7 @@
      title: "Kigali Summer Vegas",
      image: im3,
      message:
-       "Muhe Hospitality made our summer show unforgettable with seamless coordination and top-tier service.",
+       "Bauhaus made our summer show unforgettable with seamless coordination and top-tier service.",
    },
    {
      id: "point-up-show",
@@ -92,7 +92,7 @@
                    By
                  </span>
                  <h3 className="lg:text-2xl text-3xl font-bold text-yellow-500">
-                   Muhe Hospitality Services
+                   Bauhaus Entertainment
                  </h3>
                </div>
              </motion.div>
@@ -123,7 +123,7 @@
          <section className="container-fluid p-4 mx-20 mb-5 bg-yellow-600 rounded">
            <div className="text-center text-xl lg:text-sm">
              <p>
-               "At Muhe Hospitality Services, we believe that true inspiration
+               "At Bauhaus Entertainment, we believe that true inspiration
                comes from dedication, passion, and an unwavering commitment to
                excellence. Every moment is an opportunity to create experiences
                that resonate, connecting us deeply with our clients and their

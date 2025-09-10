@@ -105,7 +105,7 @@ const HospitalityMaterials: React.FC = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="absolute bottom-40 animate-pulse text-white text-xl font-bold"
           >
-            MHS (Muhe Hospitality Service)
+            Bauhaus Entertainment
           </motion.h1>
           <motion.button
             initial={{ y: 100, opacity: 0 }}

@@ -288,7 +288,7 @@
     
            Please remember, if you have booked the event venue, vendors and
            rentals through www.muheservices.com, to claim your exclusive offers
-           and discounts with our MHS Accredited Suppliers
+           and discounts with our Bauhaus Accredited Suppliers
          </h1>
        </div>
 

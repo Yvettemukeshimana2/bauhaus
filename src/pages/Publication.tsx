@@ -98,13 +98,13 @@ import CardComponent from "./Cardcomponent";
            <div className="absolute inset-0 flex justify-center text-center">
              <div className="container mx-auto px-6 top-32 absolute">
                <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
-                 MHS
+                 Bauhaus
                </h1>
                <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
-                 Muhe Hospitality Services
+                 Bauhaus Entertainment
                </h1>
                <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-                 MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+                 PREMIUM <span className="text-yellow-500 ">ENTERTAINMENT</span>
                </h1>
              </div>
            </div>
@@ -134,25 +134,25 @@ import CardComponent from "./Cardcomponent";
            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
              {[
                {
-                 title: "Crafting Memorable MHS Events",
+                 title: "Crafting Memorable Bauhaus Events",
                  description:
-                   "Step into the world of event magic! Join us behind the scenes at MHS as we unveil the secrets to creating unforgettable experiences.",
+                   "Step into the world of event magic! Join us behind the scenes at Bauhaus as we unveil the secrets to creating unforgettable experiences.",
                  imageUrl: c1,
                },
                {
                  title: "Unlocking Success",
                  description:
-                   "Discover the power of MHS Digital services in this transformative journey. From boosting efficiency to elevating profits of your Business.",
+                   "Discover the power of Bauhaus Digital services in this transformative journey. From boosting efficiency to elevating profits of your Business.",
                  imageUrl: c2,
                },
                {
-                 title: "MHS's Impact on Industry Trends",
+                 title: "Bauhaus's Impact on Industry Trends",
                  description:
-                   "Stay ahead of the curve with MHS! Dive into the future of industry trends as we unveil the innovative solutions shaping tomorrow.",
+                   "Stay ahead of the curve with Bauhaus! Dive into the future of industry trends as we unveil the innovative solutions shaping tomorrow.",
                  imageUrl: c4,
                },
                {
-                 title: "A Journey through MHS Event Experiences",
+                 title: "A Journey through Bauhaus Event Experiences",
                  description:
                    "Client Spotlight: Experience events like never before! Join us on a journey through the eyes of our clients.",
                  imageUrl: c3,
@@ -214,7 +214,7 @@ import CardComponent from "./Cardcomponent";
                  </h5>
                  <p className="mb-6 text-2xl lg:text-sm">
                    Are you a talented individual, bursting with enthusiasm for
-                   event and hospitality management? At MHS Company, we are
+                   event and hospitality management? At Bauhaus Company, we are
                    always on the lookout for talented individuals who feel they
                    would thrive in the ever-changing events industry!
                  </p>

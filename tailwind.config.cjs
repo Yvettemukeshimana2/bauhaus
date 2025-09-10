@@ -16,6 +16,7 @@
            800: "#166534",
            900: "#14532d",
            950: "#042f2e",
+           960: "#623411",
          },
          customTeal: {
            // Define custom teal shades

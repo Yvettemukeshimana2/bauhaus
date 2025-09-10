@@ -22,14 +22,14 @@ const inspirations: Inspiration[] = [
     title: "Pamella Wedding",
     image: im1,
     message:
-      "Muhe Hospitality made my wedding stress-free and elegant. Their staff handled everything perfectly from ceremony to reception!",
+      "Bauhaus made my wedding stress-free and elegant. Their staff handled everything perfectly from ceremony to reception!",
   },
   {
     id: "annie-black-show",
     title: "Annie Black Show Offs",
     image: im6,
     message:
-      "The show was classy and energetic, thanks to the ambiance and attention to detail provided by Muhe Hospitality.",
+      "The show was classy and energetic, thanks to the ambiance and attention to detail provided by Bauhaus.",
   },
   {
     id: "lounge-party",
@@ -43,7 +43,7 @@ const inspirations: Inspiration[] = [
     title: "Kigali Summer Vegas",
     image: im3,
     message:
-      "Muhe Hospitality made our summer show unforgettable with seamless coordination and top-tier service.",
+      "Bauhaus made our summer show unforgettable with seamless coordination and top-tier service.",
   },
   {
     id: "point-up-show",

@@ -9,9 +9,9 @@
    FiMenu,
    FiX,
  } from "react-icons/fi";
- import Logo from "../assets/Muhe-Logo-white.png";
+ import Logo from "../assets/Bauhaus Logo.png";
  import MenuItem from "../reusable/MenuItem";
- import Header from "./Header";
+ 
 
  const NavBar = () => {
    const [isScrolled, setIsScrolled] = useState(false);
@@ -37,23 +37,23 @@
      { title: "About Us", address: "/aboutus1", Icon: FiBookmark },
      { title: "Contact", address: "/contactus", Icon: FiPhone },
      { title: "Services", address: "/venue", Icon: FiActivity },
-     { title: "Inspirations", address: "/inspirations", Icon: FiActivity },
-     { title: "Publications", address: "/publication", Icon: FiPackage },
-     { title: "Plan Your Event", address: "/planevent", Icon: FiActivity },
+     { title: "Resto-bar", address: "/inspirations", Icon: FiActivity },
+     { title: "Night club", address: "/publication", Icon: FiPackage },
+     { title: "Karaoke", address: "/planevent", Icon: FiActivity },
    ];
 
    return (
      <header
-       className={`fixed -top-14 left-0 z-50 w-full transition-all duration-300 ${
+       className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
          isScrolled
            ? "bg-black sm:bg-opacity-75 sm:backdrop-blur-2xl"
            : "bg-transparent"
        }`}
      >
        <div className="flex flex-col w-full max-w-7xl mx-auto">
-         <Header />
+      
 
-         <div className="flex justify-between items-center bg-gradient-to-b from-yellow-800 to-yellow-500 rounded-t-sm w-full h-12 px-4">
+         <div className="flex justify-between items-center rounded-t-sm w-full h-12 px-4" style={{backgroundColor: '#623411'}}>
            <Link to="/">
              <img
                src={Logo}
@@ -91,7 +91,7 @@
 
        {/* Mobile Slide Menu */}
        {isMenuOpen && (
-         <div className="fixed top-14 right-0 w-1/2 sm:w-1/3 h-screen bg-yellow-500 z-40 p-6 shadow-lg">
+         <div className="fixed top-14 right-0 w-1/2 sm:w-1/3 h-screen z-40 p-6 shadow-lg" style={{backgroundColor: '#623411'}}>
            <button
              className="absolute top-4 right-4 text-white text-xl"
              onClick={() => setIsMenuOpen(false)}

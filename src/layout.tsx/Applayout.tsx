@@ -11,7 +11,7 @@ const AppLayout = () => {
 
       <div className="">{<Outlet />}</div>
       <WhatsAppChatButton/>
-      <Footer companyName="MHS Ltd" year={2020} />
+      <Footer companyName="Bauhaus" year={2020} />
     </div>
   );
 };

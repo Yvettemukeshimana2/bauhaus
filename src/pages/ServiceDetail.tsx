@@ -68,9 +68,9 @@
      id: 2,
      title: "DO YOU NEED EVENT STAFFING SOLUTIONS SERVICE?",
      description:
-       "  MHS is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff. The MHS team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events. Includes Event Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry.                                   ",
+       "  Bauhaus is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff. The Bauhaus team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events. Includes Event Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry.                                   ",
      fullDescription:
-       " MHS is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff.   The MHS team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events.   and Wedding Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry. ",
+       " Bauhaus is your full-service staffing solution, specializing in On-time, well-groomed, professionally mannered, and experienced temporary and full-time staff. We screen, Test, interview, and train all hospitality staff.   The Bauhaus team is a part of your event's success by helping to establish your ceremony as one that is defined by a good sense of professionalism in corporate and private Events.   and Wedding Planners, Protocol Officers, Waiter Staff, Bartenders, Baristas, Mixologists, Private Chefs, Housekeepers, and more! We have worked with a wide variety of hotels, large-scale events venues, weddings, catering companies, event organizers, and ceremonies for more than five years of experience with an illustrious career spanning the hospitality industry. ",
      features: [
        "24/7 availability",
        "Comprehensive travel planning",
@@ -110,7 +110,7 @@
      description:
        " We’ve got you covered.  Our caterers provide food and drinks for weddings and events, dinner parties, and any special events at a range of different venues. We are in charge of preparing, delivering, and serving bulk meal orders to clients based on their menu selection and event type. we also have a mobile bar service that provides a fully stocked bar and trained staff such as mixologists or bartenders for preparing your cocktails, coffee, and tea for high-end events, weddings, corporate events, private parties, and any special events.",
      fullDescription:
-       "  MHS provide menu customization to setup and cleanup, these services ensure a seamless dining experience for occasions like weddings, corporate gatherings, and parties, tailored to guests' preferences and dietary needs",
+       "  Bauhaus provide menu customization to setup and cleanup, these services ensure a seamless dining experience for occasions like weddings, corporate gatherings, and parties, tailored to guests' preferences and dietary needs",
      features: [
        "Venue Scouting",
        "Full Vendor Resourcing",
@@ -180,13 +180,13 @@
          <div className="absolute inset-0 flex justify-center top-32 text-center">
            <div className="container mx-auto px-6 absolute">
              <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
-               MHS
+               Bauhaus
              </h1>
              <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
-               Muhe Hospitality Services
+               Bauhaus Entertainment
              </h1>
              <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-               MOMENT <span className="text-yellow-500 ">MADE PERFECT</span>
+               PREMIUM <span className="text-yellow-500 ">ENTERTAINMENT</span>
              </h1>
            </div>
          </div>

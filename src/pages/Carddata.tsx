@@ -43,12 +43,12 @@ export const cardsData: Card[] = [
   },
   {
     id: 3,
-    title: "MHS's Impact on Industry Trends",
+    title: "Bauhaus's Impact on Industry Trends",
     description:
-      "Stay ahead of the curve with MHS! Dive into the future of trends.",
+      "Stay ahead of the curve with Bauhaus! Dive into the future of trends.",
     imageUrl: c3,
     fullDescription:
-      "Explore the cutting-edge innovations and trends shaping the future of various industries. From technology to sustainable solutions, discover how MHS is driving positive change.",
+      "Explore the cutting-edge innovations and trends shaping the future of various industries. From technology to sustainable solutions, discover how Bauhaus is driving positive change.",
     additionalImages: [
       "https://i.pinimg.com/736x/7b/df/4f/7bdf4f0ccd137e0da58779d6bba9309a.jpg",
       "https://i.pinimg.com/736x/7d/2a/43/7d2a43f7f14e63164e0992f59df42405.jpg",
