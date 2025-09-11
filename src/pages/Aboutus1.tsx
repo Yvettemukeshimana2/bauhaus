@@ -41,7 +41,7 @@
        image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Enjoy expertly crafted cocktails, premium spirits, and exceptional bar service in our stylish lounge atmosphere with professional mixologists.",
-       operatingHours: "Monday - Sunday: 4:00 PM - 1:00 AM",
+       operatingHours: "Monday - Sunday: 5:00 AM - 22:00 PM",
        features: [
          "Expert mixologists",
          "Premium spirits collection",
@@ -220,7 +220,7 @@
              <div>
                <h4 className="text-xl lg:text-lg font-bold">Location</h4>
                <p className="text-gray-600 lg:text-sm text-lg">
-                 KG 17 Ave, Kigali-Rwanda
+                 KN 169 St Nyamirambo, Kigali-Rwanda
                </p>
              </div>
            </div>
@@ -229,7 +229,7 @@
              <div>
                <h4 className="text-xl lg:text-lg font-bold">Contact</h4>
                <p className="text-gray-600 lg:text-sm text-lg">
-                 +250 788 501 009
+                 +250 788647315/+250788816126
                </p>
              </div>
            </div>

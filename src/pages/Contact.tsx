@@ -92,7 +92,7 @@
                </div>
                <div>
                  <h3 className="font-bold text-lg text-gray-800 mb-1">Address</h3>
-                 <p className="text-gray-600">KG 17 Ave, Kigali – Rwanda</p>
+                 <p className="text-gray-600">KN 169 ST Nyamirambo, Kigali – Rwanda</p>
                  <p className="text-gray-600">24X8+MM Kigali</p>
                </div>
              </div>
@@ -103,7 +103,7 @@
                </div>
                <div>
                  <h3 className="font-bold text-lg text-gray-800 mb-1">Phone</h3>
-                 <p className="text-gray-600">(+250) 788 501 009</p>
+                 <p className="text-gray-600">(+250) 788816126</p>
                  <p className="text-sm text-gray-500">Call for reservations</p>
                </div>
              </div>
@@ -114,7 +114,7 @@
                </div>
                <div>
                  <h3 className="font-bold text-lg text-gray-800 mb-1">Email</h3>
-                 <p className="text-gray-600">info@bauhaus.com</p>
+                 <p className="text-gray-600">bauhausltd01@gmail.com</p>
                  <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                </div>
              </div>
@@ -125,7 +125,7 @@
                </div>
                <div>
                  <h3 className="font-bold text-lg text-gray-800 mb-1">Operating Hours</h3>
-                 <p className="text-gray-600">Bar: 4:00 PM - 1:00 AM</p>
+                 <p className="text-gray-600">Bar: 1:00 PM - 5:00 AM</p>
                  <p className="text-gray-600">Karaoke: 6:00 PM - 2:00 AM</p>
                  <p className="text-gray-600">Night Club: Thu-Sun 9:00 PM - 4:00 AM</p>
                </div>

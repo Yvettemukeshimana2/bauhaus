@@ -1,5 +1,6 @@
  import React from "react";
  import { Link } from "react-router-dom";
+ import a1 from "../assets/c.jpg"
 
  const services = [
    {
@@ -10,7 +11,7 @@
      link: "/karaoke",
    },
    {
-     img: "https://images.unsplash.com/photo-1571266028243-e68f8570c9e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+     img:  a1,
      title: "Night Club",
      description: "Electrifying dance floor with world-class DJs, VIP bottle service, LED lighting, and exclusive VIP sections for unforgettable party experiences.",
      features: ["World-Class DJs", "VIP Bottle Service", "LED Lighting", "VIP Sections"],

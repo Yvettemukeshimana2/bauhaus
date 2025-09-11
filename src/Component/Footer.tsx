@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ companyName, year }) => {
 
         <div className="mb-8">
           <p className="text-gray-300">
-            KG 17 Ave, Kigali - Rwanda | +250 788 888 889 | info@bauhaus.com
+            KG 17 Ave, Kigali - Rwanda | +250 788816126 | bauhausltd01@gmail.com
           </p>
         </div>
 

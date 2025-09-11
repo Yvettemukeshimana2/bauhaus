@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 // import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
 // import im2 from "../assets/h1.jpeg";
-// import im3 from "../assets/h2.jpeg";
+import im3 from "../assets/1002687045s[1](1).jpg";
 import OurServices from "./service";
 import AboutUs from "./Aboutus";
 import Specialties from "./Speciality";
@@ -16,7 +16,7 @@ const images = [
     description: "",
   },
   {
-    src: "https://img.freepik.com/premium-photo/group-friends-sing-karaoke-together-party-laughing-having-good-time_14117-899607.jpg",
+    src: im3,
     description: "",
   },
 ];
@@ -51,18 +51,19 @@ const Home: React.FC = () => {
         </div>
         <div className="pl-10 pt-32 z-0 text-xl sm:text-lg md:text-lg ">
           <h1 className="text-2xl ml-36 lg:text-6xl text-white font-semibold">
-            
             {images[currentIndex].description}
           </h1>
           {/* <h1 className="text-yellow-500 text-xs pl-36 font-semibold">Muhe Hospitality Services</h1> */}
-          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center"><span className="text-white ">BAUHAUS ENTERTAINMENT</span>
+          <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+            <span className="text-white ">
+              Experience the ultimate nightlife — a vibrant karaoke bar and
+              energetic night club all in one place at BAUHAUS </span>
           </h1>
         </div>
       </div>
       <AboutUs />
       <OurServices />
       <Specialties />
-      
     </div>
   );
 };
