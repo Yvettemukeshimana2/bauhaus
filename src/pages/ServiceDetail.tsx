@@ -1,7 +1,12 @@
  import React from "react";
  import {  ChevronLeft, Check } from "lucide-react";
-//  import testmony from "../assets/1002687045s[1](1).jpg";
-//  import testmony1 from "../assets/Bauhaus Logo.png";
+ import n1 from "../assets/NNN[1](1).jpg";
+ import n2 from "../assets/uu.jpg";
+ import k1 from "../assets/X1.jpg";
+ import k2 from "../assets/XX.jpg";
+ import k3 from "../assets/XXX.jpg";
+ import b1 from "../assets/B.jpg";
+ import b2 from "../assets/BB.jpg"
  import wed1 from "../assets/c.jpg"
  interface Service {
    id: number;
@@ -43,9 +48,9 @@
     "Safe & Comfortable Environment",
   ],
   images: [
-    "/src/assets/bauhaus_karaoke1.jpeg",
-    "/src/assets/bauhaus_karaoke2.jpeg",
-    "/src/assets/bauhaus_karaoke3.jpeg",
+    k1,
+    k2,
+    k3
   ],
   testimonials: [
     {
@@ -88,9 +93,8 @@
     "Safe & Vibrant Environment",
   ],
   images: [
-    "/src/assets/bauhaus_nightclub1.jpeg",
-    "/src/assets/bauhaus_nightclub2.jpeg",
-    "/src/assets/bauhaus_nightclub3.jpeg",
+    n1,
+    n2
   ],
   testimonials: [
     {
@@ -134,9 +138,8 @@
     "Custom Drink Menus for Events",
   ],
   images: [
-    "https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1559599238-d27b45c9d8f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1570134110359-5b49a4f25b8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+     b1,
+     b2
   ],
   testimonials: [
     {
@@ -186,11 +189,11 @@
          />
          <div className="absolute inset-0 flex justify-center top-32 text-center">
            <div className="container mx-auto px-6 absolute">
-             <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
+             <h1 className="text-2xl ml-5 lg:text-4xl text-white font-semibold">
                Bauhaus
              </h1>
 
-             <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
+             <h1 className="text-4xl md:text-2xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
                Experience the ultimate nightlife — a vibrant karaoke bar and
                energetic night club all in one place at BAUHAUS
              </h1>
@@ -199,7 +202,7 @@
        </header>
 
        <header className="mb-8 p-10 text-center">
-         <h1 className="text-4xl font-bold text-customGreen-960">
+         <h1 className="text-2xl font-bold text-customGreen-960">
            {service.title}
          </h1>
          <p className="mt-4 text-lg text-gray-600">{service.description}</p>
