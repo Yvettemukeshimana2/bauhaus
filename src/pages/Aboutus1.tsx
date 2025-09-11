@@ -7,7 +7,7 @@
    const venues = [
      {
        title: "Karaoke Lounge",
-       icon: <Music className="w-8 h-8 text-yellow-600" />,
+       icon: <Music className="w-8 h-8 text-customGreen-960" />,
        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Sing your heart out in our premium karaoke lounge with thousands of songs, private rooms, and professional sound systems for unforgettable musical experiences.",
@@ -22,7 +22,7 @@
      },
      {
        title: "Night Club",
-       icon: <Users className="w-8 h-8 text-yellow-600" />,
+       icon: <Users className="w-8 h-8 text-customGreen-960" />,
        image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Dance the night away in our electrifying night club with world-class DJs, VIP sections, signature cocktails, and stunning light shows.",
@@ -37,7 +37,7 @@
      },
      {
        title: "Premium Bar",
-       icon: <Wine className="w-8 h-8 text-yellow-600" />,
+       icon: <Wine className="w-8 h-8 text-customGreen-960" />,
        image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Enjoy expertly crafted cocktails, premium spirits, and exceptional bar service in our stylish lounge atmosphere with professional mixologists.",
@@ -69,11 +69,11 @@
              <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
                Bauhaus
              </h1>
-             <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
+             <h1 className="text-customGreen-960 text-xs pl-5 font-semibold">
                Bauhaus Entertainment
              </h1>
              <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-               PREMIUM <span className="text-yellow-500 ">ENTERTAINMENT</span>
+               PREMIUM <span className="text-customGreen-960 ">ENTERTAINMENT</span>
              </h1>
            </div>
          </div>
@@ -83,7 +83,7 @@
          <h2 className="lg:text-xl text-2xl font-bold mt-4">
            Our Entertainment Venues
          </h2>
-         <p className="bg-gradient-to-t p-9 text-white lg:text-sm text-2xl m-10 from-yellow-400 to-yellow-500">
+         <p className="bg-gradient-to-t p-9 text-white lg:text-sm text-2xl m-10 from-customGreen-960 to-black">
              Experience the ultimate entertainment at Bauhaus with our three distinct venues: 
              Premium Bar, Karaoke Lounge, and Night Club. Each venue offers unique experiences 
              tailored to different moods and occasions.
@@ -115,15 +115,15 @@
                    {venue.description}
                  </p>
                  <div className="flex items-center mb-4">
-                   <Clock className="w-5 h-5 text-yellow-600 mr-2" />
-                   <span className="text-lg lg:text-sm font-semibold text-yellow-600">
+                   <Clock className="w-5 h-5 text-customGreen-960 mr-2" />
+                   <span className="text-lg lg:text-sm font-semibold text-customGreen-960">
                      {venue.operatingHours}
                    </span>
                  </div>
                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                    {venue.features.map((feature, index) => (
                      <div key={index} className="flex items-center">
-                       <ChevronRight className="w-4 h-4 text-yellow-500 mr-1" />
+                       <ChevronRight className="w-4 h-4 text-customGreen-960 mr-1" />
                        <span className="text-sm lg:text-xs text-gray-600">
                          {feature}
                        </span>
@@ -139,8 +139,8 @@
        {/* Operating Hours Section */}
        <div className="bg-yellow-50 rounded-lg p-8 mb-20 max-w-4xl mx-auto">
          <div className="flex items-center mb-8">
-           <Clock className="w-8 h-8 text-yellow-600" />
-           <h3 className="text-4xl lg:text-2xl font-bold ml-3 text-yellow-500">
+           <Clock className="w-8 h-8 text-customGreen-960" />
+           <h3 className="text-4xl lg:text-2xl font-bold ml-3 text-customGreen-960">
              Operating Hours
            </h3>
          </div>
@@ -172,12 +172,12 @@
 
        {/* Why Choose Bauhaus Section */}
        <div className="bg-gray-50 rounded-lg p-8 mb-20 max-w-6xl mx-auto">
-         <h3 className="text-4xl lg:text-2xl font-bold text-center mb-8 text-yellow-500">
+         <h3 className="text-4xl lg:text-2xl font-bold text-center mb-8 text-customGreen-960">
            Why Choose Bauhaus Entertainment?
          </h3>
          <div className="grid lg:grid-cols-3 gap-8">
            <div className="text-center">
-             <div className="bg-yellow-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+             <div className="bg-customGreen-960 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                <Star className="w-8 h-8 text-white" />
              </div>
              <h4 className="text-xl lg:text-lg font-bold mb-3">Premium Experience</h4>
@@ -187,7 +187,7 @@
              </p>
            </div>
            <div className="text-center">
-             <div className="bg-yellow-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+             <div className="bg-customGreen-960 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                <Clock className="w-8 h-8 text-white" />
              </div>
              <h4 className="text-xl lg:text-lg font-bold mb-3">Flexible Hours</h4>
@@ -197,7 +197,7 @@
              </p>
            </div>
            <div className="text-center">
-             <div className="bg-yellow-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+             <div className="bg-customGreen-960 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                <Users className="w-8 h-8 text-white" />
              </div>
              <h4 className="text-xl lg:text-lg font-bold mb-3">Diverse Venues</h4>
@@ -211,12 +211,12 @@
 
        {/* Contact Information Section */}
        <div className="bg-yellow-50 rounded-lg p-8 mb-20 max-w-4xl mx-auto">
-         <h3 className="text-4xl lg:text-2xl font-bold text-center mb-8 text-yellow-500">
+         <h3 className="text-4xl lg:text-2xl font-bold text-center mb-8 text-customGreen-960">
            Visit Us Today
          </h3>
          <div className="grid lg:grid-cols-2 gap-8">
            <div className="flex items-center">
-             <MapPin className="w-6 h-6 text-yellow-600 mr-3" />
+             <MapPin className="w-6 h-6 text-customGreen-960 mr-3" />
              <div>
                <h4 className="text-xl lg:text-lg font-bold">Location</h4>
                <p className="text-gray-600 lg:text-sm text-lg">
@@ -225,7 +225,7 @@
              </div>
            </div>
            <div className="flex items-center">
-             <Phone className="w-6 h-6 text-yellow-600 mr-3" />
+             <Phone className="w-6 h-6 text-customGreen-960 mr-3" />
              <div>
                <h4 className="text-xl lg:text-lg font-bold">Contact</h4>
                <p className="text-gray-600 lg:text-sm text-lg">
@@ -236,7 +236,7 @@
          </div>
          <div className="text-center mt-8">
            <Link to="/contactus">
-             <button className="bg-yellow-500 text-white text-lg px-8 py-3 rounded-lg hover:bg-yellow-700 transition-colors">
+             <button className="bg-custtext-customGreen-960 text-white text-lg px-8 py-3 rounded-lg hover:bg-yellow-700 transition-colors">
                Get Directions
              </button>
            </Link>

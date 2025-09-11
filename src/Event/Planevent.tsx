@@ -1,324 +1,230 @@
- import React, { useState, useEffect, useCallback } from "react";
- import { ShoppingCart } from "lucide-react";
- import CartModal from "../Component/Categorycard";
- import ItemModal from "../Component/Itemmodal";
+ 
+import { Mic, Music, Users, Star, Clock, MapPin } from "lucide-react";
 
- // Type Definitions
- type ItemType = {
-   name: string;
-   price: number;
- };
+const KaraokeComponent = () => {
+  return (
+    <div className="max-w-6xl mx-auto p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg">
+      {/* Header Section */}
+      <div className="text-center mb-4 mt-8">
+        <div className="flex justify-center items-center mb-7">
+          <Mic className="w-8 h-8 text-customGreen-960 mr-2" />
+          <h1 className="text-4xl font-bold text-gray-800">
+            Bauhaus Karaoke Experience
+          </h1>
+          <Music className="w-8 h-8 text-customGreen-960 ml-2" />
+        </div>
+        <p className="text-xl text-gray-600">
+          Where Every Voice Becomes a Star
+        </p>
+      </div>
 
- type CartItem = {
-   category: string;
-   name: string;
-   quantity: number;
-   price: number;
- };
+      {/* Hero Image */}
+      <div className="relative mb-8 rounded-lg overflow-hidden shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Karaoke at Bauhaus"
+          className="w-full h-96 object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h2 className="text-3xl font-bold mb-2">Sing Your Heart Out</h2>
+            <p className="text-lg">
+              Professional karaoke setup in the heart of Bauhaus
+            </p>
+          </div>
+        </div>
+      </div>
 
- type Category = {
-   catid: number;
-   catname: string;
-   cattype: string;
-   catimage: string;
-   catdescription: string;
-   type: "Vendor" | "Venue" | "Materials";
- };
+      {/* Description Section */}
+      <div className="grid md:grid-cols-2 gap-8 mb-10">
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-customGreen-960 mb-4 flex items-center">
+            <Star className="w-6 h-6 mr-2" />
+            About Our Karaoke
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Step into Bauhaus's premier karaoke experience where music meets
+            magic! Our state-of-the-art karaoke setup transforms any gathering
+            into an unforgettable musical journey. Whether you're planning a
+            birthday celebration, corporate event, or just want to unleash your
+            inner superstar, we've got you covered.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            With our extensive song library spanning decades and genres,
+            professional-grade equipment, and vibrant atmosphere, every
+            performance becomes a memorable moment. From classic hits to the
+            latest chart-toppers, find your perfect song and let your voice
+            shine.
+          </p>
+        </div>
 
- type Item = {
-   itemid: number;
-   itemname: string;
-   catid: number;
-   itemPPU: number;
-   itemquantity: number;
-   Itemimage: string | null;
-   itemdiscription: string | null;
-   Category: {
-     catname: string;
-     cattype: string;
-   };
- };
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-customGreen-960 mb-4 flex items-center">
+            <MapPin className="w-6 h-6 mr-2" />
+            Venue Features
+          </h3>
+          <div className="space-y-3">
+            {[
+              "Premium sound system with crystal clear acoustics",
+              "Comfortable seating areas for audience and performers",
+              "Dynamic stage lighting to set the perfect mood",
+              "Full bar and refreshment service available",
+              "Private rooms available for intimate gatherings",
+            ].map((feature, idx) => (
+              <div key={idx} className="flex items-center text-gray-700">
+                <div className="w-2 h-2 bg-customtext-customGreen-960 rounded-full mr-3"></div>
+                {feature}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
- const EventPlannerPage: React.FC = () => {
-   // State Management
-   const [cart, setCart] = useState<CartItem[]>([]);
-   const [isCartOpen, setIsCartOpen] = useState(false);
-   const [selectedCategory, setSelectedCategory] = useState<Category | null>(
-     null
-   );
-   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
-   const [categories, setCategories] = useState<Category[]>([]);
-   const [items, setItems] = useState<Item[]>([]);
-   const [loading, setLoading] = useState(true);
-   const [filteredItems, setFilteredItems] = useState<Item[]>([]);
+      {/* Experience Section */}
+      <div className="mb-8">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-customGreen-960 mb-4">
+              What Makes Us Special
+            </h3>
+            <div className="space-y-3">
+              {[
+                {
+                  icon: Music,
+                  title: "Massive Song Library",
+                  text: "Over 10,000 songs from every decade and genre",
+                },
+                {
+                  icon: Mic,
+                  title: "Professional Equipment",
+                  text: "Studio-quality microphones and sound system",
+                },
+                {
+                  icon: Star,
+                  title: "VIP Treatment",
+                  text: "Dedicated staff to make your night unforgettable",
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start">
+                  <item.icon className="w-5 h-5 text-customGreen-960 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-800">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-   const him = import.meta.env.VITE_HOST;
-   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFkbyIsImlhdCI6MTczNzI3MDMyMn0.kkLgJDbm4ojjT1O3OjkELdfy8RBz1cmEesGK8ZvcBDc";
-    // Data Fetching
-   const fetchData = useCallback(async () => {
-     try {
-       const headers = { Authorization: `Bearer ${token}` };
-       const categoryUrls = {
-         vendor: `${him}/cat/vendor`,
-         venue: `${him}/cat/venue`,
-         material: `${him}/item/materials`,
-       };
-       const itemsUrl = `${him}/item/all`;
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-customGreen-960 mb-4">
+              Operating Hours
+            </h3>
+            <div className="space-y-2">
+              {[
+                { days: "Monday - Thursday", hours: "7:00 PM - 12:00 AM" },
+                { days: "Friday - Saturday", hours: "6:00 PM - 2:00 AM" },
+                { days: "Sunday", hours: "7:00 PM - 11:00 PM" },
+              ].map((item, idx) => (
+                <div key={idx} className="flex justify-between">
+                  <span className="text-gray-700">{item.days}</span>
+                  <span className="text-gray-600">{item.hours}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-yellow-50 rounded-lg">
+              <h4 className="font-semibold text-gray-800 mb-2">
+                Special Events
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Available for private bookings outside regular hours
+              </p>
+            </div>
+          </div>
+        </div>
 
-       const [vendorData, venueData, materialData, itemsData] =
-         await Promise.all([
-           fetch(categoryUrls.vendor, { headers }).then((res) => res.json()),
-           fetch(categoryUrls.venue, { headers }).then((res) => res.json()),
-           fetch(categoryUrls.material, { headers }).then((res) => res.json()),
-           fetch(itemsUrl, { headers }).then((res) => res.json()),
-         ]);
+        {/* Perfect For Section */}
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Perfect For Any Occasion
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Users,
+                title: "Birthday Parties",
+                text: "Celebrate another year with friends, music, and unforgettable performances",
+              },
+              {
+                icon: Star,
+                title: "Corporate Events",
+                text: "Team building activities and office celebrations with a musical twist",
+              },
+              {
+                icon: Music,
+                title: "Date Nights",
+                text: "Romantic evenings filled with your favorite duets and love songs",
+              },
+              {
+                icon: Clock,
+                title: "Bachelor/Bachelorette",
+                text: "Send-off celebrations with the wedding party's favorite hits",
+              },
+              {
+                icon: Mic,
+                title: "Family Reunions",
+                text: "Multi-generational fun with songs that span the decades",
+              },
+              {
+                icon: MapPin,
+                title: "Special Occasions",
+                text: "Graduations, anniversaries, and any reason to celebrate life",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-8 h-8 text-customGreen-960" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-800 mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-       const allCategories: Category[] = [
-         ...vendorData.data.map((cat: Category) => ({
-           ...cat,
-           type: "Vendor",
-         })),
-         ...venueData.data.map((cat: Category) => ({ ...cat, type: "Venue" })),
-         ...materialData.data.map((cat: Category) => ({
-           ...cat,
-           type: "Materials",
-         })),
-       ];
+        {/* Gallery Section */}
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Gallery
+          </h3>
+          <div className="grid md:grid-cols-4 gap-4">
+            {[
+              "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+              "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+              "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+              "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+            ].map((src, idx) => (
+              <div key={idx} className="relative group cursor-pointer">
+                <img
+                  src={src}
+                  alt="Karaoke scene"
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all rounded-lg"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-       setCategories(allCategories);
-       setItems(itemsData.data);
-     } catch (error) {
-       console.error("Error fetching data:", error);
-     } finally {
-       setLoading(false);
-     }
-   }, [him, token]);
-
-   // Effects
-   useEffect(() => {
-     fetchData();
-   }, [fetchData]);
-
-   useEffect(() => {
-     if (selectedCategory) {
-       const filtered = items.filter(
-         (item) => item.Category.catname === selectedCategory.catname
-       );
-       setFilteredItems(filtered);
-     }
-   }, [selectedCategory, items]);
-
-   // Cart Management
-   const handleAddToCart = (
-     category: string,
-     selectedItem: Item,
-     type?: ItemType,
-     quantity: number = 1
-   ) => {
-     const newCartItem: CartItem = {
-       category,
-       name: type?.name
-         ? `${selectedItem.itemname} - ${type.name}`
-         : selectedItem.itemname,
-       quantity,
-       price: type?.price ?? selectedItem.itemPPU,
-     };
-
-     setCart((prev) => [...prev, newCartItem]);
-     setSelectedItem(null);
-     setSelectedCategory(null);
-   };
-
-   const handleUpdateCart = (index: number, quantity: number) => {
-     setCart((prev) =>
-       prev.map((item, i) =>
-         i === index ? { ...item, quantity: Math.max(1, quantity) } : item
-       )
-     );
-   };
-
-   const handleRemoveFromCart = (index: number) => {
-     setCart((prev) => prev.filter((_, i) => i !== index));
-   };
-
-   // UI Components
-   const CategoryCard: React.FC<{ category: Category }> = ({ category }) => (
-     <div
-       className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
-       onClick={() => setSelectedCategory(category)}
-     >
-       <img
-         src={
-           category.catimage || "https://wallpaperaccess.com/full/5458954.jpg"
-         }
-         alt={category.catname}
-         className="w-full h-48 object-cover rounded-t-lg"
-         onError={(e) => {
-           const imgElement = e.target as HTMLImageElement;
-           imgElement.src = "https://wallpaperaccess.com/full/5458954.jpg";
-         }}
-       />
-       <div className="mt-4">
-         <h3 className="lg:text-lg text-2xl font-bold text-center">
-           {category.catname}
-         </h3>
-         <p className="text-gray-600 lg:text-sm text-lg">
-           {category.catdescription || "No description available"}
-         </p>
-       </div>
-      
-     </div>
-   );
-
-   const ItemCard: React.FC<{ item: Item }> = ({ item }) => (
-     <div
-       className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all cursor-pointer"
-       onClick={() => setSelectedItem(item)}
-     >
-       <img
-         src={item.Itemimage || "https://wallpaperaccess.com/full/5458954.jpg"}
-         alt={item.itemname}
-         className="w-full h-48 object-cover rounded-t-lg"
-         onError={(e) => {
-           const imgElement = e.target as HTMLImageElement;
-           imgElement.src = "https://wallpaperaccess.com/full/5458954.jpg";
-         }}
-       />
-       <div className="mt-4">
-         <h3 className="lg:text-lg text-2xl font-bold text-center">
-           {item.itemname}
-         </h3>
-         <p className="text-gray-600 lg:text-sm text-lg">
-           {item.itemdiscription || "No description available"}
-         </p>
-         <p className="text-yellow-500 font-bold text-center">
-           ${item.itemPPU}
-         </p>
-       </div>
-     </div>
-   );
-
-   const CategorySection: React.FC<{ type: Category["type"] }> = ({ type }) => (
-     <div>
-       <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
-         {type}
-       </h2>
-       <div className="grid grid-cols-1 lg:text-sm text-xl lg:grid-cols-4 gap-3">
-         {categories
-           .filter((cat) => cat.type === type)
-           .map((category) => (
-             <CategoryCard key={category.catid} category={category} />
-           ))}
-       </div>
-     </div>
-   );
-
-   const totalItemsInCart = cart.reduce(
-     (total, item) => total + item.quantity,
-     0
-   );
-
-   return (
-     <div className="mx-auto px-4 py-8 mt-28">
-       <div className="flex justify-between items-center mb-8">
-         <h1 className="lg:text-2xl text-4xl font-bold text-yellow-500">
-           Plan Your Event
-         </h1>
-
-         <div
-           className="relative cursor-pointer"
-           onClick={() => setIsCartOpen(true)}
-         >
-           <ShoppingCart className="w-8 h-8" />
-           {totalItemsInCart > 0 && (
-             <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-               {totalItemsInCart}
-             </div>
-           )}
-         </div>
-       </div>
-       <div className="pb-6">
-         <h3 className="text-2xl font-bold ">Concierge</h3>
-         <h1>
-           {" "}
-           Are you tired, and stressed like there are never enough hours in a
-           day? Let Us Help, with “Yes I Can Spirit”, It’s like having your
-           assistant, call on us when you need an extra pair of hands. We can
-           assist with just about anything as long as it’s legal and ethical.
-           Our services combine industry expertise and personalized assistance
-           to empower you. We’re also your one-stop shop for wedding and event
-           rentals, with our own equipment and a network of top-rated vendors,
-           including venues, caterers, planners, photographers, décor, dresses,
-           transport, and more. Let us make your life easier, call us when you
-           need a helping hand.
-           <br />
-         </h1>
-       </div>
-
-       <div className="space-y-8">
-         {loading ? (
-           <p>Loading categories...</p>
-         ) : (
-           <>
-             {!selectedCategory ? (
-               ["Vendor", "Venue", "Materials"].map((type) => (
-                 <CategorySection key={type} type={type as Category["type"]} />
-               ))
-             ) : (
-               <div>
-                 <button
-                   onClick={() => setSelectedCategory(null)}
-                   className="mb-4 px-4 py-2 bg-yellow-500 text-white rounded"
-                 >
-                   Back to Categories
-                 </button>
-                 <h2 className="lg:text-2xl text-4xl font-bold text-center text-yellow-500 mb-4">
-                   {selectedCategory.catname}
-                 </h2>
-                 <div className="grid grid-cols-3 lg:text-sm text-xl lg:grid-cols-5 gap-3">
-                   {filteredItems.map((item) => (
-                     <ItemCard key={item.itemid} item={item} />
-                   ))}
-                 </div>
-               </div>
-             )}
-           </>
-         )}
-         <h1 className="font-bold">
-    
-           Please remember, if you have booked the event venue, vendors and
-           rentals through www.muheservices.com, to claim your exclusive offers
-           and discounts with our Bauhaus Accredited Suppliers
-         </h1>
-       </div>
-
-       {selectedItem && (
-         <ItemModal
-           item={{
-             name: selectedItem.itemname,
-             description: selectedItem.itemdiscription || "",
-             image:
-               selectedItem.Itemimage ||
-               "https://wallpaperaccess.com/full/5458954.jpg",
-           }}
-           category={selectedCategory?.cattype || null}
-           onAddToCart={(category, _, type, quantity) =>
-             handleAddToCart(category, selectedItem, type, quantity)
-           }
-           onClose={() => setSelectedItem(null)}
-         />
-       )}
-
-       {isCartOpen && (
-         <CartModal
-           cart={cart}
-           removeFromCart={handleRemoveFromCart}
-           updateQuantity={handleUpdateCart}
-           closeModal={() => setIsCartOpen(false)}
-         />
-       )}
-     </div>
-   );
- };
-
- export default EventPlannerPage;
+export default KaraokeComponent;

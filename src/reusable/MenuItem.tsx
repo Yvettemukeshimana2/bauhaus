@@ -19,10 +19,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
     <Link
       to={address}
       onClick={onClick}
-      className="flex items-center gap-2 p-2 pb-4 hover:p-2 rounded text-white"
-      style={{'--hover-bg': '#4a2a0d'} as React.CSSProperties}
-      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a2a0d'}
-      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+      className="flex items-center gap-2 p-2 pb-4 hover:bg-yellow-700 hover:p-2 rounded text-white"
     >
       <Icon className="w-5 h-5 sm:hidden" />
       <span>{title}</span>

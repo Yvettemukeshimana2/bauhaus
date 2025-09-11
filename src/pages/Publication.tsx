@@ -1,260 +1,227 @@
- import React from "react";
- import { ChevronRight } from "lucide-react";
- import { motion } from "framer-motion";  
- import bg from "../assets/staffing1.jpeg";
-import CardComponent from "./Cardcomponent";
  
+import { motion } from "framer-motion";
+import { Music, Volume2, Users, Clock, Calendar, MapPin } from "lucide-react";
 
- interface JobCardProps {
-   title: string;
-   description?: string;
-   buttonText: string;
-   onClick: () => void;
-   index: number;
- }
+const BauhausNightclub = () => {
+  return (
+    <div className="min-h-screen bg-black">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2080&auto=format&fit=crop"
+            alt="Bauhaus Nightclub"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        </div>
 
- interface TeamQualityProps {
-   text: string;
-   index: number;
- }
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center text-white px-6"
+        >
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+            BAUHAUS
+          </h1>
+          <div className="w-32 h-1 bg-gradient-to-r from-black to-customGreen-960 mx-auto mb-6"></div>
+          <p className="text-2xl md:text-3xl font-light text-purple-200 mb-8">
+            NIGHTCLUB EXPERIENCE
+          </p>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+            Where music comes alive and nights become unforgettable. Experience
+            Kigali's premier nightclub destination.
+          </p>
+        </motion.div>
+      </section>
 
-//  const fadeInUp = {
-//    initial: { opacity: 0, y: 20 },
-//    animate: { opacity: 1, y: 0 },
-//    transition: { duration: 0.5 },
-//  };
+      {/* About Nightclub */}
+      <section className="py-20 bg-gradient-to-b from-customGreen-960 to-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-white mb-6">
+              THE <span className="text-customGreen-960">EXPERIENCE</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-black to-customGreen-960 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Step into Bauhaus Nightclub and immerse yourself in an
+              electrifying atmosphere where world-class DJs, premium sound
+              systems, and stunning visuals create the ultimate nightlife
+              experience in Kigali.
+            </p>
+          </motion.div>
 
- const TeamQuality: React.FC<TeamQualityProps> = ({ text, index }) => (
-   <motion.div
-     initial={{ opacity: 0, x: -20 }}
-     animate={{ opacity: 1, x: 0 }}
-     transition={{ duration: 0.5, delay: index * 0.1 }}
-     className="flex items-center space-x-2 mb-3 group hover:bg-yellow-400/20 p-2 rounded-lg transition-all duration-300"
-   >
-     <ChevronRight className="w-5 h-5 text-yellow-500 group-hover:translate-x-1 transition-transform" />
-     <span className="group-hover:translate-x-1 transition-transform">
-       {text}
-     </span>
-   </motion.div>
- );
- const JobCard: React.FC<JobCardProps> = ({
-   title,
-   description,
-   buttonText,
-   onClick,
-   index,
- }) => (
-   <motion.div
-     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-     animate={{ opacity: 1, x: 0 }}
-     transition={{ duration: 0.5, delay: index * 0.2 }}
-     whileHover={{ scale: 1.03 }}
-     className="w-full mb-4"
-   >
-     <div className="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
-       <h5 className="lg:text-lg text-3xl font-semibold text-yellow-500 mb-2">{title}</h5>
-       {description && (
-         <p className="lg:text-sm text-xl text-gray-600 mb-3">{description}</p>
-       )}
-       <button
-         onClick={onClick}
-         className="border-yellow-500 border-2 text-black px-4 py-2 rounded hover:bg-yellow-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-       >
-         {buttonText}
-       </button>
-     </div>
-   </motion.div>
- );
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Music className="w-8 h-8" />,
+                title: "World-Class DJs",
+                description:
+                  "International and local DJs spinning the hottest tracks all night long",
+              },
+              {
+                icon: <Volume2 className="w-8 h-8" />,
+                title: "Premium Sound",
+                description:
+                  "State-of-the-art sound system delivering crystal-clear audio experience",
+              },
+              {
+                icon: <Users className="w-8 h-8" />,
+                title: "VIP Experience",
+                description:
+                  "Exclusive VIP sections with bottle service and premium amenities",
+              },
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800 rounded-2xl p-8 text-center hover:bg-gray-700 transition-colors"
+              >
+                <div className="w-16 h-16 bg-customGreen-960 rounded-full flex items-center justify-center mx-auto mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
- const Publication = () => {
-   const handleContact = () => {
-     window.location.href = "tel:+250 788 501 009";
-   };
+      {/* Events & Schedule */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-white mb-6">
+              UPCOMING <span className="text-customGreen-960">EVENTS</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-black to-customGreen-960 mx-auto"></div>
+          </motion.div>
 
-   const teamQualities = [
-     "Quick and empathetic responders",
-     "Creative problem solvers",
-     "Great listeners and leaders",
-     "Keen to little details and the big picture",
-     "Calm and composed in the eye of the storm",
-     "Artful and pragmatic",
-     "Self-starters and aren't afraid to ask questions",
-   ];
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                title: "Saturday Night Fever",
+                date: "Every Saturday",
+                time: "10PM - 4AM",
+                description:
+                  "The hottest party in town with top DJs and special performances",
+              },
+              {
+                title: "Ladies Night",
+                date: "Every Thursday",
+                time: "9PM - 3AM",
+                description:
+                  "Special night for ladies with exclusive drinks and entertainment",
+              },
+            ].map((event, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="bg-black border border-black rounded-2xl p-8 hover:border-customtext-customGreen-960 transition-colors"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {event.title}
+                </h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-2 text-customGreen-960">
+                    <Calendar className="w-5 h-5" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-customGreen-960">
+                    <Clock className="w-5 h-5" />
+                    <span>{event.time}</span>
+                  </div>
+                </div>
+                <p className="text-gray-300">{event.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-   return (
-     <div className="min-h-screen">
-       {/* Hero Section */}
-       <header className="relative item-center bg-black overflow-hidden">
-         <motion.img
-           initial={{ scale: 1.2 }}
-           animate={{ scale: 1 }}
-           transition={{ duration: 1.5 }}
-           src={bg}
-           loading="lazy"
-           alt="Our Services"
-           className="w-full h-96 object-cover opacity-40 bg-black"
-         />
-         <div className="absolute inset-0 flex justify-center space-y-3 text-center ">
-           <div className="absolute inset-0 flex justify-center text-center">
-             <div className="container mx-auto px-6 top-32 absolute">
-               <h1 className="text-2xl ml-5 lg:text-6xl text-white font-semibold">
-                 Bauhaus
-               </h1>
-               <h1 className="text-yellow-500 text-xs pl-5 font-semibold">
-                 Bauhaus Entertainment
-               </h1>
-               <h1 className="text-4xl md:text-4xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
-                 PREMIUM <span className="text-yellow-500 ">ENTERTAINMENT</span>
-               </h1>
-             </div>
-           </div>
-           <motion.button
-             initial={{ y: 100, opacity: 0 }}
-             animate={{ y: 0, opacity: 1 }}
-             transition={{ duration: 1, delay: 1.1 }}
-             whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.95 }}
-             className="absolute p-2 border-2 animate-pulse border-yellow-400 bottom-8 rounded-full text-white text-2xl lg:text-xl font-bold hover:bg-yellow-500 transition-colors duration-300"
-           >
-             Let's Connect
-           </motion.button>
-         </div>
-       </header>
-       {/* <section className="py-16">
-         <motion.h2
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{ duration: 1 }}
-           className="text-3xl font-bold text-center text-yellow-500 mb-12"
-         >
-           What's New!
-         </motion.h2>
+      {/* Location & Contact */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-5xl font-bold text-white mb-8">
+              JOIN THE <span className="text-customGreen-960">PARTY</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-black to-customGreen-960 mx-auto mb-12"></div>
 
-         <div className="container  mx-auto px-4">
-           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-             {[
-               {
-                 title: "Crafting Memorable Bauhaus Events",
-                 description:
-                   "Step into the world of event magic! Join us behind the scenes at Bauhaus as we unveil the secrets to creating unforgettable experiences.",
-                 imageUrl: c1,
-               },
-               {
-                 title: "Unlocking Success",
-                 description:
-                   "Discover the power of Bauhaus Digital services in this transformative journey. From boosting efficiency to elevating profits of your Business.",
-                 imageUrl: c2,
-               },
-               {
-                 title: "Bauhaus's Impact on Industry Trends",
-                 description:
-                   "Stay ahead of the curve with Bauhaus! Dive into the future of industry trends as we unveil the innovative solutions shaping tomorrow.",
-                 imageUrl: c4,
-               },
-               {
-                 title: "A Journey through Bauhaus Event Experiences",
-                 description:
-                   "Client Spotlight: Experience events like never before! Join us on a journey through the eyes of our clients.",
-                 imageUrl: c3,
-               },
-             ].map((card, index) => (
-               <Card key={index} {...card} index={index} />
-             ))}
-           </div>
-         </div>
-       </section> */}
-       <CardComponent />
-       <motion.section
-         initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}
-         transition={{ duration: 1 }}
-         className="py-16 bg-yellow-100"
-       >
-         <div className="container mx-auto px-4">
-           <h3 className="lg:text-2xl text-4xl font-bold text-center mb-12">
-             Tenders
-           </h3>
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-             <JobCard
-               title="A Video-grapher"
-               description="We Are Looking for an experienced Video-grapher who can Record Our Summer Weddings"
-               buttonText="Contact Us"
-               onClick={handleContact}
-               index={0}
-             />
-             <JobCard
-               title="Caterer"
-               description="We Are Looking for an experienced Caterer who can Cater our Upcoming events"
-               buttonText="Contact Us"
-               onClick={handleContact}
-               index={1}
-             />
-           </div>
-         </div>
-       </motion.section>
-       <motion.section
-         initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}
-         transition={{ duration: 1 }}
-         className="py-16 bg-[#fb911f] text-black"
-       >
-         <div>
-           <h3 className="lg:text-2xl text-4xl font-bold text-center mb-5">
-             Careers
-           </h3>
-           <div className="container mx-auto px-4 pl-20 pr-20 flex justify-center items-center">
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-               <motion.div
-                 initial={{ x: -100, opacity: 0 }}
-                 whileInView={{ x: 0, opacity: 1 }}
-                 transition={{ duration: 0.8 }}
-               >
-                 <h5 className="lg:text-xl text-2xl font-semibold mb-4">
-                   Join Our Team in making a positive impact on our society!
-                 </h5>
-                 <p className="mb-6 text-2xl lg:text-sm">
-                   Are you a talented individual, bursting with enthusiasm for
-                   event and hospitality management? At Bauhaus Company, we are
-                   always on the lookout for talented individuals who feel they
-                   would thrive in the ever-changing events industry!
-                 </p>
-                 <h5 className="lg:text-xl text-2xl font-semibold mb-4">
-                   We love team members who are:
-                 </h5>
-                 <div className="space-y-1 text-2xl lg:text-sm">
-                   {teamQualities.map((quality, index) => (
-                     <TeamQuality key={index} text={quality} index={index} />
-                   ))}
-                 </div>
-               </motion.div>
-               <motion.div
-                 initial={{ x: 100, opacity: 0 }}
-                 whileInView={{ x: 0, opacity: 1 }}
-                 transition={{ duration: 0.8 }}
-               >
-                 <h5 className="lg:text-xl text-3xl lg:font-semibold font-bold text-center mb-8">
-                   Available Job Positions
-                 </h5>
-                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                   <JobCard
-                     title="Event Staffing Officer"
-                     buttonText="Apply Here"
-                     onClick={() => {}}
-                     index={0}
-                   />
-                   <JobCard
-                     title="Marketing Officer"
-                     buttonText="Apply Here"
-                     onClick={() => {}}
-                     index={1}
-                   />
-                 </div>
-               </motion.div>
-             </div>
-           </div>
-         </div>
-       </motion.section>
-     </div>
-   );
- };
- export default Publication;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-customGreen-960 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Location</h3>
+                <p className="text-gray-300">
+                  KG 17 Ave, Kigali
+                  <br />
+                  Rwanda
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-customGreen-960 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Hours</h3>
+                <p className="text-gray-300">
+                  Thu - Sat: 9PM - 4AM
+                  <br />
+                  Closed Sun - Wed
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-customGreen-960 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Age Limit</h3>
+                <p className="text-gray-300">
+                  21+ Only
+                  <br />
+                  Valid ID Required
+                </p>
+              </div>
+            </div>
+
+            <p className="text-xl text-gray-300 mb-8">
+              Ready for an unforgettable night? Contact us for VIP reservations
+              and group bookings.
+            </p>
+
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-customGreen-960 text-lg">
+              <p>+250 788 888 889</p>
+              <p>nightclub@bauhaus.com</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default BauhausNightclub;
