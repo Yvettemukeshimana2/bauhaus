@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
 // import im2 from "../assets/h1.jpeg";
 import im3 from "../assets/1002687045s[1](1).jpg";
+import im4 from "../assets/c.jpg"
 import OurServices from "./service";
 import AboutUs from "./Aboutus";
 import Specialties from "./Speciality";
@@ -12,7 +13,7 @@ const images = [
     description: " ",
   },
   {
-    src: "http://www.partybus.co.uk/wp-content/uploads/2.jpg",
+    src:  im4,
     description: "",
   },
   {
