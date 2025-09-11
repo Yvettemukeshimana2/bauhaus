@@ -22,7 +22,7 @@
      description:
        "Sing your heart out in private rooms with top-notch sound and thousands of songs to choose from",
      icon: <Heart className="w-4 h-4" />,
-     image: "/src/assets/staffing1.jpeg",
+     image: "https://wallpapercave.com/wp/wp9577449.jpg",
    },
 
    {
@@ -30,7 +30,8 @@
      title: " Night club",
      description:
        " Dance the night away with world-class DJs, dazzling lights, and an electric atmosphere.",
-     image: "src/assets/history.jpeg",
+     image:
+       "https://i.pinimg.com/originals/0e/5f/c1/0e5fc1120e8224c5c5e9789d53f9b659.jpg",
      icon: <Users className="w-4 h-4" />,
    },
    {
@@ -38,7 +39,8 @@
      title: "bar",
      description:
        " Delicious meals, crafted drinks, and a lively atmosphere — the perfect spot to eat, drink, and unwind. at bauhaus",
-     image: "src/assets/catering2.jpeg",
+     image:
+       "https://st.hzcdn.com/simgs/f86142d3020fcef1_4-9803/home-design.jpg",
      icon: <UtensilsCrossed className="w-4 h-4" />,
    },
  ];

@@ -78,9 +78,9 @@
                </div>
                
                <Link to={service.link}>
-                 <button className="w-full bg-customGreen-960 text-white font-semibold py-3 px-6 rounded-lg hover:bg-customGreen-800 transition-colors duration-200">
+                 {/* <button className="w-full bg-customGreen-960 text-white font-semibold py-3 px-6 rounded-lg hover:bg-customGreen-800 transition-colors duration-200">
                    Learn More
-                 </button>
+                 </button> */}
                </Link>
              </div>
            </div>
