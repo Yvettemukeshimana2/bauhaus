@@ -1,6 +1,6 @@
  import React, { useState, ReactNode } from "react";
 import { Mail, Phone } from "lucide-react";
-import salto from "../assets/mh3.jpg"
+ 
 // Types
 interface CardProps {
   children: ReactNode;
@@ -88,14 +88,14 @@ const CEOSection: React.FC = () => {
   return (
     <Card className="my-12 mx-auto max-w-7xl">
       <CardContent className="flex flex-col lg:flex-row items-start gap-8">
-        <div className="lg:w-1/3">
+        {/* <div className="lg:w-1/3">
           <img
-            src={salto}
+            src={}
             loading="lazy"
             alt="Salton MUHETO"
             className="rounded-lg  w-full object-cover"
           />
-        </div>
+        </div> */}
         <div className="lg:w-2/3 space-y-4">
           <h2 className="lg:text-xl text-2xl font-bold text-gray-800">Salton MUHETO</h2>
           <h3 className="lg:text-lg text-xl font-semibold text-yellow-500">
