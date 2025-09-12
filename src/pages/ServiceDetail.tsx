@@ -1,6 +1,7 @@
  import React from "react";
  import {  ChevronLeft, Check } from "lucide-react";
- import n1 from "../assets/NNN[1](1).jpg";
+ import n1 from "../assets/night1.jpg";
+ import n3 from "../assets/NNN[1](1).jpg"
  import n2 from "../assets/uu.jpg";
  import k1 from "../assets/X1.jpg";
  import k2 from "../assets/XX.jpg";
@@ -26,140 +27,138 @@
  }
 
  const services: Service[] = [
-    {
-  id: 1,
-  title: "EXPERIENCE KARAOKE AT BAUHAUS",
-  description:
-    "Bauhaus brings you the ultimate karaoke experience! Sing your favorite hits in our private rooms with premium sound, extensive song selection, and themed karaoke nights. Perfect for birthdays, parties, or a night out with friends — all in a vibrant and fun atmosphere.",
-  fullDescription:
-    "Our karaoke rooms at Bauhaus feature high-quality sound systems, professional microphones, and a vast library of songs across all genres. Whether it's a small gathering or a large celebration, we ensure a fun, safe, and unforgettable karaoke night.",
-  features: [
-    "Private Karaoke Rooms",
-    "Premium Sound System",
-    "10,000+ Song Library",
-    "Themed Karaoke Nights",
-    "Birthday & Party Packages",
-    "Professional Microphones",
-    "Dance & Sing Competitions",
-    "Drink & Snack Service",
-    "Ambient LED Lighting",
-    "Reservation & Scheduling",
-    "Friendly Staff Assistance",
-    "Safe & Comfortable Environment",
-  ],
-  images: [
-    k1,
-    k2,
-    k3
-  ],
-  testimonials: [
-    {
-      id: 1,
-      name: "James Carter",
-      role: "Music Lover",
-      comment: "Bauhaus karaoke is next-level fun! Amazing sound and perfect vibe.",
-      rating: 5,
-      avatar: "/src/assets/testimony_karaoke1.jpeg",
-    },
-    {
-      id: 2,
-      name: "Emily Smith",
-      role: "Party Enthusiast",
-      comment: "Had my birthday here — the karaoke rooms were incredible and the staff was super helpful!",
-      rating: 5,
-      avatar: "/src/assets/testimony_karaoke2.jpeg",
-    },
-  ],
-},
-    {
-  id: 2,
-  title: "EXPERIENCE THE NIGHT AT BAUHAUS NIGHT CLUB",
-  description:
-    "Bauhaus Night Club brings the ultimate nightlife experience! Dance to world-class DJs, enjoy premium drinks, and immerse yourself in dazzling lights and high-energy music. Perfect for parties, celebrations, or a night out with friends in an electrifying atmosphere.",
-  fullDescription:
-    "Our night club features state-of-the-art sound and lighting systems, VIP sections, themed party nights, and professional bartenders. Whether celebrating a special occasion or just enjoying the nightlife, Bauhaus ensures a safe, vibrant, and unforgettable clubbing experience.",
-  features: [
-    "World-Class DJs",
-    "VIP Bottle Service",
-    "LED Lighting & Visual Effects",
-    "Themed Party Nights",
-    "Dance Floor with Professional Lighting",
-    "Exclusive VIP Sections",
-    "Premium Spirits & Cocktails",
-    "Cocktail & Drink Specials",
-    "Professional Bartenders",
-    "Reservation & Scheduling",
-    "Friendly Staff Assistance",
-    "Safe & Vibrant Environment",
-  ],
-  images: [
-    n1,
-    n2
-  ],
-  testimonials: [
-    {
-      id: 1,
-      name: "David Johnson",
-      role: "Nightlife Enthusiast",
-      comment: "The club vibe at Bauhaus is incredible — music, lights, and energy all perfect!",
-      rating: 5,
-      avatar: "/src/assets/testimony_nightclub1.jpeg",
-    },
-    {
-      id: 2,
-      name: "Sophia Lee",
-      role: "Party Goer",
-      comment: "Amazing DJs and VIP experience. Bauhaus Night Club never disappoints!",
-      rating: 5,
-      avatar: "/src/assets/testimony_nightclub2.jpeg",
-    },
-  ],
-}
-,
-    {
-  id: 3,
-  title: "ENJOY PREMIUM DRINKS AT BAUHAUS BAR",
-  description:
-    "Bauhaus Bar offers a vibrant lounge atmosphere where you can unwind with expertly crafted cocktails, premium spirits, craft beers, and fine wines. Perfect for casual evenings, after-work drinks, or special celebrations, our bar ensures a memorable experience with great drinks and a lively ambiance.",
-  fullDescription:
-    "Our bar provides menu customization, signature cocktails, and a sophisticated yet relaxed environment. With skilled bartenders, ambient lighting, and comfortable seating, Bauhaus Bar guarantees a perfect place to socialize, celebrate, or simply enjoy a great drink.",
-  features: [
-    "Expert Mixologists",
-    "Signature Cocktails",
-    "Premium Spirits Collection",
-    "Craft Beer Selection",
-    "Wine Tasting Events",
-    "Happy Hour Specials",
-    "Private Lounge Areas",
-    "Ambient Lighting & Music",
-    "Reservation & Scheduling",
-    "Friendly Staff Assistance",
-    "Safe & Comfortable Environment",
-    "Custom Drink Menus for Events",
-  ],
-  images: [
-     b1,
-     b2
-  ],
-  testimonials: [
-    {
-      id: 1,
-      name: "Michael Brown",
-      role: "Cocktail Enthusiast",
-      comment: "Amazing cocktails and a perfect vibe for a relaxed evening!",
-      rating: 5,
-      avatar: "/src/assets/testimony_bar1.jpeg",
-    },
-    {
-      id: 2,
-      name: "Laura Davis",
-      role: "Bar Lover",
-      comment: "Bauhaus Bar never disappoints! Great drinks and friendly staff.",
-      rating: 5,
-      avatar: "/src/assets/testimony_bar2.jpeg",
-    },
-  ],
-},
+   {
+     id: 1,
+     title: "EXPERIENCE KARAOKE AT BAUHAUS",
+     description:
+       "Bauhaus brings you the ultimate karaoke experience! Sing your favorite hits in our private rooms with premium sound, extensive song selection, and themed karaoke nights. Perfect for birthdays, parties, or a night out with friends — all in a vibrant and fun atmosphere.",
+     fullDescription:
+       "Our karaoke rooms at Bauhaus feature high-quality sound systems, professional microphones, and a vast library of songs across all genres. Whether it's a small gathering or a large celebration, we ensure a fun, safe, and unforgettable karaoke night.",
+     features: [
+       "Private Karaoke Rooms",
+       "Premium Sound System",
+       "10,000+ Song Library",
+       "Themed Karaoke Nights",
+       "Birthday & Party Packages",
+       "Professional Microphones",
+       "Dance & Sing Competitions",
+       "Drink & Snack Service",
+       "Ambient LED Lighting",
+       "Reservation & Scheduling",
+       "Friendly Staff Assistance",
+       "Safe & Comfortable Environment",
+     ],
+     images: [k1, k2, k3],
+     testimonials: [
+       {
+         id: 1,
+         name: "James Carter",
+         role: "Music Lover",
+         comment:
+           "Bauhaus karaoke is next-level fun! Amazing sound and perfect vibe.",
+         rating: 5,
+         avatar: "/src/assets/testimony_karaoke1.jpeg",
+       },
+       {
+         id: 2,
+         name: "Emily Smith",
+         role: "Party Enthusiast",
+         comment:
+           "Had my birthday here — the karaoke rooms were incredible and the staff was super helpful!",
+         rating: 5,
+         avatar: "/src/assets/testimony_karaoke2.jpeg",
+       },
+     ],
+   },
+   {
+     id: 2,
+     title: "EXPERIENCE THE NIGHT AT BAUHAUS NIGHT CLUB",
+     description:
+       "Bauhaus Night Club brings the ultimate nightlife experience! Dance to world-class DJs, enjoy premium drinks, and immerse yourself in dazzling lights and high-energy music. Perfect for parties, celebrations, or a night out with friends in an electrifying atmosphere.",
+     fullDescription:
+       "Our night club features state-of-the-art sound and lighting systems, VIP sections, themed party nights, and professional bartenders. Whether celebrating a special occasion or just enjoying the nightlife, Bauhaus ensures a safe, vibrant, and unforgettable clubbing experience.",
+     features: [
+       "World-Class DJs",
+       "VIP Bottle Service",
+       "LED Lighting & Visual Effects",
+       "Themed Party Nights",
+       "Dance Floor with Professional Lighting",
+       "Exclusive VIP Sections",
+       "Premium Spirits & Cocktails",
+       "Cocktail & Drink Specials",
+       "Professional Bartenders",
+       "Reservation & Scheduling",
+       "Friendly Staff Assistance",
+       "Safe & Vibrant Environment",
+     ],
+     images: [n1, n2, n3],
+     testimonials: [
+       {
+         id: 1,
+         name: "David Johnson",
+         role: "Nightlife Enthusiast",
+         comment:
+           "The club vibe at Bauhaus is incredible — music, lights, and energy all perfect!",
+         rating: 5,
+         avatar: "/src/assets/testimony_nightclub1.jpeg",
+       },
+       {
+         id: 2,
+         name: "Sophia Lee",
+         role: "Party Goer",
+         comment:
+           "Amazing DJs and VIP experience. Bauhaus Night Club never disappoints!",
+         rating: 5,
+         avatar: "/src/assets/testimony_nightclub2.jpeg",
+       },
+     ],
+   },
+   {
+     id: 3,
+     title: "ENJOY PREMIUM DRINKS AT BAUHAUS BAR",
+     description:
+       "Bauhaus Bar offers a vibrant lounge atmosphere where you can unwind with expertly crafted cocktails, premium spirits, craft beers, and fine wines. Perfect for casual evenings, after-work drinks, or special celebrations, our bar ensures a memorable experience with great drinks and a lively ambiance.",
+     fullDescription:
+       "Our bar provides menu customization, signature cocktails, and a sophisticated yet relaxed environment. With skilled bartenders, ambient lighting, and comfortable seating, Bauhaus Bar guarantees a perfect place to socialize, celebrate, or simply enjoy a great drink.",
+     features: [
+       "Expert Mixologists",
+       "Signature Cocktails",
+       "Premium Spirits Collection",
+       "Craft Beer Selection",
+       "Wine Tasting Events",
+       "Happy Hour Specials",
+       "Private Lounge Areas",
+       "Ambient Lighting & Music",
+       "Reservation & Scheduling",
+       "Friendly Staff Assistance",
+       "Safe & Comfortable Environment",
+       "Custom Drink Menus for Events",
+     ],
+     images: [
+       b1,
+       b2,
+       "https://media.cnn.com/api/v1/images/stellar/prod/171005152930-worlds-best-german-bars-and-restaurants-worldwide-bauhaus.jpg?q=w_4124,h_3045,x_0,y_0,c_fill/w_1280",
+     ],
+     testimonials: [
+       {
+         id: 1,
+         name: "Michael Brown",
+         role: "Cocktail Enthusiast",
+         comment: "Amazing cocktails and a perfect vibe for a relaxed evening!",
+         rating: 5,
+         avatar: "/src/assets/testimony_bar1.jpeg",
+       },
+       {
+         id: 2,
+         name: "Laura Davis",
+         role: "Bar Lover",
+         comment:
+           "Bauhaus Bar never disappoints! Great drinks and friendly staff.",
+         rating: 5,
+         avatar: "/src/assets/testimony_bar2.jpeg",
+       },
+     ],
+   },
  ];
  interface ServiceDetailProps {
    serviceId: number;
@@ -190,7 +189,7 @@
          <div className="absolute inset-0 flex justify-center top-32 text-center">
            <div className="container mx-auto px-6 absolute">
              <h1 className="text-2xl ml-5 lg:text-4xl text-white font-semibold">
-               Bauhaus
+               
              </h1>
 
              <h1 className="text-4xl md:text-2xl sm:text-4xl font-bold mt-10 animate-pulse text-white text-center">
@@ -208,14 +207,15 @@
          <p className="mt-4 text-lg text-gray-600">{service.description}</p>
        </header>
 
-       <div className="flex gap-4 mb-12 pl-20 pr-20 h-72">
+       <div className="flex  mb-12 pl-20
+h-96">
          {service.images.slice(0, 3).map((image, index) => (
            <div key={index} className="flex-1 overflow-hidden rounded-lg">
              <img
                src={image}
                loading="lazy"
                alt={`${service.title} image ${index + 1}`}
-               className="w-full h-full object-cover"
+               className="w-80 h-full object-cover"
              />
            </div>
          ))}

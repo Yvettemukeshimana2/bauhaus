@@ -9,7 +9,7 @@
    FiMenu,
    FiX,
  } from "react-icons/fi";
- import Logo from "../assets/Bauhaus Logo.png";
+ import Logo from "../assets/boh logo.jpg";
  import MenuItem from "../reusable/MenuItem";
  
 

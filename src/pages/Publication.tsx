@@ -9,7 +9,7 @@ const BauhausNightclub = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2080&auto=format&fit=crop"
+            src="src/assets/night.jpg"
             alt="Bauhaus Nightclub"
             className="w-full h-full object-cover opacity-60"
           />

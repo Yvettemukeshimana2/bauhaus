@@ -31,7 +31,7 @@
      description:
        " Dance the night away with world-class DJs, dazzling lights, and an electric atmosphere.",
      image:
-       "https://i.pinimg.com/originals/0e/5f/c1/0e5fc1120e8224c5c5e9789d53f9b659.jpg",
+       "src/assets/night.jpg",
      icon: <Users className="w-4 h-4" />,
    },
    {
