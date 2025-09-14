@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 // import im1 from "../assets/images/LOLA-Event-Productions-SouthAsianFlare-Wedding-Chicago-OldPostOffice_0701.jpg";
 // import im2 from "../assets/h1.jpeg";
+import OurTeam from "./Ourteam";
 import im3 from "../assets/1002687045s[1](1).jpg";
 import im4 from "../assets/c.jpg"
 import OurServices from "./service";
@@ -65,6 +66,7 @@ const Home: React.FC = () => {
       <AboutUs />
       <OurServices />
       <Specialties />
+      <OurTeam/>
     </div>
   );
 };
