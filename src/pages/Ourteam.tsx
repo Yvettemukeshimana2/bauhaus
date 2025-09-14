@@ -75,29 +75,6 @@
      </div>
    );
  };
-
-//  const CEOSection: React.FC = () => {
-//    const ceoContent = `Salton MUHETO, the owner, and director of Bauhaus Entertainment is a prominent figure in Rwanda's hospitality industry. With over six years of experience in prestigious hotels and events, MUHETO has established himself as a dedicated and visionary entrepreneur. Throughout his career, MUHETO has gained extensive expertise in the hospitality sector, refining his skills, and accumulating invaluable experiences. Holding a bachelor's degree in hospitality management and currently pursuing a Master of Business Administration (MBA) specializing in Project Management, he aspires to become a professional event and wedding planner. MUHETO's boundless imagination, exceptional multitasking abilities, and positive outlook have made him a go-to person in his region, contributing to the growth of Rwanda's hospitality industry. He utilizes available resources to help communities, particularly the youth, create career opportunities by applying their knowledge and skills. His goal is to position Rwanda as the most favorable hospitality and event destination in Africa. Driven by the desire to make a visible and meaningful contribution to his country, MUHETO embraced entrepreneurship in events management. As a Rwandan, he has always pondered ways to contribute to the development and progress of his nation. Through the knowledge and skills he acquired, he chose to embark on the path of event planning, aiming to leave a lasting impact.`;
-
-//    return (
-//      <Card className="my-12 mx-auto max-w-7xl">
-//        <CardContent className="flex flex-col lg:flex-row items-start gap-8">
-//          <div className="lg:w-2/3 space-y-4">
-//            <h2 className="lg:text-xl text-2xl font-bold text-gray-800">
-//              Salton MUHETO
-//            </h2>
-//            <h3 className="lg:text-lg text-xl font-semibold text-customGreen-960">
-//              CEO & Founder
-//            </h3>
-//            <div className="text-lg lg:text-sm">
-//              <ExpandableText text={ceoContent} maxLength={500} />
-//            </div>
-//          </div>
-//        </CardContent>
-//      </Card>
-//    );
-//  };
-
  const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
    <Card className="h-full transform transition-all duration-300 hover:scale-105">
      <CardContent className="text-center">
@@ -182,9 +159,6 @@
    return (
      <div className="min-h-screen bg-white">
        <BannerSection />
-       <div className="container mx-auto px-4">
-         {/* <CEOSection /> */}
-       </div>
        <TeamSection />
      </div>
    );
