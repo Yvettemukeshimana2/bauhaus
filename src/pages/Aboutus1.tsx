@@ -8,7 +8,7 @@
      {
        title: "Karaoke Lounge",
        icon: <Music className="w-8 h-8 text-customGreen-960" />,
-       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+       image: "https://wallpapercave.com/wp/wp9577449.jpg",
        description:
          "Sing your heart out in our premium karaoke lounge with thousands of songs, private rooms, and professional sound systems for unforgettable musical experiences.",
        operatingHours: "Monday - Sunday: 6:00 PM - 2:00 AM",
@@ -17,13 +17,14 @@
          "10,000+ song library",
          "Professional sound systems",
          "Themed karaoke nights",
-         "Group competitions"
+         "Group competitions",
        ],
      },
      {
        title: "Night Club",
        icon: <Users className="w-8 h-8 text-customGreen-960" />,
-       image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+       image:
+         "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Dance the night away in our electrifying night club with world-class DJs, VIP sections, signature cocktails, and stunning light shows.",
        operatingHours: "Thursday - Sunday: 9:00 PM - 4:00 AM",
@@ -32,13 +33,14 @@
          "VIP bottle service",
          "LED lighting systems",
          "Themed party nights",
-         "Exclusive VIP sections"
+         "Exclusive VIP sections",
        ],
      },
      {
        title: "Premium Bar",
        icon: <Wine className="w-8 h-8 text-customGreen-960" />,
-       image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+       image:
+         "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
        description:
          "Enjoy expertly crafted cocktails, premium spirits, and exceptional bar service in our stylish lounge atmosphere with professional mixologists.",
        operatingHours: "Monday - Sunday: 5:00 AM - 22:00 PM",
@@ -47,7 +49,7 @@
          "Premium spirits collection",
          "Craft beer selection",
          "Wine tasting events",
-         "Cocktail making classes"
+         "Cocktail making classes",
        ],
      },
    ];
